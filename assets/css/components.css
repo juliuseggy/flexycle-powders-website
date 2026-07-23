@@ -170,6 +170,7 @@
   position: relative;
   padding-block: var(--space-9) var(--space-8);
 }
+.hero--landing { padding-top: var(--space-7); }
 .hero__grid {
   position: relative;
   z-index: 1;
@@ -203,8 +204,9 @@
   max-width: 72rem;
   margin-inline: auto;
 }
-.hero--landing .hero__lede { margin-inline: auto; }
-.hero--landing .hero__actions { justify-content: center; }
+.hero--landing h1 { margin-bottom: 0; }
+.hero--landing .hero__lede { margin-inline: auto; margin-bottom: 0; }
+.hero--landing .hero__actions { justify-content: center; margin-top: 0; }
 .hero--landing .hero__spectrum-wrap { width: 100%; max-width: 30rem; }
 .hero--landing .spectrum__unit { text-align: center; }
 
@@ -269,9 +271,12 @@
 /* Stat callouts                                                           */
 /* ---------------------------------------------------------------------- */
 .stats {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: var(--space-6);
   grid-template-columns: repeat(2, 1fr);
+  margin-top: var(--space-9);
   padding-block: var(--space-7);
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
@@ -422,11 +427,39 @@
 }
 @media (min-width: 768px) { .compare { grid-template-columns: 1fr 1fr; } }
 .compare__col {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--border-on-contrast);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
 }
-.compare__col--flexycle { border-color: var(--accent); background: rgba(199, 111, 61, 0.08); }
+.compare__col:hover { border-color: var(--accent); transform: translateY(-2px); }
+.compare__col::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(199, 111, 61, 0.22), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--dur-slow) var(--ease-out);
+  pointer-events: none;
+}
+.compare__col:hover::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .compare__col::before { transition: none; }
+}
+.compare__col > * { position: relative; z-index: 1; }
+
+/* "Grain & Patina": conventional stays copper, Flexycle Process shifts to the teal patina end. */
+.compare__col--flexycle {
+  border-color: var(--teal-800);
+  background: rgba(22, 95, 99, 0.08);
+}
+.compare__col--flexycle:hover { border-color: var(--teal-800); }
+.compare__col--flexycle::before {
+  background: radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(22, 95, 99, 0.28), transparent 70%);
+}
 .compare__col h4 { font-size: var(--fs-400); margin-bottom: var(--space-4); }
 .compare__col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); }
 .compare__col li {
@@ -446,6 +479,8 @@
 /* Application tiles / value cards / team cards                            */
 /* ---------------------------------------------------------------------- */
 .tile {
+  position: relative;
+  overflow: hidden;
   padding: var(--space-6);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
@@ -453,6 +488,21 @@
   transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
 }
 .tile:hover { border-color: var(--accent); transform: translateY(-2px); }
+.tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(199, 111, 61, 0.30), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--dur-slow) var(--ease-out);
+  pointer-events: none;
+}
+.tile:hover::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .tile::before { transition: none; }
+}
+.tile__icon, .tile h3, .tile p { position: relative; z-index: 1; }
 .tile__icon { width: 32px; height: 32px; color: var(--structure); margin-bottom: var(--space-4); }
 .tile h3 { font-size: var(--fs-500); margin-bottom: var(--space-3); }
 .tile p { font-size: var(--fs-200); color: var(--text-soft); margin-bottom: 0; }

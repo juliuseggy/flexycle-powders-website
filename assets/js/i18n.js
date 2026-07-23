@@ -34,10 +34,10 @@ window.FLX_I18N = {
       spectrumLabel: "Particle-size spectrum",
       spectrumCta: "See all four grades →",
       stats: [
-        { value: "&gt;0.9", label: "sphericity, Flexycle-AM" },
-        { value: "100%", label: "recycled feedstock" },
-        { value: "5–500", label: "µm particle size range" },
-        { value: "≥99.9%", label: "copper purity, Flexycle-AM" }
+        { value: "&gt;0.9", label: "sphericity" },
+        { value: "100%", label: "regional supply chain" },
+        { value: "10–150", label: "<span style=\"text-transform:none\">µm</span> particle size range" },
+        { value: "Up to 99.95%", label: "copper purity" }
       ],
       process: {
         eyebrow: "The process",
@@ -55,7 +55,7 @@ window.FLX_I18N = {
           ]
         },
         flexycle: {
-          title: "Flexycle mechanical conversion",
+          title: "Flexycle Process",
           items: [
             "Starts from thin copper residues from battery &amp; electronics production",
             "No melting step — mechanical size reduction and classification",
@@ -259,10 +259,10 @@ window.FLX_I18N = {
       spectrumLabel: "Korngrößen-Spektrum",
       spectrumCta: "Alle vier Klassen ansehen →",
       stats: [
-        { value: "&gt;0.9", label: "Sphärizität, Flexycle-AM" },
-        { value: "100%", label: "recycelter Einsatzstoff" },
-        { value: "5–500", label: "µm Korngrößenbereich" },
-        { value: "≥99,9%", label: "Kupferreinheit, Flexycle-AM" }
+        { value: "&gt;0,9", label: "Sphärizität" },
+        { value: "100%", label: "regionale Lieferkette" },
+        { value: "10–150", label: "<span style=\"text-transform:none\">µm</span> Korngrößenbereich" },
+        { value: "Bis zu 99,95%", label: "Kupferreinheit" }
       ],
       process: {
         eyebrow: "Der Prozess",
@@ -280,7 +280,7 @@ window.FLX_I18N = {
           ]
         },
         flexycle: {
-          title: "Flexycle mechanische Umwandlung",
+          title: "Flexycle Process",
           items: [
             "Beginnt bei dünnen Kupferrückständen aus Batterie- und Elektronikfertigung",
             "Kein Schmelzschritt — mechanische Zerkleinerung und Klassierung",

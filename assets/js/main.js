@@ -95,10 +95,21 @@
     });
   }
 
+  function initSpotlightCards() {
+    document.querySelectorAll('.tile, .compare__col').forEach(function (tile) {
+      tile.addEventListener('pointermove', function (e) {
+        var rect = tile.getBoundingClientRect();
+        tile.style.setProperty('--spot-x', (e.clientX - rect.left) + 'px');
+        tile.style.setProperty('--spot-y', (e.clientY - rect.top) + 'px');
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
     initReveal();
     initStats();
     initPrint();
+    initSpotlightCards();
   });
 })();
