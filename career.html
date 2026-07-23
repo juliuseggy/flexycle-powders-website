@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="career.title">Flexycle Powders — Career</title>
+<meta name="description" content="Join the engineering team at Flexycle Powders in Freiberg, Germany — or send an open application.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/print.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Flexycle Powders" class="logo__img"></a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+        <li><a href="company.html" data-i18n="nav.company">Company</a></li>
+        <li><a href="career.html" data-i18n="nav.career" aria-current="page">Career</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="nav__mobile" id="mobile-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <a href="company.html" data-i18n="nav.company">Company</a>
+      <a href="career.html" data-i18n="nav.career">Career</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow" data-i18n="career.eyebrow">Career</p>
+      <h1 data-i18n="career.title">Build the mechanical alternative with us.</h1>
+      <p class="hero__lede" data-i18n="career.lede">We're a small, engineering-led team out of Freiberg. If you don't see an open role but want to work on closed-loop metallurgy, we'd like to hear from you.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 data-reveal data-i18n="career.openTitle">Open applications</h2>
+      <p style="max-width:60ch" data-reveal data-i18n="career.openBody">Tell us about your background and what you'd want to work on — we review every application personally.</p>
+
+      <form class="form" novalidate data-reveal data-mailto="info@flexcyclesolutions.com" data-subject="Open application — Flexycle Powders" style="margin-top:var(--space-6)">
+        <div class="form__row">
+          <label for="career-name" data-i18n="career.form.name">Name</label>
+          <input id="career-name" name="Name" type="text" required data-mail-label="Name">
+          <span class="form__error" data-i18n="career.form.errorRequired">This field is required.</span>
+        </div>
+        <div class="form__row">
+          <label for="career-email" data-i18n="career.form.email">Email</label>
+          <input id="career-email" name="Email" type="email" required data-mail-label="Email">
+          <span class="form__error" data-i18n="career.form.errorEmail">Enter a valid email address.</span>
+        </div>
+        <div class="form__row">
+          <label for="career-phone" data-i18n="career.form.phone">Phone (optional)</label>
+          <input id="career-phone" name="Phone" type="tel" data-mail-label="Phone">
+        </div>
+        <div class="form__row">
+          <label for="career-field" data-i18n="career.form.field">Field of interest</label>
+          <select id="career-field" name="Field of interest" required data-mail-label="Field of interest">
+            <option data-i18n="career.form.fieldOptions.0">Mechanical / process engineering</option>
+            <option data-i18n="career.form.fieldOptions.1">Electrical / electronics</option>
+            <option data-i18n="career.form.fieldOptions.2">Business / operations</option>
+            <option data-i18n="career.form.fieldOptions.3">Other</option>
+          </select>
+        </div>
+        <div class="form__row">
+          <label for="career-message" data-i18n="career.form.message">Message</label>
+          <textarea id="career-message" name="Message" required data-mail-label="Message"></textarea>
+          <span class="form__error" data-i18n="career.form.errorRequired">This field is required.</span>
+        </div>
+        <div class="form__row">
+          <label for="career-cv" data-i18n="career.form.cv">CV / portfolio link (optional)</label>
+          <input id="career-cv" name="CV / portfolio link" type="url" data-mail-label="CV / portfolio link">
+        </div>
+        <div>
+          <button class="btn btn--primary" type="submit" data-i18n="career.form.submit">Send application</button>
+        </div>
+        <p class="form__status form__status--success" role="status" data-i18n="career.form.success">Thanks — your email client should have opened with your application ready to send.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Flexycle Powders" class="logo__img"></a>
+        <p data-i18n="footer.tagline" style="margin-top:var(--space-4)">Recycled copper powder, engineered by grain size.</p>
+        <p style="font-family:var(--font-mono); font-size:var(--fs-100)">
+          <span data-i18n="footer.address">Freiberg, Saxony, Germany</span><br>
+          +49&nbsp;3731&nbsp;39&nbsp;3768<br>
+          <a href="mailto:info@flexcyclesolutions.com">info@flexcyclesolutions.com</a>
+        </p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.explore">Explore</h4>
+        <ul>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="company.html" data-i18n="nav.company">Company</a></li>
+          <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="imprint.html" data-i18n="footer.imprint">Imprint</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Flexycle Powders. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/spectrum.js"></script>
+<script src="assets/js/forms.js"></script>
+</body>
+</html>

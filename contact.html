@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="contact.title">Flexycle Powders — Contact</title>
+<meta name="description" content="Reach the Flexycle Powders team in Freiberg, Germany — general inquiries or a request for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/print.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Flexycle Powders" class="logo__img"></a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+        <li><a href="company.html" data-i18n="nav.company">Company</a></li>
+        <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact" aria-current="page">Contact</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="nav__mobile" id="mobile-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <a href="company.html" data-i18n="nav.company">Company</a>
+      <a href="career.html" data-i18n="nav.career">Career</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+        <h1 data-i18n="contact.title">Talk to the team.</h1>
+        <p class="hero__lede" data-i18n="contact.lede">Questions about a grade, a sample, or a partnership — reach us directly.</p>
+      </div>
+      <div>
+        <h4 data-i18n="contact.infoTitle" style="font-family:var(--font-mono); text-transform:uppercase; font-size:var(--fs-100); letter-spacing:var(--tracking-wide); color:var(--text-soft)">Contact details</h4>
+        <p style="font-size:var(--fs-300)">
+          <span data-i18n="contact.address">Freiberg, Saxony, Germany</span><br>
+          +49&nbsp;3731&nbsp;39&nbsp;3768<br>
+          <a href="mailto:info@flexcyclesolutions.com">info@flexcyclesolutions.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="general">
+    <div class="container">
+      <h2 data-reveal data-i18n="contact.generalTitle">General inquiry</h2>
+      <form class="form" novalidate data-reveal data-mailto="info@flexcyclesolutions.com" data-subject="General inquiry — Flexycle Powders" style="margin-top:var(--space-6)">
+        <div class="form__row">
+          <label for="gen-name" data-i18n="contact.form.name">Name</label>
+          <input id="gen-name" name="Name" type="text" required data-mail-label="Name">
+          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+        </div>
+        <div class="form__row">
+          <label for="gen-company" data-i18n="contact.form.company">Company (optional)</label>
+          <input id="gen-company" name="Company" type="text" data-mail-label="Company">
+        </div>
+        <div class="form__row">
+          <label for="gen-email" data-i18n="contact.form.email">Email</label>
+          <input id="gen-email" name="Email" type="email" required data-mail-label="Email">
+          <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
+        </div>
+        <div class="form__row">
+          <label for="gen-message" data-i18n="contact.form.message">Message</label>
+          <textarea id="gen-message" name="Message" required data-mail-label="Message"></textarea>
+          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+        </div>
+        <div>
+          <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitGeneral">Send message</button>
+        </div>
+        <p class="form__status form__status--success" role="status" data-i18n="contact.form.successGeneral">Thanks — your email client should have opened with your message ready to send.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="quote" class="section-alt">
+    <div class="container">
+      <h2 data-reveal data-i18n="contact.quoteTitle">Request a quote</h2>
+      <form class="form" novalidate data-reveal data-mailto="info@flexcyclesolutions.com" data-subject="Quote request — Flexycle Powders" style="margin-top:var(--space-6)">
+        <div class="form__row">
+          <label for="q-name" data-i18n="contact.form.name">Name</label>
+          <input id="q-name" name="Name" type="text" required data-mail-label="Name">
+          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+        </div>
+        <div class="form__row">
+          <label for="q-company" data-i18n="contact.form.companyRequired">Company</label>
+          <input id="q-company" name="Company" type="text" required data-mail-label="Company">
+          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+        </div>
+        <div class="form__row">
+          <label for="q-email" data-i18n="contact.form.email">Email</label>
+          <input id="q-email" name="Email" type="email" required data-mail-label="Email">
+          <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
+        </div>
+        <div class="form__row">
+          <label for="q-grade" data-i18n="contact.form.grade">Grade of interest</label>
+          <select id="q-grade" name="Grade of interest" required data-mail-label="Grade of interest">
+            <option data-i18n="contact.form.gradeOptions.0">Flexycle-Si</option>
+            <option data-i18n="contact.form.gradeOptions.1">Flexycle-AM</option>
+            <option data-i18n="contact.form.gradeOptions.2">Flexycle-PM</option>
+            <option data-i18n="contact.form.gradeOptions.3">Flexycle-G</option>
+            <option data-i18n="contact.form.gradeOptions.4">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form__row">
+          <label for="q-quantity" data-i18n="contact.form.quantity">Estimated quantity</label>
+          <input id="q-quantity" name="Estimated quantity" type="text" data-mail-label="Estimated quantity">
+        </div>
+        <div class="form__row">
+          <label for="q-message" data-i18n="contact.form.message">Message</label>
+          <textarea id="q-message" name="Message" data-mail-label="Message"></textarea>
+        </div>
+        <div>
+          <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitQuote">Request quote</button>
+        </div>
+        <p class="form__status form__status--success" role="status" data-i18n="contact.form.successQuote">Thanks — your email client should have opened with your request ready to send.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="Flexycle Powders" class="logo__img"></a>
+        <p data-i18n="footer.tagline" style="margin-top:var(--space-4)">Recycled copper powder, engineered by grain size.</p>
+        <p style="font-family:var(--font-mono); font-size:var(--fs-100)">
+          <span data-i18n="footer.address">Freiberg, Saxony, Germany</span><br>
+          +49&nbsp;3731&nbsp;39&nbsp;3768<br>
+          <a href="mailto:info@flexcyclesolutions.com">info@flexcyclesolutions.com</a>
+        </p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.explore">Explore</h4>
+        <ul>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="company.html" data-i18n="nav.company">Company</a></li>
+          <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="imprint.html" data-i18n="footer.imprint">Imprint</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Flexycle Powders. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/spectrum.js"></script>
+<script src="assets/js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Flexycle Powders — Design Tokens
+   "Grain & Patina": copper oxidises to a teal patina — the brand's own
+   colour pair is a real material process, used here as the single
+   recurring accent gradient rather than a decorative flourish.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand colour palette (carried over from the reference material) ---- */
+  --dark: #0E2E30;
+  --dark-900: #0A2426;
+  --dark-800: #12393C;
+  --teal-800: #165F63;
+  --teal: #5EA298;
+  --teal-300: #6FA7A1;
+  --teal-line: #1E4A4E;
+  --teal-200: #9DC0BC;
+  --copper: #C76F3D;
+  --copper-hover: #B5632F;
+  --orange: #E28A4A;
+  --orange-300: #E8A876;
+  --cream: #F4F2EC;
+  --paper: #FBFAF8;
+  --paper-alt: #F0EEE9;
+  --ink: #0E2E30;
+  --ink-700: #2B3938;
+  --ink-600: #41504F;
+  --sage: #AFC2C0;
+  --sage-300: #8AA0A0;
+  --sage-400: #BFDBD7;
+  --sage-500: #6E8A88;
+  --sage-200: #8FB0AC;
+
+  /* ---- Semantic roles ----
+     Dark-first: the page body is dark (--bg). ".section-contrast" is a
+     deliberate light "island" used sparingly to break up the page — the
+     inverse of what it meant in a light-first scheme, same mechanism. */
+  --bg: var(--dark-900);
+  --bg-alt: var(--dark-800);
+  --bg-raised: var(--dark-800);
+  --bg-deep: var(--dark-900);
+  --bg-contrast: var(--paper);
+  --bg-contrast-alt: var(--cream);
+
+  --text: var(--paper);
+  --text-soft: var(--teal-200);
+  --text-on-contrast: var(--ink);
+  --text-on-contrast-soft: var(--ink-600);
+
+  --accent: var(--copper);
+  --accent-hover: var(--copper-hover);
+  --accent-soft: var(--orange-300);
+  --structure: var(--teal-300);
+  --structure-soft: var(--teal-200);
+
+  --border: rgba(157, 192, 188, 0.25);
+  --border-soft: rgba(157, 192, 188, 0.16);
+  --border-on-contrast: var(--sage);
+
+  /* The single signature gradient: raw copper oxidising into teal patina. */
+  --gradient-patina: linear-gradient(90deg, var(--copper) 0%, var(--orange) 22%, var(--teal-300) 62%, var(--teal-800) 100%);
+
+  /* ---- Typography ---- */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --fs-100: 0.8125rem;   /* 13px — captions, eyebrows, units */
+  --fs-200: 0.9375rem;   /* 15px — small body */
+  --fs-300: 1rem;        /* 16px — body */
+  --fs-400: 1.125rem;    /* 18px — lead paragraphs */
+  --fs-500: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);   /* h4 */
+  --fs-600: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);    /* h3 */
+  --fs-700: clamp(2.25rem, 1.8rem + 2vw, 3rem);         /* h2 */
+  --fs-800: clamp(2.75rem, 2rem + 3.2vw, 4.25rem);      /* h1 */
+  --fs-900: clamp(3.25rem, 2.2rem + 4.8vw, 5.75rem);    /* hero display */
+
+  --lh-tight: 1.08;
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.08em;
+  --tracking-label: 0.14em;
+
+  /* ---- Spacing scale (8px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---- Layout ---- */
+  --container-max: 76rem; /* 1216px */
+  --container-pad: var(--space-5);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* ---- Elevation (kept hairline/technical, no soft drop-shadows) ---- */
+  --shadow-card: 0 1px 0 rgba(14, 46, 48, 0.06), 0 8px 24px rgba(14, 46, 48, 0.06);
+  --shadow-raised: 0 12px 32px rgba(14, 46, 48, 0.12);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 500ms;
+
+  --z-nav: 100;
+  --z-overlay: 200;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}
