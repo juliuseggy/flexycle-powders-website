@@ -67,79 +67,81 @@
     </div>
   </section>
 
-  <section id="general">
-    <div class="container">
-      <h2 data-reveal data-i18n="contact.generalTitle">General inquiry</h2>
-      <form class="form" novalidate data-reveal data-mailto="info@flexcyclesolutions.com" data-subject="General inquiry — Flexycle Powders" style="margin-top:var(--space-6)">
-        <div class="form__row">
-          <label for="gen-name" data-i18n="contact.form.name">Name</label>
-          <input id="gen-name" name="Name" type="text" required data-mail-label="Name">
-          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+  <section>
+    <div class="container" data-blur-group>
+      <div class="grid grid-2" style="align-items:start">
+        <div id="general">
+          <h2 class="blur-fade" data-i18n="contact.generalTitle">General inquiry</h2>
+          <form class="form blur-fade" novalidate data-mailto="info@flexcyclesolutions.com" data-subject="General inquiry — Flexycle Powders" style="margin-top:var(--space-6)">
+            <div class="form__row">
+              <label for="gen-name" data-i18n="contact.form.name">Name</label>
+              <input id="gen-name" name="Name" type="text" required data-mail-label="Name">
+              <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+            </div>
+            <div class="form__row">
+              <label for="gen-company" data-i18n="contact.form.company">Company (optional)</label>
+              <input id="gen-company" name="Company" type="text" data-mail-label="Company">
+            </div>
+            <div class="form__row">
+              <label for="gen-email" data-i18n="contact.form.email">Email</label>
+              <input id="gen-email" name="Email" type="email" required data-mail-label="Email">
+              <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
+            </div>
+            <div class="form__row">
+              <label for="gen-message" data-i18n="contact.form.message">Message</label>
+              <textarea id="gen-message" name="Message" required data-mail-label="Message"></textarea>
+              <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+            </div>
+            <div>
+              <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitGeneral">Send message</button>
+            </div>
+            <p class="form__status form__status--success" role="status" data-i18n="contact.form.successGeneral">Thanks — your email client should have opened with your message ready to send.</p>
+          </form>
         </div>
-        <div class="form__row">
-          <label for="gen-company" data-i18n="contact.form.company">Company (optional)</label>
-          <input id="gen-company" name="Company" type="text" data-mail-label="Company">
-        </div>
-        <div class="form__row">
-          <label for="gen-email" data-i18n="contact.form.email">Email</label>
-          <input id="gen-email" name="Email" type="email" required data-mail-label="Email">
-          <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
-        </div>
-        <div class="form__row">
-          <label for="gen-message" data-i18n="contact.form.message">Message</label>
-          <textarea id="gen-message" name="Message" required data-mail-label="Message"></textarea>
-          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
-        </div>
-        <div>
-          <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitGeneral">Send message</button>
-        </div>
-        <p class="form__status form__status--success" role="status" data-i18n="contact.form.successGeneral">Thanks — your email client should have opened with your message ready to send.</p>
-      </form>
-    </div>
-  </section>
 
-  <section id="quote" class="section-alt">
-    <div class="container">
-      <h2 data-reveal data-i18n="contact.quoteTitle">Request a quote</h2>
-      <form class="form" novalidate data-reveal data-mailto="info@flexcyclesolutions.com" data-subject="Quote request — Flexycle Powders" style="margin-top:var(--space-6)">
-        <div class="form__row">
-          <label for="q-name" data-i18n="contact.form.name">Name</label>
-          <input id="q-name" name="Name" type="text" required data-mail-label="Name">
-          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+        <div id="quote" class="contact-forms__quote">
+          <h2 class="blur-fade" data-i18n="contact.quoteTitle">Request a quote</h2>
+          <form class="form blur-fade" novalidate data-mailto="info@flexcyclesolutions.com" data-subject="Quote request — Flexycle Powders" style="margin-top:var(--space-6)">
+            <div class="form__row">
+              <label for="q-name" data-i18n="contact.form.name">Name</label>
+              <input id="q-name" name="Name" type="text" required data-mail-label="Name">
+              <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+            </div>
+            <div class="form__row">
+              <label for="q-company" data-i18n="contact.form.companyRequired">Company</label>
+              <input id="q-company" name="Company" type="text" required data-mail-label="Company">
+              <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
+            </div>
+            <div class="form__row">
+              <label for="q-email" data-i18n="contact.form.email">Email</label>
+              <input id="q-email" name="Email" type="email" required data-mail-label="Email">
+              <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
+            </div>
+            <div class="form__row">
+              <label for="q-grade" data-i18n="contact.form.grade">Grade of interest</label>
+              <select id="q-grade" name="Grade of interest" required data-mail-label="Grade of interest">
+                <option data-i18n="contact.form.gradeOptions.0">Flexycle-Si</option>
+                <option data-i18n="contact.form.gradeOptions.1">Flexycle-AM</option>
+                <option data-i18n="contact.form.gradeOptions.2">Flexycle-PM</option>
+                <option data-i18n="contact.form.gradeOptions.3">Flexycle-G</option>
+                <option data-i18n="contact.form.gradeOptions.4">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form__row">
+              <label for="q-quantity" data-i18n="contact.form.quantity">Estimated quantity</label>
+              <input id="q-quantity" name="Estimated quantity" type="text" data-mail-label="Estimated quantity">
+            </div>
+            <div class="form__row">
+              <label for="q-message" data-i18n="contact.form.message">Message</label>
+              <textarea id="q-message" name="Message" data-mail-label="Message"></textarea>
+            </div>
+            <div>
+              <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitQuote">Request quote</button>
+            </div>
+            <p class="form__status form__status--success" role="status" data-i18n="contact.form.successQuote">Thanks — your email client should have opened with your request ready to send.</p>
+          </form>
         </div>
-        <div class="form__row">
-          <label for="q-company" data-i18n="contact.form.companyRequired">Company</label>
-          <input id="q-company" name="Company" type="text" required data-mail-label="Company">
-          <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
-        </div>
-        <div class="form__row">
-          <label for="q-email" data-i18n="contact.form.email">Email</label>
-          <input id="q-email" name="Email" type="email" required data-mail-label="Email">
-          <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
-        </div>
-        <div class="form__row">
-          <label for="q-grade" data-i18n="contact.form.grade">Grade of interest</label>
-          <select id="q-grade" name="Grade of interest" required data-mail-label="Grade of interest">
-            <option data-i18n="contact.form.gradeOptions.0">Flexycle-Si</option>
-            <option data-i18n="contact.form.gradeOptions.1">Flexycle-AM</option>
-            <option data-i18n="contact.form.gradeOptions.2">Flexycle-PM</option>
-            <option data-i18n="contact.form.gradeOptions.3">Flexycle-G</option>
-            <option data-i18n="contact.form.gradeOptions.4">Not sure yet</option>
-          </select>
-        </div>
-        <div class="form__row">
-          <label for="q-quantity" data-i18n="contact.form.quantity">Estimated quantity</label>
-          <input id="q-quantity" name="Estimated quantity" type="text" data-mail-label="Estimated quantity">
-        </div>
-        <div class="form__row">
-          <label for="q-message" data-i18n="contact.form.message">Message</label>
-          <textarea id="q-message" name="Message" data-mail-label="Message"></textarea>
-        </div>
-        <div>
-          <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitQuote">Request quote</button>
-        </div>
-        <p class="form__status form__status--success" role="status" data-i18n="contact.form.successQuote">Thanks — your email client should have opened with your request ready to send.</p>
-      </form>
+      </div>
     </div>
   </section>
 

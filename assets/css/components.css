@@ -552,15 +552,15 @@
   align-items: flex-start;
   gap: var(--space-8);
 }
-.team-showcase__photos { display: flex; gap: var(--space-4); flex-shrink: 0; }
+.team-showcase__photos { display: flex; gap: var(--space-5); flex-shrink: 0; }
 .team-showcase__col { display: flex; flex-direction: column; gap: var(--space-5); }
 /* 2x2 matrix with equal spacing within each column; the TK/PN column shifts
    up as a whole unit, giving an irregular offset rather than an aligned grid. */
-.team-showcase__col--2 { margin-top: calc(var(--space-5) * -1); }
+.team-showcase__col--2 { margin-top: -32px; }
 
 .team-showcase__photo {
-  width: 150px;
-  height: 160px;
+  width: 200px;
+  height: 215px;
   border-radius: var(--radius-lg);
   background: var(--gradient-patina);
   position: relative;
@@ -577,7 +577,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: var(--fs-500);
+  font-size: var(--fs-600);
   color: rgba(251, 250, 248, 0.92);
   font-weight: 700;
 }
@@ -631,14 +631,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   border-radius: var(--radius-sm);
   color: var(--text-soft);
   transition: color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
 }
 .team-showcase__social:hover { color: var(--text); background: rgba(251, 250, 248, 0.12); }
-.team-showcase__social svg { width: 13px; height: 13px; }
+.team-showcase__social svg { width: 18px; height: 18px; }
 .team-showcase__role {
   display: block;
   margin: var(--space-2) 0 0 calc(16px + var(--space-3));
@@ -661,19 +661,86 @@
 
 /* ---------------------------------------------------------------------- */
 /* Morphology glyphs (generative, factual: derived from real spec values)  */
+/* Always used as a tilt-card's full-bleed background (see below) — sized   */
+/* to fill its parent rather than standing alone as a bordered square.      */
 /* ---------------------------------------------------------------------- */
 .morph-glyph {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 1;
-  border-radius: var(--radius-lg);
+  height: 100%;
   background: var(--bg-alt);
-  border: 1px solid var(--border-soft);
 }
 .morph-glyph circle, .morph-glyph polygon, .morph-glyph rect { fill: var(--structure); }
 .morph-glyph--si circle { fill: var(--copper); }
 .morph-glyph--am circle { fill: var(--orange); }
 .morph-glyph--pm polygon { fill: var(--teal-300); }
 .morph-glyph--g rect { fill: var(--teal-800); }
+
+/* ---------------------------------------------------------------------- */
+/* Product tilt card — mouse-reactive 3D tilt, morphology glyph as the      */
+/* full-bleed backdrop, headline particle-size spec as the standout tag.    */
+/* Adapted from a pasted React/Tailwind "InteractiveProductCard" prompt:    */
+/* same 3D-tilt-on-mousemove interaction and glass-header/tag/dots layout,  */
+/* rebuilt in plain CSS/JS (initTiltCards in main.js) with the product's    */
+/* own morphology-glyph art instead of stock photography, and the dots      */
+/* repurposed to mark this grade's position among the four (Si→AM→PM→G).   */
+/* ---------------------------------------------------------------------- */
+.tilt-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: transform 400ms var(--ease-out);
+}
+.tilt-card__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 36, 38, 0.92) 0%, rgba(10, 36, 38, 0.4) 55%, transparent 100%);
+}
+.tilt-card__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5);
+}
+.tilt-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(251, 250, 248, 0.16);
+  background: rgba(251, 250, 248, 0.07);
+  backdrop-filter: blur(10px);
+}
+.tilt-card__title { font-size: var(--fs-500); color: var(--text); margin: 0; }
+.tilt-card__tagline { font-size: var(--fs-100); color: rgba(251, 250, 248, 0.72); margin: var(--space-1) 0 0; }
+.tilt-card__mark { width: 26px; height: auto; flex-shrink: 0; }
+.tilt-card__tag {
+  align-self: flex-start;
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  background: rgba(10, 36, 38, 0.6);
+  backdrop-filter: blur(6px);
+  font-family: var(--font-mono);
+  font-size: var(--fs-200);
+  font-weight: 600;
+  color: var(--text);
+}
+.tilt-card__dots { margin-top: auto; display: flex; justify-content: center; gap: var(--space-2); padding-top: var(--space-4); }
+.tilt-card__dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(251, 250, 248, 0.3); }
+.tilt-card__dots span.is-active { background: var(--text); }
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card { transition: none; }
+}
 
 /* ---------------------------------------------------------------------- */
 /* Spec table (datasheet)                                                  */
@@ -722,6 +789,12 @@
 /* ---------------------------------------------------------------------- */
 /* Forms                                                                    */
 /* ---------------------------------------------------------------------- */
+/* Contact page: general-inquiry and quote forms sit side by side (contact.html
+   wraps both in .grid.grid-2) — a vertical rule replaces the old alternating
+   full-width section backgrounds as the visual separator between them. */
+@media (min-width: 768px) {
+  .contact-forms__quote { padding-left: var(--space-8); border-left: 1px solid var(--border-soft); }
+}
 .form { display: grid; gap: var(--space-5); max-width: 40rem; }
 .form__row { display: grid; gap: var(--space-2); }
 .form__row label {

@@ -50,6 +50,10 @@
     // Negative bottom margin (unlike initReveal's +200px pre-trigger): the
     // section must actually be scrolled into view before it settles, so the
     // effect is seen happening rather than already resolved on page load.
+    // threshold 0.12 (not 0) matters for tall elements like the contact/career
+    // forms: with threshold 0, a form mostly below the fold still counts as
+    // "intersecting" the instant its top edge alone pokes above the -15%
+    // line, resolving it before the visitor scrolls far enough to see it.
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -57,7 +61,7 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0, rootMargin: '0px 0px -15% 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -15% 0px' });
     els.forEach(function (el) { io.observe(el); });
   }
 
@@ -124,6 +128,27 @@
     });
   }
 
+  // Product tilt cards (products.html): mouse-reactive 3D tilt, ported from
+  // a pasted React component's pointer-tracked rotateX/rotateY handlers.
+  function initTiltCards() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.tilt-card').forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var rotateX = ((y - rect.height / 2) / (rect.height / 2)) * -8;
+        var rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 8;
+        card.style.transition = 'transform 100ms ease-out';
+        card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) scale3d(1.03, 1.03, 1.03)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transition = 'transform 400ms ease-in-out';
+        card.style.transform = '';
+      });
+    });
+  }
+
   function initSpotlightCards() {
     document.querySelectorAll('.tile, .compare__col').forEach(function (tile) {
       tile.addEventListener('pointermove', function (e) {
@@ -176,5 +201,6 @@
     initPrint();
     initSpotlightCards();
     initTeamShowcase();
+    initTiltCards();
   });
 })();

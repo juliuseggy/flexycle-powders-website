@@ -16,6 +16,7 @@
   }
 
   body { background: #FFFFFF; color: #0E2E30; font-size: 11pt; }
+  h1, h2, h3, h4, h5 { color: #0E2E30 !important; }
 
   .site-header, .site-footer, .nav__mobile, .hero, .spectrum,
   .stats, .no-print, .btn, .lang-switch { display: none !important; }
@@ -51,6 +52,8 @@
   [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
   .product-section__grid { grid-template-columns: 1fr 1fr !important; display: grid !important; }
   .morph-glyph { border: 1px solid #ccc; }
+  .tilt-card { box-shadow: none; aspect-ratio: 1; }
+  .tilt-card__scrim, .tilt-card__content { display: none !important; }
   .spec-table th, .spec-table td { border-bottom: 1px solid #ccc; color: #0E2E30; }
   a { color: #0E2E30; text-decoration: none; }
 }
