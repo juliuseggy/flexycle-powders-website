@@ -554,10 +554,9 @@
 }
 .team-showcase__photos { display: flex; gap: var(--space-4); flex-shrink: 0; }
 .team-showcase__col { display: flex; flex-direction: column; gap: var(--space-5); }
-/* 2x2 matrix, but row 2 pulled up by a different amount in each column —
-   an irregular offset rather than a perfectly aligned grid. */
-.team-showcase__col--1 .team-showcase__photo:nth-child(2) { margin-top: -14px; }
-.team-showcase__col--2 .team-showcase__photo:nth-child(2) { margin-top: -32px; }
+/* 2x2 matrix with equal spacing within each column; the TK/PN column shifts
+   up as a whole unit, giving an irregular offset rather than an aligned grid. */
+.team-showcase__col--2 { margin-top: calc(var(--space-5) * -1); }
 
 .team-showcase__photo {
   width: 150px;
