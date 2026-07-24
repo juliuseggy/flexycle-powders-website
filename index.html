@@ -69,14 +69,12 @@
   </section>
 
   <section class="section-contrast">
-    <div class="container">
-      <div data-reveal>
-        <p class="eyebrow" data-i18n="home.process.eyebrow">The process</p>
-        <h2 data-i18n="home.process.title">Mechanical conversion, not melt atomisation.</h2>
-        <p class="hero__lede" data-i18n="home.process.lede" style="color:var(--text-on-contrast-soft)">Conventional copper powder is made by melting virgin cathode and atomising it with gas or water — an energy-intensive route that starts from primary metal. Flexycle takes thin metallic residues already close to the right form factor and refines them mechanically into calibrated powder.</p>
-      </div>
-      <div class="compare" data-reveal>
-        <div class="compare__col">
+    <div class="container" data-blur-group>
+      <p class="eyebrow blur-fade" data-i18n="home.process.eyebrow">The process</p>
+      <h2 class="blur-fade" data-i18n="home.process.title">Mechanical conversion, not melt atomisation.</h2>
+      <p class="hero__lede blur-fade" data-i18n="home.process.lede" style="color:var(--text-on-contrast-soft)">Conventional copper powder is made by melting virgin cathode and atomising it with gas or water — an energy-intensive route that starts from primary metal. Flexycle takes thin metallic residues already close to the right form factor and refines them mechanically into calibrated powder.</p>
+      <div class="compare">
+        <div class="compare__col blur-fade">
           <h4 data-i18n="home.compare.conventional.title">Conventional atomisation</h4>
           <ul>
             <li data-i18n="home.compare.conventional.items.0">Starts from virgin cathode copper</li>
@@ -85,7 +83,7 @@
             <li data-i18n="home.compare.conventional.items.3">Fixed morphology, limited grade differentiation</li>
           </ul>
         </div>
-        <div class="compare__col compare__col--flexycle">
+        <div class="compare__col compare__col--flexycle blur-fade">
           <h4 data-i18n="home.compare.flexycle.title">Flexycle mechanical conversion</h4>
           <ul>
             <li data-i18n-html="home.compare.flexycle.items.0">Starts from thin copper residues from battery &amp; electronics production</li>
@@ -99,31 +97,31 @@
   </section>
 
   <section>
-    <div class="container">
-      <h2 data-reveal data-i18n="home.applications.title">Where Flexycle powder goes to work</h2>
+    <div class="container" data-blur-group>
+      <h2 class="blur-fade" data-i18n="home.applications.title">Where Flexycle powder goes to work</h2>
       <div class="grid grid-4" style="margin-top:var(--space-7)">
-        <article class="tile" data-reveal>
+        <article class="tile blur-fade">
           <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 3l8 4-8 4-8-4 8-4z"/><path d="M4 11l8 4 8-4"/><path d="M4 15l8 4 8-4"/>
           </svg>
           <h3 data-i18n="home.applications.items.0.title">Additive manufacturing</h3>
           <p data-i18n="home.applications.items.0.desc">Highly spherical Flexycle-AM feeds LPBF and DED systems for dense, pure-copper parts.</p>
         </article>
-        <article class="tile" data-reveal>
+        <article class="tile blur-fade">
           <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="9" y="9" width="6" height="6"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/>
           </svg>
           <h3 data-i18n="home.applications.items.1.title">Electronics</h3>
           <p data-i18n="home.applications.items.1.desc">Flexycle-Si sinters into fine conductive structures and components.</p>
         </article>
-        <article class="tile" data-reveal>
+        <article class="tile blur-fade">
           <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="7" width="17" height="10" rx="1.5"/><path d="M21 10v4M6 10v4M10 10v4"/>
           </svg>
           <h3 data-i18n="home.applications.items.2.title">Battery technology</h3>
           <p data-i18n="home.applications.items.2.desc">Production residues from battery manufacturing become feedstock again, closing the loop.</p>
         </article>
-        <article class="tile" data-reveal>
+        <article class="tile blur-fade">
           <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M4 4v16M9 4v16M14 4v16M19 4v16"/><path d="M4 9h15M4 15h15" stroke-opacity="0.4"/>
           </svg>
@@ -135,9 +133,9 @@
   </section>
 
   <section class="section-alt">
-    <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:var(--space-6)">
-      <h2 style="margin:0" data-i18n="home.cta.title">Get a sample sized to your process.</h2>
-      <a class="btn btn--primary" href="contact.html#quote" data-i18n="home.cta.button">Request a quote</a>
+    <div class="container" data-blur-group style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:var(--space-6)">
+      <h2 class="blur-fade" style="margin:0" data-i18n="home.cta.title">Get a sample sized to your process.</h2>
+      <a class="btn btn--primary blur-fade" href="contact.html#quote" data-i18n="home.cta.button">Request a quote</a>
     </div>
   </section>
 
@@ -181,8 +179,7 @@
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/spectrum.js"></script>
-<script src="assets/js/forms.js"></script>
-<script src="assets/js/hero-grain.js"></script>
+<script src="assets/js/forms.js"></script><script src="assets/js/hero-grain.js"></script>
 <script type="module">
 /* Flexycle Powders — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven

@@ -40,6 +40,27 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  function initBlurFade() {
+    var els = document.querySelectorAll('.blur-fade');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    // Negative bottom margin (unlike initReveal's +200px pre-trigger): the
+    // section must actually be scrolled into view before it settles, so the
+    // effect is seen happening rather than already resolved on page load.
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -15% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
   function countUp(el) {
     var text = el.textContent;
     var match = text.match(/(\d+(?:[.,]\d+)?)/);
@@ -95,6 +116,14 @@
     });
   }
 
+  function initBlurFadeStagger() {
+    document.querySelectorAll('[data-blur-group]').forEach(function (group) {
+      group.querySelectorAll('.blur-fade').forEach(function (el, i) {
+        el.style.setProperty('--reveal-delay', (i * 90) + 'ms');
+      });
+    });
+  }
+
   function initSpotlightCards() {
     document.querySelectorAll('.tile, .compare__col').forEach(function (tile) {
       tile.addEventListener('pointermove', function (e) {
@@ -105,11 +134,47 @@
     });
   }
 
+  // Team showcase (company page): a photo and its name row share a
+  // data-member value despite living in separate branches of the DOM, so
+  // hovering either one highlights both — mirrors the pattern's original
+  // hoveredId state, just done via matching data attributes instead.
+  function initTeamShowcase() {
+    var showcase = document.querySelector('.team-showcase');
+    if (!showcase) return;
+    var nodes = showcase.querySelectorAll('[data-member]');
+    if (!nodes.length) return;
+
+    function setActive(id) {
+      nodes.forEach(function (el) {
+        var isMatch = el.getAttribute('data-member') === id;
+        el.classList.toggle('is-active', !!id && isMatch);
+        el.classList.toggle('is-dimmed', !!id && !isMatch);
+      });
+    }
+
+    nodes.forEach(function (el) {
+      var id = el.getAttribute('data-member');
+      el.addEventListener('mouseenter', function () { setActive(id); });
+      el.addEventListener('mouseleave', function () { setActive(null); });
+      el.addEventListener('focus', function () { setActive(id); });
+      el.addEventListener('blur', function () { setActive(null); });
+    });
+
+    // Mail/LinkedIn are placeholder (href="#") until real per-person links
+    // exist — swallow the click instead of jumping to the top of the page.
+    showcase.querySelectorAll('.team-showcase__social').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
+    initBlurFadeStagger();
     initReveal();
+    initBlurFade();
     initStats();
     initPrint();
     initSpotlightCards();
+    initTeamShowcase();
   });
 })();

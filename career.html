@@ -62,24 +62,31 @@
       <h2 data-reveal data-i18n="career.openTitle">Open applications</h2>
       <p style="max-width:60ch" data-reveal data-i18n="career.openBody">Tell us about your background and what you'd want to work on — we review every application personally.</p>
 
-      <form class="form" novalidate data-reveal data-mailto="info@flexcyclesolutions.com" data-subject="Open application — Flexycle Powders" style="margin-top:var(--space-6)">
+      <form class="form" novalidate data-reveal data-web3forms
+            action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data"
+            target="career-submit-frame"
+            style="margin-top:var(--space-6)">
+        <!-- Replace with the real key from https://web3forms.com (free — enter an email, it's mailed to you). -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="Open application — Flexycle Powders">
+        <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off">
         <div class="form__row">
           <label for="career-name" data-i18n="career.form.name">Name</label>
-          <input id="career-name" name="Name" type="text" required data-mail-label="Name">
+          <input id="career-name" name="Name" type="text" required>
           <span class="form__error" data-i18n="career.form.errorRequired">This field is required.</span>
         </div>
         <div class="form__row">
           <label for="career-email" data-i18n="career.form.email">Email</label>
-          <input id="career-email" name="Email" type="email" required data-mail-label="Email">
+          <input id="career-email" name="Email" type="email" required>
           <span class="form__error" data-i18n="career.form.errorEmail">Enter a valid email address.</span>
         </div>
         <div class="form__row">
           <label for="career-phone" data-i18n="career.form.phone">Phone (optional)</label>
-          <input id="career-phone" name="Phone" type="tel" data-mail-label="Phone">
+          <input id="career-phone" name="Phone" type="tel">
         </div>
         <div class="form__row">
           <label for="career-field" data-i18n="career.form.field">Field of interest</label>
-          <select id="career-field" name="Field of interest" required data-mail-label="Field of interest">
+          <select id="career-field" name="Field of interest" required>
             <option data-i18n="career.form.fieldOptions.0">Mechanical / process engineering</option>
             <option data-i18n="career.form.fieldOptions.1">Electrical / electronics</option>
             <option data-i18n="career.form.fieldOptions.2">Business / operations</option>
@@ -88,18 +95,29 @@
         </div>
         <div class="form__row">
           <label for="career-message" data-i18n="career.form.message">Message</label>
-          <textarea id="career-message" name="Message" required data-mail-label="Message"></textarea>
+          <textarea id="career-message" name="Message" required></textarea>
           <span class="form__error" data-i18n="career.form.errorRequired">This field is required.</span>
         </div>
         <div class="form__row">
-          <label for="career-cv" data-i18n="career.form.cv">CV / portfolio link (optional)</label>
-          <input id="career-cv" name="CV / portfolio link" type="url" data-mail-label="CV / portfolio link">
+          <label for="career-cv" data-i18n="career.form.cv">CV / Resume (optional)</label>
+          <input id="career-cv" name="CV / Resume" type="file" accept=".pdf,.doc,.docx">
+          <span class="form__hint" data-i18n="career.form.cvHint">PDF or Word document, up to 5 MB.</span>
+        </div>
+        <div class="form__row">
+          <label for="career-portfolio" data-i18n="career.form.portfolio">Portfolio link (optional)</label>
+          <input id="career-portfolio" name="Portfolio link" type="url">
         </div>
         <div>
           <button class="btn btn--primary" type="submit" data-i18n="career.form.submit">Send application</button>
         </div>
-        <p class="form__status form__status--success" role="status" data-i18n="career.form.success">Thanks — your email client should have opened with your application ready to send.</p>
+        <p class="form__status form__status--success" role="status" data-i18n="career.form.success">Thanks — your application has been sent. We'll get back to you soon.</p>
+        <p class="form__status form__status--error" role="status" data-i18n="career.form.error">Something went wrong sending your application — please email us directly at info@flexcyclesolutions.com instead.</p>
       </form>
+      <!-- Submission target: a plain form POST into a hidden iframe isn't
+           subject to CORS (unlike fetch), which matters because Web3Forms
+           sends no CORS header for a null origin — i.e. when this page is
+           opened directly via file://. See forms.js initWeb3Form(). -->
+      <iframe name="career-submit-frame" class="visually-hidden" title="Form submission target" aria-hidden="true" tabindex="-1"></iframe>
     </div>
   </section>
 

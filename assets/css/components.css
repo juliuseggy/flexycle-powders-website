@@ -418,6 +418,40 @@
 }
 
 /* ---------------------------------------------------------------------- */
+/* Blur-fade reveal (landing page sections)                                */
+/* Elements start blurred/dropped/transparent and settle into place as     */
+/* they cross the viewport edge. --reveal-delay staggers siblings sharing  */
+/* a [data-blur-group] ancestor, set in main.js by document order — same   */
+/* convention as the spectrum bands' --reveal-delay in spectrum.js.        */
+/* Declared ahead of .tile/.compare__col so their :hover lift (equal       */
+/* specificity, transform) still wins the cascade once revealed.           */
+/* ---------------------------------------------------------------------- */
+.blur-fade {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(10px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              filter var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.blur-fade.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: none;
+}
+/* .tile/.compare__col each declare their own hover `transition` shorthand;
+   at equal specificity it would replace blur-fade's list wholesale (losing
+   the opacity/filter animation). Higher-specificity merge keeps both. */
+.tile.blur-fade,
+.compare__col.blur-fade {
+  transition: opacity var(--dur-slow) var(--ease-out),
+              filter var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out);
+}
+
+/* ---------------------------------------------------------------------- */
 /* Comparison block (mechanical vs. melt-based)                            */
 /* ---------------------------------------------------------------------- */
 .compare {
@@ -507,17 +541,36 @@
 .tile h3 { font-size: var(--fs-500); margin-bottom: var(--space-3); }
 .tile p { font-size: var(--fs-200); color: var(--text-soft); margin-bottom: 0; }
 
-.team-card { text-align: left; }
-.team-card__avatar {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+/* ---------------------------------------------------------------------- */
+/* Team showcase (company page) — staggered photo cascade + linked list.   */
+/* Hovering either a photo or a name row highlights that person in both;   */
+/* main.js links them via matching data-member values (see initTeamShowcase). */
+/* ---------------------------------------------------------------------- */
+.team-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-8);
+}
+.team-showcase__photos { display: flex; gap: var(--space-4); flex-shrink: 0; }
+.team-showcase__col { display: flex; flex-direction: column; gap: var(--space-5); }
+/* 2x2 matrix, but row 2 pulled up by a different amount in each column —
+   an irregular offset rather than a perfectly aligned grid. */
+.team-showcase__col--1 .team-showcase__photo:nth-child(2) { margin-top: -14px; }
+.team-showcase__col--2 .team-showcase__photo:nth-child(2) { margin-top: -32px; }
+
+.team-showcase__photo {
+  width: 150px;
+  height: 160px;
   border-radius: var(--radius-lg);
   background: var(--gradient-patina);
-  margin-bottom: var(--space-4);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  filter: grayscale(1) brightness(0.75);
+  transition: filter var(--dur-slow) var(--ease-out), opacity var(--dur-base) var(--ease-out);
 }
-.team-card__avatar::after {
+.team-showcase__photo::after {
   content: attr(data-initials);
   position: absolute;
   inset: 0;
@@ -525,13 +578,87 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: var(--fs-700);
+  font-size: var(--fs-500);
   color: rgba(251, 250, 248, 0.92);
   font-weight: 700;
 }
-.team-card h3 { font-size: var(--fs-400); margin-bottom: var(--space-1); }
-.team-card__role { font-family: var(--font-mono); font-size: var(--fs-100); color: var(--accent); text-transform: uppercase; letter-spacing: var(--tracking-wide); }
-.team-card__title { color: var(--text-soft); font-size: var(--fs-200); margin-top: var(--space-1); }
+.team-showcase__photo.is-active { filter: grayscale(0) brightness(1); }
+.team-showcase__photo.is-dimmed { opacity: 0.55; }
+
+.team-showcase__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+  flex: 1;
+  min-width: 16rem;
+}
+.team-showcase__row {
+  cursor: pointer;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+.team-showcase__row.is-dimmed { opacity: 0.5; }
+.team-showcase__pill {
+  display: inline-block;
+  width: 16px;
+  height: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--structure);
+  opacity: 0.35;
+  vertical-align: middle;
+  margin-right: var(--space-3);
+  transition: width var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out), background-color var(--dur-base) var(--ease-out);
+}
+.team-showcase__row.is-active .team-showcase__pill { width: 22px; opacity: 1; background: var(--accent); }
+.team-showcase__name {
+  font-size: var(--fs-500);
+  font-weight: 600;
+  color: var(--text-soft);
+  transition: color var(--dur-base) var(--ease-out);
+}
+.team-showcase__row.is-active .team-showcase__name { color: var(--text); }
+.team-showcase__socials {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-left: var(--space-2);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+  vertical-align: middle;
+}
+.team-showcase__row.is-active .team-showcase__socials { opacity: 1; transform: none; }
+.team-showcase__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+  color: var(--text-soft);
+  transition: color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+.team-showcase__social:hover { color: var(--text); background: rgba(251, 250, 248, 0.12); }
+.team-showcase__social svg { width: 13px; height: 13px; }
+.team-showcase__role {
+  display: block;
+  margin: var(--space-2) 0 0 calc(16px + var(--space-3));
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+.team-showcase__title {
+  display: block;
+  margin-left: calc(16px + var(--space-3));
+  color: var(--text-soft);
+  font-size: var(--fs-200);
+  margin-top: var(--space-1);
+}
+@media (max-width: 767px) {
+  .team-showcase__photos { display: none; }
+}
 
 /* ---------------------------------------------------------------------- */
 /* Morphology glyphs (generative, factual: derived from real spec values)  */
@@ -638,6 +765,8 @@
 }
 .form__status.is-visible { display: block; }
 .form__status--success { background: rgba(94, 162, 152, 0.18); color: var(--paper); }
+.form__status--error { background: rgba(199, 111, 61, 0.18); color: var(--paper); }
+.form__row input[type="file"] { padding: var(--space-2) var(--space-3); font-size: var(--fs-200); }
 
 /* ---------------------------------------------------------------------- */
 /* Footer                                                                   */
