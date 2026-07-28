@@ -50,6 +50,8 @@
 <main id="main">
 
   <section class="hero">
+    <div class="hero__grain" data-hero-grain aria-hidden="true"></div>
+    <div class="hero__nebula" data-hero-nebula aria-hidden="true"></div>
     <div class="container">
       <p class="eyebrow" data-i18n="career.eyebrow">Career</p>
       <h1 data-i18n="career.title">Build the mechanical alternative with us.</h1>
@@ -162,5 +164,202 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/spectrum.js"></script>
 <script src="assets/js/forms.js"></script>
+<script src="assets/js/hero-grain.js"></script>
+<script type="module">
+/* Flexycle Powders — Hero nebula
+   A lightweight WebGL particle field for the landing-page hero: GPU-driven
+   swirl (no per-frame CPU physics loop), additive-blended soft points for a
+   glow feel, mouse-reactive, coloured from the brand's copper/teal palette.
+
+   Inlined (rather than an external module file) so it still runs when this
+   page is opened directly via file:// — browsers block `<script type=module
+   src=local-file>` there via CORS, but an inline module's own dynamic
+   import() of the remote CDN module is unaffected.
+
+   Progressive enhancement: skipped entirely under prefers-reduced-motion,
+   without WebGL support, or if the CDN import fails — the CSS grain field
+   (hero-grain.js) stays as the fallback in all of those cases. */
+(async function () {
+  const mount = document.querySelector('[data-hero-nebula]');
+  if (!mount) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.WebGLRenderingContext) return;
+
+  let THREE;
+  try {
+    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js');
+  } catch (e) {
+    return; // CDN unreachable — CSS grain field remains as the only effect.
+  }
+
+  // Brand palette — same four hues used by the spectrum bands and morphology glyphs.
+  const PALETTE = [0xC76F3D, 0xE28A4A, 0x6FA7A1, 0x9DC0BC];
+
+  const isSmall = mount.clientWidth < 640;
+  const COUNT = isSmall ? 1000 : 2400;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 20);
+  camera.position.z = 6;
+
+  // Spawn range scales with this hero's own aspect ratio instead of a fixed
+  // box, so the field reaches the edges on every page — a size tuned only
+  // for the landing hero's tall proportions left particles stranded mid-
+  // frame on the other pages' shorter, wider headers.
+  const heroAspect = (mount.clientWidth || 1) / (mount.clientHeight || 1);
+  const vFOV = 55 * Math.PI / 180;
+  const visibleHeight = 2 * 6 * Math.tan(vFOV / 2);
+  const visibleWidth = visibleHeight * heroAspect;
+
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false });
+  } catch (e) {
+    return; // WebGL init failed — CSS grain field remains as the only effect.
+  }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  const canvas = renderer.domElement;
+
+  const positions = new Float32Array(COUNT * 3);
+  const randoms = new Float32Array(COUNT * 3);
+  const colors = new Float32Array(COUNT * 3);
+  const tmpColor = new THREE.Color();
+
+  for (let i = 0; i < COUNT; i++) {
+    const i3 = i * 3;
+    positions[i3] = (Math.random() - 0.5) * visibleWidth * 0.8;
+    positions[i3 + 1] = (Math.random() - 0.5) * visibleHeight * 0.8;
+    positions[i3 + 2] = (Math.random() - 0.5) * 4;
+
+    randoms[i3] = Math.random();
+    randoms[i3 + 1] = Math.random() * 0.6 + 0.2;
+    randoms[i3 + 2] = Math.random() * 0.6 + 0.2;
+
+    tmpColor.set(PALETTE[i % PALETTE.length]);
+    colors[i3] = tmpColor.r;
+    colors[i3 + 1] = tmpColor.g;
+    colors[i3 + 2] = tmpColor.b;
+  }
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 3));
+  geometry.setAttribute('aColor', new THREE.BufferAttribute(colors, 3));
+
+  const material = new THREE.ShaderMaterial({
+    uniforms: {
+      uTime: { value: 0 },
+      uMouse: { value: new THREE.Vector2(0, 0) },
+      uSize: { value: isSmall ? 22 : 30 },
+      uOpacity: { value: 0.55 }
+    },
+    vertexShader: `
+      attribute vec3 aRandom;
+      attribute vec3 aColor;
+      uniform float uTime;
+      uniform vec2 uMouse;
+      uniform float uSize;
+      varying vec3 vColor;
+      varying float vAlpha;
+
+      void main() {
+        vColor = aColor;
+        vec3 pos = position;
+        float t = uTime * 0.18 + aRandom.x * 6.2831;
+
+        pos.x += sin(t + position.y * 0.6) * 0.5 * aRandom.y;
+        pos.y += cos(t * 0.9 + position.z * 0.6) * 0.4 * aRandom.z;
+        pos.z += sin(t * 0.7 + position.x * 0.6) * 0.3 * aRandom.y;
+
+        vec2 toMouse = pos.xy - uMouse * 3.2;
+        float d = length(toMouse);
+        float repel = (1.0 - smoothstep(0.0, 1.4, d)) * 0.7;
+        pos.xy += normalize(toMouse + 0.0001) * repel;
+
+        vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+        gl_PointSize = uSize * (1.0 / -mvPosition.z);
+        gl_Position = projectionMatrix * mvPosition;
+        vAlpha = 1.0 - smoothstep(6.0, 8.5, -mvPosition.z);
+      }
+    `,
+    fragmentShader: `
+      varying vec3 vColor;
+      varying float vAlpha;
+      uniform float uOpacity;
+      void main() {
+        float d = length(gl_PointCoord - vec2(0.5));
+        float strength = 1.0 - smoothstep(0.0, 0.5, d);
+        if (strength < 0.02) discard;
+        gl_FragColor = vec4(vColor, strength * uOpacity * vAlpha);
+      }
+    `,
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+  });
+
+  const points = new THREE.Points(geometry, material);
+  scene.add(points);
+
+  function resize() {
+    const w = mount.clientWidth;
+    const h = mount.clientHeight;
+    if (!w || !h) return;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const mouse = { x: 0, y: 0 };
+  mount.addEventListener('pointermove', function (e) {
+    const rect = mount.getBoundingClientRect();
+    mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  });
+
+  let running = false;
+  let contextLost = false;
+  let rafId = null;
+  const clock = new THREE.Clock();
+
+  canvas.addEventListener('webglcontextlost', function (e) {
+    e.preventDefault();
+    contextLost = true;
+  });
+  canvas.addEventListener('webglcontextrestored', function () {
+    contextLost = false;
+  });
+
+  function tick() {
+    if (!running) return;
+    if (!contextLost) {
+      material.uniforms.uTime.value = clock.getElapsedTime();
+      material.uniforms.uMouse.value.set(mouse.x * 1.6, mouse.y * 0.9);
+      renderer.render(scene, camera);
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+  function start() { if (!running) { running = true; clock.start(); tick(); } }
+  function stop() { running = false; if (rafId) cancelAnimationFrame(rafId); }
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { entry.isIntersecting ? start() : stop(); });
+    }, { threshold: 0 }).observe(mount);
+  } else {
+    start();
+  }
+
+  mount.appendChild(canvas);
+  canvas.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; display:block;';
+
+  // WebGL nebula is live — remove the CSS grain fallback so they don't double up.
+  const grain = document.querySelector('[data-hero-grain]');
+  if (grain) grain.remove();
+})();
+</script>
 </body>
 </html>

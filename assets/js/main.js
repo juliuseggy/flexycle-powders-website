@@ -192,6 +192,92 @@
     });
   }
 
+  // Application gallery (landing page): hover-expand strip + click-to-open
+  // lightbox. Ported from a pasted React/Framer-Motion "ExpandableGallery"
+  // prompt — flex-grow on hover instead of animated width, and the modal
+  // clones whichever item's morph-glyph was clicked instead of swapping an
+  // <img src>, since these are inline SVG placeholders, not photos yet.
+  function initGallery() {
+    var gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+    var items = gallery.querySelectorAll('.gallery__item');
+    if (!items.length) return;
+
+    var modal = document.querySelector('[data-gallery-modal]');
+    var modalImage = document.querySelector('[data-gallery-modal-image]');
+    var modalCaption = document.querySelector('[data-gallery-modal-caption]');
+    var modalCounter = document.querySelector('[data-gallery-modal-counter]');
+    var closeBtn = document.querySelector('[data-gallery-close]');
+    var prevBtn = document.querySelector('[data-gallery-prev]');
+    var nextBtn = document.querySelector('[data-gallery-next]');
+    var currentIndex = null;
+    var lastFocused = null;
+    var scrollLockY = 0;
+
+    items.forEach(function (item, i) {
+      item.addEventListener('mouseenter', function () {
+        items.forEach(function (other, j) {
+          other.classList.toggle('is-hovered', j === i);
+          other.classList.toggle('is-dimmed', j !== i);
+        });
+      });
+      item.addEventListener('mouseleave', function () {
+        items.forEach(function (other) {
+          other.classList.remove('is-hovered', 'is-dimmed');
+        });
+      });
+      item.addEventListener('click', function () { openModal(i); });
+    });
+
+    function renderModal(index) {
+      currentIndex = index;
+      var glyph = items[index].querySelector('.morph-glyph');
+      modalImage.innerHTML = '';
+      if (glyph) modalImage.appendChild(glyph.cloneNode(true));
+      var caption = items[index].querySelector('.gallery__caption');
+      modalCaption.textContent = caption ? caption.textContent : '';
+      modalCounter.textContent = (index + 1) + ' / ' + items.length;
+    }
+
+    function openModal(index) {
+      lastFocused = document.activeElement;
+      renderModal(index);
+      modal.hidden = false;
+      scrollLockY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = (-scrollLockY) + 'px';
+      document.body.style.width = '100%';
+      closeBtn.focus();
+      document.addEventListener('keydown', onKeydown);
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollLockY);
+      document.removeEventListener('keydown', onKeydown);
+      if (lastFocused) lastFocused.focus();
+    }
+
+    function goTo(delta) {
+      if (currentIndex === null) return;
+      renderModal((currentIndex + delta + items.length) % items.length);
+    }
+
+    function onKeydown(e) {
+      if (e.key === 'Escape') closeModal();
+      else if (e.key === 'ArrowLeft') goTo(-1);
+      else if (e.key === 'ArrowRight') goTo(1);
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    prevBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(-1); });
+    nextBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(1); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
     initBlurFadeStagger();
@@ -202,5 +288,6 @@
     initSpotlightCards();
     initTeamShowcase();
     initTiltCards();
+    initGallery();
   });
 })();

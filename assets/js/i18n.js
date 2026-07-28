@@ -73,6 +73,18 @@ window.FLX_I18N = {
           { title: "Powder metallurgy", desc: "FCP-PM's broad classification suits standard press-and-sinter routes, from bearings to structural parts." }
         ]
       },
+      gallery: {
+        title: "Application examples",
+        lede: "A closer look at what each grade becomes in the field.",
+        items: [
+          "Electronics — sintered contacts and conductive pastes",
+          "Binder Jetting — complex geometries in batch production",
+          "LPBF — dense pure-copper parts",
+          "EBM — high-conductivity functional parts",
+          "Sintering — SPS-consolidated functional parts",
+          "Powder metallurgy — bearings and structural parts"
+        ]
+      },
       cta: { title: "Get a sample sized to your process.", button: "Request a quote" }
     },
     products: {
@@ -329,6 +341,18 @@ window.FLX_I18N = {
           { title: "Elektronik", desc: "FCP-20 sintert zu feinen leitfähigen Strukturen und Bauteilen." },
           { title: "Batterietechnik", desc: "Produktionsrückstände aus der Batteriefertigung werden erneut zu Einsatzstoff — der Kreislauf schließt sich." },
           { title: "Pulvermetallurgie", desc: "Die breite Klassierung von FCP-PM eignet sich für klassische Press-Sinter-Anwendungen, von Lagern bis zu Strukturbauteilen." }
+        ]
+      },
+      gallery: {
+        title: "Anwendungsbeispiele",
+        lede: "Ein genauerer Blick darauf, was aus jeder Klasse in der Praxis wird.",
+        items: [
+          "Elektronik — gesinterte Kontakte und leitfähige Pasten",
+          "Binder Jetting — komplexe Geometrien in Serienproduktion",
+          "LPBF — dichte Reinkupfer-Bauteile",
+          "EBM — hochleitfähige Funktionsbauteile",
+          "Sintern — SPS-verdichtete Funktionsbauteile",
+          "Pulvermetallurgie — Lager und Strukturbauteile"
         ]
       },
       cta: { title: "Fordern Sie ein auf Ihren Prozess abgestimmtes Muster an.", button: "Angebot anfragen" }
