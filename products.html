@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="products.title">Flexycle Powders — Four grades, one spectrum</title>
-<meta name="description" content="Flexycle-Si, -AM, -PM and -G: four calibrated recycled copper powder grades spanning 5–500 µm, positioned on one particle-size spectrum.">
+<title data-i18n="products.title">Flexycle Powders — Six grades, one spectrum</title>
+<meta name="description" content="FCP-20, -BJ, -AM, -EBM, -Si and -PM: six calibrated recycled copper powder grades spanning under 20 to 150 µm, positioned on one particle-size spectrum.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -49,59 +49,90 @@
 
 <main id="main">
 
-  <section class="hero" style="padding-bottom: var(--space-6)">
+  <section class="hero hero--compact">
     <div class="container">
       <p class="eyebrow" data-i18n="products.eyebrow">Product range</p>
-      <h1 data-i18n="products.title">Four grades, one spectrum.</h1>
-      <p class="hero__lede" data-i18n="products.lede">Every Flexycle grade sits at a defined position on the particle-size spectrum below — from ultrafine sintering powder to coarse thermal granulate. Select a band to jump to its datasheet.</p>
+      <h1 data-i18n="products.title">Six grades, one spectrum.</h1>
+      <p class="hero__lede" data-i18n="products.lede">Every FCP grade sits at a defined position on the particle-size spectrum below — from ultrafine sintering powder to broad press-and-sinter granulate. Several grades' cuts overlap, so each gets its own row. Select a grade to jump to its datasheet.</p>
 
       <div class="spectrum" data-spectrum>
         <div class="spectrum__scale" aria-hidden="true">
-          <span class="spectrum__tick" style="--pos:0">5</span>
-          <span class="spectrum__tick" style="--pos:15.05">10</span>
-          <span class="spectrum__tick" style="--pos:30.1">20</span>
-          <span class="spectrum__tick" style="--pos:50">50</span>
-          <span class="spectrum__tick" style="--pos:65.05">100</span>
-          <span class="spectrum__tick" style="--pos:80.1">200</span>
-          <span class="spectrum__tick" style="--pos:100">500</span>
+          <span class="spectrum__scale-spacer--label"></span>
+          <span class="spectrum__scale-track">
+            <span class="spectrum__tick" style="--pos:0">5</span>
+            <span class="spectrum__tick" style="--pos:20.38">10</span>
+            <span class="spectrum__tick" style="--pos:40.76">20</span>
+            <span class="spectrum__tick" style="--pos:64.60">45</span>
+            <span class="spectrum__tick" style="--pos:74.49">63</span>
+            <span class="spectrum__tick" style="--pos:88.08">100</span>
+            <span class="spectrum__tick" style="--pos:100">150</span>
+          </span>
+          <span class="spectrum__scale-spacer--value"></span>
         </div>
-        <div class="spectrum__track">
-          <a class="spectrum__band spectrum__band--si" style="--start:0%; --end:27%" href="#si"><span class="spectrum__band-label"><span class="spectrum__band-label--full">Flexycle-Si</span><span class="spectrum__band-label--short">Si</span></span></a>
-          <a class="spectrum__band spectrum__band--am" style="--start:27%; --end:47.7%" href="#am"><span class="spectrum__band-label"><span class="spectrum__band-label--full">Flexycle-AM</span><span class="spectrum__band-label--short">AM</span></span></a>
-          <a class="spectrum__band spectrum__band--pm" style="--start:47.7%; --end:73.9%" href="#pm"><span class="spectrum__band-label"><span class="spectrum__band-label--full">Flexycle-PM</span><span class="spectrum__band-label--short">PM</span></span></a>
-          <a class="spectrum__band spectrum__band--g" style="--start:73.9%; --end:100%" href="#g"><span class="spectrum__band-label"><span class="spectrum__band-label--full">Flexycle-G</span><span class="spectrum__band-label--short">G</span></span></a>
+        <div class="spectrum__rows">
+          <a class="spectrum__row spectrum__row--fcp20" href="#fcp20">
+            <span class="spectrum__row-label">FCP-20</span>
+            <span class="spectrum__row-track"><span class="spectrum__row-bar" style="--start:0%; --end:40.76%"></span></span>
+            <span class="spectrum__row-value">&lt;20 µm</span>
+          </a>
+          <a class="spectrum__row spectrum__row--fcpbj" href="#fcpbj">
+            <span class="spectrum__row-label">FCP-BJ</span>
+            <span class="spectrum__row-track"><span class="spectrum__row-bar" style="--start:40.76%; --end:64.60%"></span></span>
+            <span class="spectrum__row-value">20–45 µm</span>
+          </a>
+          <a class="spectrum__row spectrum__row--fcpam" href="#fcpam">
+            <span class="spectrum__row-label">FCP-AM</span>
+            <span class="spectrum__row-track"><span class="spectrum__row-bar" style="--start:40.76%; --end:74.49%"></span></span>
+            <span class="spectrum__row-value">20–63 µm</span>
+          </a>
+          <a class="spectrum__row spectrum__row--fcpebm" href="#fcpebm">
+            <span class="spectrum__row-label">FCP-EBM</span>
+            <span class="spectrum__row-track"><span class="spectrum__row-bar" style="--start:74.49%; --end:88.08%"></span></span>
+            <span class="spectrum__row-value">63–100 µm</span>
+          </a>
+          <a class="spectrum__row spectrum__row--fcpsi" href="#fcpsi">
+            <span class="spectrum__row-label">FCP-Si</span>
+            <span class="spectrum__row-track"><span class="spectrum__row-bar" style="--start:64.60%; --end:100%"></span></span>
+            <span class="spectrum__row-value">45–150 µm</span>
+          </a>
+          <a class="spectrum__row spectrum__row--fcppm" href="#fcppm">
+            <span class="spectrum__row-label">FCP-PM</span>
+            <span class="spectrum__row-track"><span class="spectrum__row-bar" style="--start:40.76%; --end:100%"></span></span>
+            <span class="spectrum__row-value">20–150 µm</span>
+          </a>
         </div>
         <div class="spectrum__unit">µm — <span data-i18n="products.specLabels.particleSize">particle size</span> (log scale)</div>
         <div class="spectrum__hint">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           <span data-i18n="products.spectrumHint">Click a grade for its full datasheet</span>
         </div>
+        <p class="spectrum__custom" data-i18n="products.customFraction">Need a cut outside these six? We also classify to custom particle-size fractions on request.</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= Flexycle-Si ================= -->
-  <section class="product-section" id="si">
+  <!-- ================= FCP-20 ================= -->
+  <section class="product-section" id="fcp20">
     <div class="container">
       <div class="print-only">
         <span>Flexycle Powders — Freiberg, Germany</span>
-        <span>Datasheet · Flexycle-Si</span>
+        <span>Datasheet · FCP-20</span>
       </div>
       <div class="product-section__grid">
         <div data-reveal>
-          <p class="product-section__meta" data-i18n-html="products.si.eyebrow">Sintering &amp; electronics · ultrafine</p>
-          <h2>Flexycle-Si</h2>
-          <p class="hero__lede" data-i18n="products.si.tagline">Ultrafine powder for sinter-active electronics.</p>
-          <p data-i18n="products.si.desc">Flexycle-Si is classified down to single-digit micron size for maximum specific surface area, giving it high sinter activity in conductive pastes, contacts and fine sintered structures.</p>
-          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.si.applications">Electronics, sintered contacts, conductive pastes</span></p>
-          <button class="btn btn--outline print-btn no-print" type="button" data-print="si">
+          <p class="product-section__meta" data-i18n-html="products.fcp20.eyebrow">Sintering &amp; electronics · ultrafine</p>
+          <h2>FCP-20</h2>
+          <p class="hero__lede" data-i18n="products.fcp20.tagline">Ultrafine powder for sinter-active electronics.</p>
+          <p data-i18n="products.fcp20.desc">FCP-20 is classified below 20 µm for maximum specific surface area, giving it high sinter activity in conductive pastes, contacts and fine sintered structures.</p>
+          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.fcp20.applications">Electronics, sintered contacts, conductive pastes</span></p>
+          <button class="btn btn--outline print-btn no-print" type="button" data-print="fcp20">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18h12v-5H6v5zM6 9H4a1 1 0 00-1 1v5a1 1 0 001 1h2M18 9h2a1 1 0 011 1v5a1 1 0 01-1 1h-2"/></svg>
             <span data-i18n="common.printDatasheet">Print / save as PDF</span>
           </button>
         </div>
         <div data-reveal>
           <div class="tilt-card" data-tilt>
-            <svg class="morph-glyph morph-glyph--si" viewBox="0 0 100 100" aria-hidden="true">
+            <svg class="morph-glyph morph-glyph--fcp20" viewBox="0 0 100 100" aria-hidden="true">
               <circle cx="12" cy="9" r="2"/><circle cx="28" cy="14" r="1.8"/><circle cx="44" cy="8" r="2"/><circle cx="60" cy="13" r="1.6"/><circle cx="76" cy="9" r="2"/><circle cx="92" cy="14" r="1.8"/>
               <circle cx="9" cy="27" r="1.7"/><circle cx="25" cy="31" r="2"/><circle cx="41" cy="26" r="1.6"/><circle cx="57" cy="30" r="2"/><circle cx="73" cy="27" r="1.8"/><circle cx="89" cy="32" r="1.7"/>
               <circle cx="13" cy="45" r="2"/><circle cx="29" cy="42" r="1.8"/><circle cx="45" cy="47" r="1.6"/><circle cx="61" cy="43" r="2"/><circle cx="77" cy="48" r="1.7"/><circle cx="93" cy="44" r="1.9"/>
@@ -113,24 +144,24 @@
             <div class="tilt-card__content" aria-hidden="true">
               <div class="tilt-card__header">
                 <div>
-                  <h3 class="tilt-card__title">Flexycle-Si</h3>
-                  <p class="tilt-card__tagline" data-i18n="products.si.tagline">Ultrafine powder for sinter-active electronics.</p>
+                  <h3 class="tilt-card__title">FCP-20</h3>
+                  <p class="tilt-card__tagline" data-i18n="products.fcp20.tagline">Ultrafine powder for sinter-active electronics.</p>
                 </div>
                 <img class="tilt-card__mark" src="assets/img/logo-mark.svg" alt="">
               </div>
-              <span class="tilt-card__tag" data-i18n="products.si.specs.particleSizeD50">5–20 µm</span>
+              <span class="tilt-card__tag" data-i18n-html="products.fcp20.specs.particleSize">&lt;20 µm</span>
               <div class="tilt-card__dots">
-                <span class="is-active"></span><span></span><span></span><span></span>
+                <span class="is-active"></span><span></span><span></span><span></span><span></span><span></span>
               </div>
             </div>
           </div>
           <table class="spec-table" style="margin-top:var(--space-6)">
             <tbody>
-              <tr><th data-i18n="products.specLabels.particleSizeD50">Particle size (D50)</th><td data-i18n="products.si.specs.particleSizeD50">5–20 µm</td></tr>
-              <tr><th data-i18n="products.specLabels.specificSurface">Specific surface</th><td data-i18n="products.si.specs.specificSurface">High (BET)</td></tr>
-              <tr><th data-i18n="products.specLabels.tapDensity">Tap density</th><td data-i18n="products.si.specs.tapDensity">~3.8 g/cm³</td></tr>
-              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.si.specs.copperContent">≥99.8%</td></tr>
-              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.si.specs.feedstock">100% recycled</td></tr>
+              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n-html="products.fcp20.specs.particleSize">&lt;20 µm</td></tr>
+              <tr><th data-i18n="products.specLabels.specificSurface">Specific surface</th><td data-i18n="products.fcp20.specs.specificSurface">High (BET)</td></tr>
+              <tr><th data-i18n="products.specLabels.tapDensity">Tap density</th><td data-i18n="products.fcp20.specs.tapDensity">~3.8 g/cm³</td></tr>
+              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.fcp20.specs.copperContent">≥99.8%</td></tr>
+              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.fcp20.specs.feedstock">100% recycled</td></tr>
             </tbody>
           </table>
         </div>
@@ -138,28 +169,85 @@
     </div>
   </section>
 
-  <!-- ================= Flexycle-AM ================= -->
-  <section class="product-section" id="am">
+  <!-- ================= FCP-BJ ================= -->
+  <section class="product-section product-section--reverse" id="fcpbj">
     <div class="container">
       <div class="print-only">
         <span>Flexycle Powders — Freiberg, Germany</span>
-        <span>Datasheet · Flexycle-AM</span>
+        <span>Datasheet · FCP-BJ</span>
       </div>
       <div class="product-section__grid">
         <div data-reveal>
-          <p class="product-section__meta" data-i18n-html="products.am.eyebrow">Additive manufacturing · LPBF/DED</p>
-          <h2>Flexycle-AM</h2>
-          <p class="hero__lede" data-i18n="products.am.tagline">Spherical powder built for laser processing.</p>
-          <p data-i18n="products.am.desc">Highly spherical and free-flowing, Flexycle-AM is calibrated for laser powder bed fusion and directed energy deposition, producing dense, pure-copper parts without the energy cost of virgin atomisation.</p>
-          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.am.applications">LPBF of pure-copper parts, DED, high-conductivity components</span></p>
-          <button class="btn btn--outline print-btn no-print" type="button" data-print="am">
+          <p class="product-section__meta" data-i18n-html="products.fcpbj.eyebrow">Additive manufacturing · Binder Jetting</p>
+          <h2>FCP-BJ</h2>
+          <p class="hero__lede" data-i18n="products.fcpbj.tagline">Fine spherical powder calibrated for binder jetting.</p>
+          <p data-i18n="products.fcpbj.desc">Classified for consistent recoating and high green density in binder-jet printing, FCP-BJ supports fine feature resolution ahead of the sintering step to full density.</p>
+          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.fcpbj.applications">Binder jetting, complex geometries, batch AM production</span></p>
+          <button class="btn btn--outline print-btn no-print" type="button" data-print="fcpbj">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18h12v-5H6v5zM6 9H4a1 1 0 00-1 1v5a1 1 0 001 1h2M18 9h2a1 1 0 011 1v5a1 1 0 01-1 1h-2"/></svg>
             <span data-i18n="common.printDatasheet">Print / save as PDF</span>
           </button>
         </div>
         <div data-reveal>
           <div class="tilt-card" data-tilt>
-            <svg class="morph-glyph morph-glyph--am" viewBox="0 0 100 100" aria-hidden="true">
+            <svg class="morph-glyph morph-glyph--fcpbj" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="14" cy="12" r="5"/><circle cx="36" cy="12" r="5"/><circle cx="58" cy="12" r="5"/><circle cx="80" cy="12" r="5"/>
+              <circle cx="25" cy="30" r="5"/><circle cx="47" cy="30" r="5"/><circle cx="69" cy="30" r="5"/><circle cx="91" cy="30" r="5"/>
+              <circle cx="14" cy="48" r="5"/><circle cx="36" cy="48" r="5"/><circle cx="58" cy="48" r="5"/><circle cx="80" cy="48" r="5"/>
+              <circle cx="25" cy="66" r="5"/><circle cx="47" cy="66" r="5"/><circle cx="69" cy="66" r="5"/><circle cx="91" cy="66" r="5"/>
+              <circle cx="14" cy="84" r="5"/><circle cx="36" cy="84" r="5"/><circle cx="58" cy="84" r="5"/><circle cx="80" cy="84" r="5"/>
+            </svg>
+            <div class="tilt-card__scrim" aria-hidden="true"></div>
+            <div class="tilt-card__content" aria-hidden="true">
+              <div class="tilt-card__header">
+                <div>
+                  <h3 class="tilt-card__title">FCP-BJ</h3>
+                  <p class="tilt-card__tagline" data-i18n="products.fcpbj.tagline">Fine spherical powder calibrated for binder jetting.</p>
+                </div>
+                <img class="tilt-card__mark" src="assets/img/logo-mark.svg" alt="">
+              </div>
+              <span class="tilt-card__tag" data-i18n="products.fcpbj.specs.particleSize">20–45 µm</span>
+              <div class="tilt-card__dots">
+                <span></span><span class="is-active"></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <table class="spec-table" style="margin-top:var(--space-6)">
+            <tbody>
+              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.fcpbj.specs.particleSize">20–45 µm</td></tr>
+              <tr><th data-i18n="products.specLabels.flowability">Flowability (Hall)</th><td data-i18n="products.fcpbj.specs.flowability">~16 s/50 g</td></tr>
+              <tr><th data-i18n="products.specLabels.apparentDensity">Apparent density</th><td data-i18n="products.fcpbj.specs.apparentDensity">~4.5 g/cm³</td></tr>
+              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.fcpbj.specs.copperContent">≥99.8%</td></tr>
+              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.fcpbj.specs.feedstock">100% recycled</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FCP-AM ================= -->
+  <section class="product-section" id="fcpam">
+    <div class="container">
+      <div class="print-only">
+        <span>Flexycle Powders — Freiberg, Germany</span>
+        <span>Datasheet · FCP-AM</span>
+      </div>
+      <div class="product-section__grid">
+        <div data-reveal>
+          <p class="product-section__meta" data-i18n-html="products.fcpam.eyebrow">Additive manufacturing · LPBF/DED</p>
+          <h2>FCP-AM</h2>
+          <p class="hero__lede" data-i18n="products.fcpam.tagline">Spherical powder built for laser processing.</p>
+          <p data-i18n="products.fcpam.desc">Highly spherical and free-flowing, FCP-AM is calibrated for laser powder bed fusion and directed energy deposition, producing dense, pure-copper parts without the energy cost of virgin atomisation.</p>
+          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.fcpam.applications">LPBF of pure-copper parts, DED, high-conductivity components</span></p>
+          <button class="btn btn--outline print-btn no-print" type="button" data-print="fcpam">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18h12v-5H6v5zM6 9H4a1 1 0 00-1 1v5a1 1 0 001 1h2M18 9h2a1 1 0 011 1v5a1 1 0 01-1 1h-2"/></svg>
+            <span data-i18n="common.printDatasheet">Print / save as PDF</span>
+          </button>
+        </div>
+        <div data-reveal>
+          <div class="tilt-card" data-tilt>
+            <svg class="morph-glyph morph-glyph--fcpam" viewBox="0 0 100 100" aria-hidden="true">
               <circle cx="20" cy="15" r="8"/><circle cx="50" cy="15" r="8"/><circle cx="80" cy="15" r="8"/>
               <circle cx="35" cy="42" r="8"/><circle cx="65" cy="42" r="8"/>
               <circle cx="20" cy="68" r="8"/><circle cx="50" cy="68" r="8"/><circle cx="80" cy="68" r="8"/>
@@ -169,26 +257,26 @@
             <div class="tilt-card__content" aria-hidden="true">
               <div class="tilt-card__header">
                 <div>
-                  <h3 class="tilt-card__title">Flexycle-AM</h3>
-                  <p class="tilt-card__tagline" data-i18n="products.am.tagline">Spherical powder built for laser processing.</p>
+                  <h3 class="tilt-card__title">FCP-AM</h3>
+                  <p class="tilt-card__tagline" data-i18n="products.fcpam.tagline">Spherical powder built for laser processing.</p>
                 </div>
                 <img class="tilt-card__mark" src="assets/img/logo-mark.svg" alt="">
               </div>
-              <span class="tilt-card__tag" data-i18n="products.am.specs.particleSize">15–45 µm</span>
+              <span class="tilt-card__tag" data-i18n="products.fcpam.specs.particleSize">20–63 µm</span>
               <div class="tilt-card__dots">
-                <span></span><span class="is-active"></span><span></span><span></span>
+                <span></span><span></span><span class="is-active"></span><span></span><span></span><span></span>
               </div>
             </div>
           </div>
           <table class="spec-table" style="margin-top:var(--space-6)">
             <tbody>
-              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.am.specs.particleSize">15–45 µm</td></tr>
-              <tr><th data-i18n="products.specLabels.sphericity">Sphericity</th><td data-i18n-html="products.am.specs.sphericity">&gt;0.9</td></tr>
-              <tr><th data-i18n="products.specLabels.apparentDensity">Apparent density</th><td data-i18n="products.am.specs.apparentDensity">~4.9 g/cm³</td></tr>
-              <tr><th data-i18n="products.specLabels.flowability">Flowability (Hall)</th><td data-i18n="products.am.specs.flowability">~14 s/50 g</td></tr>
-              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.am.specs.copperContent">≥99.9%</td></tr>
-              <tr><th data-i18n="products.specLabels.oxygenContent">Oxygen content</th><td data-i18n="products.am.specs.oxygenContent">≤400 ppm</td></tr>
-              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.am.specs.feedstock">100% recycled</td></tr>
+              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.fcpam.specs.particleSize">20–63 µm</td></tr>
+              <tr><th data-i18n="products.specLabels.sphericity">Sphericity</th><td data-i18n-html="products.fcpam.specs.sphericity">&gt;0.9</td></tr>
+              <tr><th data-i18n="products.specLabels.apparentDensity">Apparent density</th><td data-i18n="products.fcpam.specs.apparentDensity">~4.9 g/cm³</td></tr>
+              <tr><th data-i18n="products.specLabels.flowability">Flowability (Hall)</th><td data-i18n="products.fcpam.specs.flowability">~14 s/50 g</td></tr>
+              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.fcpam.specs.copperContent">≥99.9%</td></tr>
+              <tr><th data-i18n="products.specLabels.oxygenContent">Oxygen content</th><td data-i18n="products.fcpam.specs.oxygenContent">≤400 ppm</td></tr>
+              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.fcpam.specs.feedstock">100% recycled</td></tr>
             </tbody>
           </table>
         </div>
@@ -196,28 +284,140 @@
     </div>
   </section>
 
-  <!-- ================= Flexycle-PM ================= -->
-  <section class="product-section" id="pm">
+  <!-- ================= FCP-EBM ================= -->
+  <section class="product-section product-section--reverse" id="fcpebm">
     <div class="container">
       <div class="print-only">
         <span>Flexycle Powders — Freiberg, Germany</span>
-        <span>Datasheet · Flexycle-PM</span>
+        <span>Datasheet · FCP-EBM</span>
       </div>
       <div class="product-section__grid">
         <div data-reveal>
-          <p class="product-section__meta" data-i18n-html="products.pm.eyebrow">Powder metallurgy · press &amp; sinter</p>
-          <h2>Flexycle-PM</h2>
-          <p class="hero__lede" data-i18n="products.pm.tagline">Irregular morphology, built for green strength.</p>
-          <p data-i18n="products.pm.desc">Flexycle-PM's irregular, dendritic particles interlock under pressure, giving strong green compacts for classic press-and-sinter routes.</p>
-          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n-html="products.pm.applications">Press &amp; sinter components, bearings, structural parts</span></p>
-          <button class="btn btn--outline print-btn no-print" type="button" data-print="pm">
+          <p class="product-section__meta" data-i18n-html="products.fcpebm.eyebrow">Additive manufacturing · Electron Beam Melting</p>
+          <h2>FCP-EBM</h2>
+          <p class="hero__lede" data-i18n="products.fcpebm.tagline">Coarser spherical powder suited to electron-beam processing.</p>
+          <p data-i18n="products.fcpebm.desc">Calibrated for the larger beam spot and vacuum environment of electron beam melting, FCP-EBM balances flowability with reduced fines for stable powder-bed spreading.</p>
+          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.fcpebm.applications">EBM of copper components, high-conductivity parts</span></p>
+          <button class="btn btn--outline print-btn no-print" type="button" data-print="fcpebm">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18h12v-5H6v5zM6 9H4a1 1 0 00-1 1v5a1 1 0 001 1h2M18 9h2a1 1 0 011 1v5a1 1 0 01-1 1h-2"/></svg>
             <span data-i18n="common.printDatasheet">Print / save as PDF</span>
           </button>
         </div>
         <div data-reveal>
           <div class="tilt-card" data-tilt>
-            <svg class="morph-glyph morph-glyph--pm" viewBox="0 0 100 100" aria-hidden="true">
+            <svg class="morph-glyph morph-glyph--fcpebm" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="22" cy="20" r="13"/><circle cx="58" cy="16" r="12"/><circle cx="88" cy="30" r="11"/>
+              <circle cx="38" cy="48" r="13"/><circle cx="72" cy="55" r="12"/>
+              <circle cx="18" cy="75" r="12"/><circle cx="52" cy="85" r="13"/><circle cx="85" cy="80" r="11"/>
+            </svg>
+            <div class="tilt-card__scrim" aria-hidden="true"></div>
+            <div class="tilt-card__content" aria-hidden="true">
+              <div class="tilt-card__header">
+                <div>
+                  <h3 class="tilt-card__title">FCP-EBM</h3>
+                  <p class="tilt-card__tagline" data-i18n="products.fcpebm.tagline">Coarser spherical powder suited to electron-beam processing.</p>
+                </div>
+                <img class="tilt-card__mark" src="assets/img/logo-mark.svg" alt="">
+              </div>
+              <span class="tilt-card__tag" data-i18n="products.fcpebm.specs.particleSize">63–100 µm</span>
+              <div class="tilt-card__dots">
+                <span></span><span></span><span></span><span class="is-active"></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <table class="spec-table" style="margin-top:var(--space-6)">
+            <tbody>
+              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.fcpebm.specs.particleSize">63–100 µm</td></tr>
+              <tr><th data-i18n="products.specLabels.sphericity">Sphericity</th><td data-i18n-html="products.fcpebm.specs.sphericity">&gt;0.85</td></tr>
+              <tr><th data-i18n="products.specLabels.apparentDensity">Apparent density</th><td data-i18n="products.fcpebm.specs.apparentDensity">~5.1 g/cm³</td></tr>
+              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.fcpebm.specs.copperContent">≥99.9%</td></tr>
+              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.fcpebm.specs.feedstock">100% recycled</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FCP-Si ================= -->
+  <section class="product-section" id="fcpsi">
+    <div class="container">
+      <div class="print-only">
+        <span>Flexycle Powders — Freiberg, Germany</span>
+        <span>Datasheet · FCP-Si</span>
+      </div>
+      <div class="product-section__grid">
+        <div data-reveal>
+          <p class="product-section__meta" data-i18n-html="products.fcpsi.eyebrow">Sintering · SPS &amp; pressureless</p>
+          <h2>FCP-Si</h2>
+          <p class="hero__lede" data-i18n="products.fcpsi.tagline">Engineered for spark plasma and pressureless sintering.</p>
+          <p data-i18n="products.fcpsi.desc">FCP-Si is calibrated for direct consolidation via spark plasma sintering (SPS) or pressureless sintering routes, reaching high density without a separate pressing step.</p>
+          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.fcpsi.applications">SPS-consolidated parts, pressureless-sintered components, functional structures</span></p>
+          <button class="btn btn--outline print-btn no-print" type="button" data-print="fcpsi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18h12v-5H6v5zM6 9H4a1 1 0 00-1 1v5a1 1 0 001 1h2M18 9h2a1 1 0 011 1v5a1 1 0 01-1 1h-2"/></svg>
+            <span data-i18n="common.printDatasheet">Print / save as PDF</span>
+          </button>
+        </div>
+        <div data-reveal>
+          <div class="tilt-card" data-tilt>
+            <svg class="morph-glyph morph-glyph--fcpsi" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="18" cy="20" r="11"/><circle cx="40" cy="15" r="10"/><rect x="26" y="14" width="15" height="7" rx="3"/>
+              <circle cx="65" cy="25" r="12"/><circle cx="88" cy="18" r="10"/><rect x="74" y="17" width="15" height="7" rx="3"/>
+              <circle cx="45" cy="45" r="10"/><circle cx="68" cy="48" r="9"/><rect x="53" y="43" width="16" height="7" rx="3"/>
+              <circle cx="15" cy="65" r="10"/><circle cx="38" cy="70" r="12"/><rect x="23" y="63" width="16" height="7" rx="3"/>
+              <circle cx="62" cy="72" r="11"/><circle cx="85" cy="65" r="10"/><rect x="71" y="63" width="15" height="7" rx="3"/>
+            </svg>
+            <div class="tilt-card__scrim" aria-hidden="true"></div>
+            <div class="tilt-card__content" aria-hidden="true">
+              <div class="tilt-card__header">
+                <div>
+                  <h3 class="tilt-card__title">FCP-Si</h3>
+                  <p class="tilt-card__tagline" data-i18n="products.fcpsi.tagline">Engineered for spark plasma and pressureless sintering.</p>
+                </div>
+                <img class="tilt-card__mark" src="assets/img/logo-mark.svg" alt="">
+              </div>
+              <span class="tilt-card__tag" data-i18n="products.fcpsi.specs.particleSize">45–150 µm</span>
+              <div class="tilt-card__dots">
+                <span></span><span></span><span></span><span></span><span class="is-active"></span><span></span>
+              </div>
+            </div>
+          </div>
+          <table class="spec-table" style="margin-top:var(--space-6)">
+            <tbody>
+              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.fcpsi.specs.particleSize">45–150 µm</td></tr>
+              <tr><th data-i18n="products.specLabels.consolidationRoute">Consolidation route</th><td data-i18n="products.fcpsi.specs.consolidationRoute">SPS / pressureless sintering</td></tr>
+              <tr><th data-i18n="products.specLabels.apparentDensity">Apparent density</th><td data-i18n="products.fcpsi.specs.apparentDensity">~4.0 g/cm³</td></tr>
+              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.fcpsi.specs.copperContent">≥99.7%</td></tr>
+              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.fcpsi.specs.feedstock">100% recycled</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FCP-PM ================= -->
+  <section class="product-section product-section--reverse" id="fcppm">
+    <div class="container">
+      <div class="print-only">
+        <span>Flexycle Powders — Freiberg, Germany</span>
+        <span>Datasheet · FCP-PM</span>
+      </div>
+      <div class="product-section__grid">
+        <div data-reveal>
+          <p class="product-section__meta" data-i18n-html="products.fcppm.eyebrow">Powder metallurgy · press &amp; sinter</p>
+          <h2>FCP-PM</h2>
+          <p class="hero__lede" data-i18n="products.fcppm.tagline">Irregular morphology, built for green strength.</p>
+          <p data-i18n="products.fcppm.desc">FCP-PM's irregular, dendritic particles interlock under pressure, giving strong green compacts for classic press-and-sinter routes. The broadest of the six grades, covering general powder-metallurgy use where a tight process-specific cut isn't required.</p>
+          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n-html="products.fcppm.applications">Press &amp; sinter components, bearings, structural parts</span></p>
+          <button class="btn btn--outline print-btn no-print" type="button" data-print="fcppm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18h12v-5H6v5zM6 9H4a1 1 0 00-1 1v5a1 1 0 001 1h2M18 9h2a1 1 0 011 1v5a1 1 0 01-1 1h-2"/></svg>
+            <span data-i18n="common.printDatasheet">Print / save as PDF</span>
+          </button>
+        </div>
+        <div data-reveal>
+          <div class="tilt-card" data-tilt>
+            <svg class="morph-glyph morph-glyph--fcppm" viewBox="0 0 100 100" aria-hidden="true">
               <g transform="translate(18,20) rotate(10) scale(1.1)"><polygon points="0,-10 3,-3 10,-4 4,2 7,9 0,4 -7,9 -4,2 -10,-4 -3,-3"/></g>
               <g transform="translate(52,15) rotate(-25) scale(0.9)"><polygon points="0,-10 3,-3 10,-4 4,2 7,9 0,4 -7,9 -4,2 -10,-4 -3,-3"/></g>
               <g transform="translate(83,28) rotate(45) scale(1.0)"><polygon points="0,-10 3,-3 10,-4 4,2 7,9 0,4 -7,9 -4,2 -10,-4 -3,-3"/></g>
@@ -231,83 +431,25 @@
             <div class="tilt-card__content" aria-hidden="true">
               <div class="tilt-card__header">
                 <div>
-                  <h3 class="tilt-card__title">Flexycle-PM</h3>
-                  <p class="tilt-card__tagline" data-i18n="products.pm.tagline">Irregular morphology, built for green strength.</p>
+                  <h3 class="tilt-card__title">FCP-PM</h3>
+                  <p class="tilt-card__tagline" data-i18n="products.fcppm.tagline">Irregular morphology, built for green strength.</p>
                 </div>
                 <img class="tilt-card__mark" src="assets/img/logo-mark.svg" alt="">
               </div>
-              <span class="tilt-card__tag" data-i18n="products.pm.specs.particleSize">45–150 µm</span>
+              <span class="tilt-card__tag" data-i18n="products.fcppm.specs.particleSize">20–150 µm</span>
               <div class="tilt-card__dots">
-                <span></span><span></span><span class="is-active"></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span class="is-active"></span>
               </div>
             </div>
           </div>
           <table class="spec-table" style="margin-top:var(--space-6)">
             <tbody>
-              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.pm.specs.particleSize">45–150 µm</td></tr>
-              <tr><th data-i18n="products.specLabels.morphology">Morphology</th><td data-i18n="products.pm.specs.morphology">Irregular / dendritic</td></tr>
-              <tr><th data-i18n="products.specLabels.apparentDensity">Apparent density</th><td data-i18n="products.pm.specs.apparentDensity">~2.6 g/cm³</td></tr>
-              <tr><th data-i18n="products.specLabels.greenStrength">Green strength</th><td data-i18n="products.pm.specs.greenStrength">Good</td></tr>
-              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.pm.specs.copperContent">≥99.7%</td></tr>
-              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.pm.specs.feedstock">100% recycled</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Flexycle-G ================= -->
-  <section class="product-section" id="g">
-    <div class="container">
-      <div class="print-only">
-        <span>Flexycle Powders — Freiberg, Germany</span>
-        <span>Datasheet · Flexycle-G</span>
-      </div>
-      <div class="product-section__grid">
-        <div data-reveal>
-          <p class="product-section__meta" data-i18n-html="products.g.eyebrow">Thermal &amp; functional · coarse granulate</p>
-          <h2>Flexycle-G</h2>
-          <p class="hero__lede" data-i18n="products.g.tagline">Coarse granulate for bulk thermal applications.</p>
-          <p data-i18n="products.g.desc">The coarsest Flexycle grade, delivered as a granular, high-bulk-density material suited to thermal and functional fill applications.</p>
-          <p><strong data-i18n="products.applicationsLabel">Applications</strong>: <span data-i18n="products.g.applications">Heat exchangers, cooling structures, thermal fill</span></p>
-          <button class="btn btn--outline print-btn no-print" type="button" data-print="g">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18h12v-5H6v5zM6 9H4a1 1 0 00-1 1v5a1 1 0 001 1h2M18 9h2a1 1 0 011 1v5a1 1 0 01-1 1h-2"/></svg>
-            <span data-i18n="common.printDatasheet">Print / save as PDF</span>
-          </button>
-        </div>
-        <div data-reveal>
-          <div class="tilt-card" data-tilt>
-            <svg class="morph-glyph morph-glyph--g" viewBox="0 0 100 100" aria-hidden="true">
-              <rect x="5" y="5" width="40" height="38" rx="8"/>
-              <rect x="50" y="8" width="45" height="35" rx="8"/>
-              <rect x="8" y="48" width="38" height="44" rx="8"/>
-              <rect x="50" y="48" width="20" height="42" rx="8"/>
-              <rect x="74" y="48" width="21" height="20" rx="6"/>
-              <rect x="74" y="72" width="21" height="20" rx="6"/>
-            </svg>
-            <div class="tilt-card__scrim" aria-hidden="true"></div>
-            <div class="tilt-card__content" aria-hidden="true">
-              <div class="tilt-card__header">
-                <div>
-                  <h3 class="tilt-card__title">Flexycle-G</h3>
-                  <p class="tilt-card__tagline" data-i18n="products.g.tagline">Coarse granulate for bulk thermal applications.</p>
-                </div>
-                <img class="tilt-card__mark" src="assets/img/logo-mark.svg" alt="">
-              </div>
-              <span class="tilt-card__tag" data-i18n="products.g.specs.particleSize">150–500 µm</span>
-              <div class="tilt-card__dots">
-                <span></span><span></span><span></span><span class="is-active"></span>
-              </div>
-            </div>
-          </div>
-          <table class="spec-table" style="margin-top:var(--space-6)">
-            <tbody>
-              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.g.specs.particleSize">150–500 µm</td></tr>
-              <tr><th data-i18n="products.specLabels.morphology">Morphology</th><td data-i18n="products.g.specs.morphology">Granular</td></tr>
-              <tr><th data-i18n="products.specLabels.bulkDensity">Bulk density</th><td data-i18n="products.g.specs.bulkDensity">High</td></tr>
-              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.g.specs.copperContent">≥99.5%</td></tr>
-              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.g.specs.feedstock">100% recycled</td></tr>
+              <tr><th data-i18n="products.specLabels.particleSize">Particle size</th><td data-i18n="products.fcppm.specs.particleSize">20–150 µm</td></tr>
+              <tr><th data-i18n="products.specLabels.morphology">Morphology</th><td data-i18n="products.fcppm.specs.morphology">Irregular / dendritic</td></tr>
+              <tr><th data-i18n="products.specLabels.apparentDensity">Apparent density</th><td data-i18n="products.fcppm.specs.apparentDensity">~2.6 g/cm³</td></tr>
+              <tr><th data-i18n="products.specLabels.greenStrength">Green strength</th><td data-i18n="products.fcppm.specs.greenStrength">Good</td></tr>
+              <tr><th data-i18n="products.specLabels.copperContent">Copper content</th><td data-i18n="products.fcppm.specs.copperContent">≥99.7%</td></tr>
+              <tr><th data-i18n="products.specLabels.feedstock">Feedstock</th><td data-i18n="products.fcppm.specs.feedstock">100% recycled</td></tr>
             </tbody>
           </table>
         </div>

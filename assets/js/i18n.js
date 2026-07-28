@@ -30,13 +30,13 @@ window.FLX_I18N = {
       eyebrow: "Deep tech · recycled copper powder",
       title: "From Scrap to Powder. From Waste to Value.",
       titleHtml: "From Scrap to Powder.<br>From Waste to Value.",
-      lede: "Flexycle Powders converts thin copper residues from battery and electronics manufacturing into high-performance powder — mechanically, at a fraction of the energy a melt process needs, sorted into four grades by particle size.",
+      lede: "Flexycle Powders converts thin copper residues from battery and electronics manufacturing into high-performance powder — mechanically, at a fraction of the energy a melt process needs, sorted into six grades by particle size.",
       spectrumLabel: "Particle-size spectrum",
-      spectrumCta: "See all four grades →",
+      spectrumCta: "See all six grades →",
       stats: [
         { value: "&gt;0.9", label: "sphericity" },
         { value: "100%", label: "regional supply chain" },
-        { value: "10–150", label: "<span style=\"text-transform:none\">µm</span> particle size range" },
+        { value: "&lt;20–150", label: "<span style=\"text-transform:none\">µm</span> particle size range" },
         { value: "Up to 99.95%", label: "copper purity" }
       ],
       process: {
@@ -60,29 +60,29 @@ window.FLX_I18N = {
             "Starts from thin copper residues from battery &amp; electronics production",
             "No melting step — mechanical size reduction and classification",
             "Substantially lower energy input per kilogram",
-            "Four calibrated grades, tuned by particle size and morphology"
+            "Six calibrated grades, tuned by particle size and morphology"
           ]
         }
       },
       applications: {
         title: "Where Flexycle powder goes to work",
         items: [
-          { title: "Additive manufacturing", desc: "Highly spherical Flexycle-AM feeds LPBF and DED systems for dense, pure-copper parts." },
-          { title: "Electronics", desc: "Flexycle-Si sinters into fine conductive structures and components." },
+          { title: "Additive manufacturing", desc: "Highly spherical FCP-AM feeds LPBF and DED systems for dense, pure-copper parts." },
+          { title: "Electronics", desc: "FCP-20 sinters into fine conductive structures and components." },
           { title: "Battery technology", desc: "Production residues from battery manufacturing become feedstock again, closing the loop." },
-          { title: "Thermal management", desc: "Flexycle-G's coarse granulate suits heat exchangers and cooling structures." }
+          { title: "Powder metallurgy", desc: "FCP-PM's broad classification suits standard press-and-sinter routes, from bearings to structural parts." }
         ]
       },
       cta: { title: "Get a sample sized to your process.", button: "Request a quote" }
     },
     products: {
       eyebrow: "Product range",
-      title: "Four grades, one spectrum.",
-      lede: "Every Flexycle grade sits at a defined position on the particle-size spectrum below — from ultrafine sintering powder to coarse thermal granulate. Select a band to jump to its datasheet.",
+      title: "Six grades, one spectrum.",
+      lede: "Every FCP grade sits at a defined position on the particle-size spectrum below — from ultrafine sintering powder to broad press-and-sinter granulate. Several grades' cuts overlap, so each gets its own row. Select a grade to jump to its datasheet.",
       spectrumHint: "Click a grade for its full datasheet",
+      customFraction: "Need a cut outside these six? We also classify to custom particle-size fractions on request.",
       specLabels: {
         particleSize: "Particle size",
-        particleSizeD50: "Particle size (D50)",
         sphericity: "Sphericity",
         morphology: "Morphology",
         apparentDensity: "Apparent density",
@@ -93,15 +93,16 @@ window.FLX_I18N = {
         greenStrength: "Green strength",
         copperContent: "Copper content",
         oxygenContent: "Oxygen content",
+        consolidationRoute: "Consolidation route",
         feedstock: "Feedstock"
       },
       applicationsLabel: "Applications",
-      si: {
+      fcp20: {
         eyebrow: "Sintering &amp; electronics · ultrafine",
         tagline: "Ultrafine powder for sinter-active electronics.",
-        desc: "Flexycle-Si is classified down to single-digit micron size for maximum specific surface area, giving it high sinter activity in conductive pastes, contacts and fine sintered structures.",
+        desc: "FCP-20 is classified below 20 µm for maximum specific surface area, giving it high sinter activity in conductive pastes, contacts and fine sintered structures.",
         specs: {
-          particleSizeD50: "5–20 µm",
+          particleSize: "&lt;20 µm",
           specificSurface: "High (BET)",
           tapDensity: "~3.8 g/cm³",
           copperContent: "≥99.8%",
@@ -109,47 +110,73 @@ window.FLX_I18N = {
         },
         applications: "Electronics, sintered contacts, conductive pastes"
       },
-      am: {
+      fcpbj: {
+        eyebrow: "Additive manufacturing · Binder Jetting",
+        tagline: "Fine spherical powder calibrated for binder jetting.",
+        desc: "Classified for consistent recoating and high green density in binder-jet printing, FCP-BJ supports fine feature resolution ahead of the sintering step to full density.",
+        specs: {
+          particleSize: "20–45 µm",
+          flowability: "~16 s/50 g",
+          apparentDensity: "~4.5 g/cm³",
+          copperContent: "≥99.8%",
+          feedstock: "100% recycled"
+        },
+        applications: "Binder jetting, complex geometries, batch AM production"
+      },
+      fcpam: {
         eyebrow: "Additive manufacturing · LPBF/DED",
         tagline: "Spherical powder built for laser processing.",
-        desc: "Highly spherical and free-flowing, Flexycle-AM is calibrated for laser powder bed fusion and directed energy deposition, producing dense, pure-copper parts without the energy cost of virgin atomisation.",
+        desc: "Highly spherical and free-flowing, FCP-AM is calibrated for laser powder bed fusion and directed energy deposition, producing dense, pure-copper parts without the energy cost of virgin atomisation.",
         specs: {
-          particleSize: "15–45 µm",
+          particleSize: "20–63 µm",
           sphericity: "&gt;0.9",
-          apparentDensity: "~4.9 g/cm³",
-          flowability: "~14 s/50 g",
+          apparentDensity: "~4.9 g/cm³",
+          flowability: "~14 s/50 g",
           copperContent: "≥99.9%",
-          oxygenContent: "≤400 ppm",
+          oxygenContent: "≤400 ppm",
           feedstock: "100% recycled"
         },
         applications: "LPBF of pure-copper parts, DED, high-conductivity components"
       },
-      pm: {
-        eyebrow: "Powder metallurgy · press &amp; sinter",
-        tagline: "Irregular morphology, built for green strength.",
-        desc: "Flexycle-PM's irregular, dendritic particles interlock under pressure, giving strong green compacts for classic press-and-sinter routes.",
+      fcpebm: {
+        eyebrow: "Additive manufacturing · Electron Beam Melting",
+        tagline: "Coarser spherical powder suited to electron-beam processing.",
+        desc: "Calibrated for the larger beam spot and vacuum environment of electron beam melting, FCP-EBM balances flowability with reduced fines for stable powder-bed spreading.",
+        specs: {
+          particleSize: "63–100 µm",
+          sphericity: "&gt;0.85",
+          apparentDensity: "~5.1 g/cm³",
+          copperContent: "≥99.9%",
+          feedstock: "100% recycled"
+        },
+        applications: "EBM of copper components, high-conductivity parts"
+      },
+      fcpsi: {
+        eyebrow: "Sintering · SPS &amp; pressureless",
+        tagline: "Engineered for spark plasma and pressureless sintering.",
+        desc: "FCP-Si is calibrated for direct consolidation via spark plasma sintering (SPS) or pressureless sintering routes, reaching high density without a separate pressing step.",
         specs: {
           particleSize: "45–150 µm",
+          consolidationRoute: "SPS / pressureless sintering",
+          apparentDensity: "~4.0 g/cm³",
+          copperContent: "≥99.7%",
+          feedstock: "100% recycled"
+        },
+        applications: "SPS-consolidated parts, pressureless-sintered components, functional structures"
+      },
+      fcppm: {
+        eyebrow: "Powder metallurgy · press &amp; sinter",
+        tagline: "Irregular morphology, built for green strength.",
+        desc: "FCP-PM's irregular, dendritic particles interlock under pressure, giving strong green compacts for classic press-and-sinter routes. The broadest of the six grades, covering general powder-metallurgy use where a tight process-specific cut isn't required.",
+        specs: {
+          particleSize: "20–150 µm",
           morphology: "Irregular / dendritic",
-          apparentDensity: "~2.6 g/cm³",
+          apparentDensity: "~2.6 g/cm³",
           greenStrength: "Good",
           copperContent: "≥99.7%",
           feedstock: "100% recycled"
         },
         applications: "Press &amp; sinter components, bearings, structural parts"
-      },
-      g: {
-        eyebrow: "Thermal &amp; functional · coarse granulate",
-        tagline: "Coarse granulate for bulk thermal applications.",
-        desc: "The coarsest Flexycle grade, delivered as a granular, high-bulk-density material suited to thermal and functional fill applications.",
-        specs: {
-          particleSize: "150–500 µm",
-          morphology: "Granular",
-          bulkDensity: "High",
-          copperContent: "≥99.5%",
-          feedstock: "100% recycled"
-        },
-        applications: "Heat exchangers, cooling structures, thermal fill"
       }
     },
     company: {
@@ -161,7 +188,7 @@ window.FLX_I18N = {
       values: [
         { title: "Mechanical, not melted", desc: "Every process step avoids re-melting the metal, cutting energy demand at the source." },
         { title: "Closed-loop by design", desc: "Feedstock comes from production residues, not fresh mining — the loop closes before the metal ever becomes waste." },
-        { title: "Calibrated, not generic", desc: "Four defined grades mean customers order by particle size and morphology, not a single one-size-fits-all powder." }
+        { title: "Calibrated, not generic", desc: "Six defined grades mean customers order by particle size and morphology, not a single one-size-fits-all powder." }
       ],
       teamTitle: "Leadership",
       roles: {
@@ -203,7 +230,7 @@ window.FLX_I18N = {
         name: "Name", company: "Company (optional)", companyRequired: "Company",
         email: "Email", message: "Message",
         grade: "Grade of interest",
-        gradeOptions: ["Flexycle-Si", "Flexycle-AM", "Flexycle-PM", "Flexycle-G", "Not sure yet"],
+        gradeOptions: ["FCP-20", "FCP-BJ", "FCP-AM", "FCP-EBM", "FCP-Si", "FCP-PM", "Not sure yet"],
         quantity: "Estimated quantity",
         submitGeneral: "Send message",
         submitQuote: "Request quote",
@@ -261,13 +288,13 @@ window.FLX_I18N = {
       eyebrow: "Deep-Tech · recyceltes Kupferpulver",
       title: "Von Schrott zu Pulver. Von Abfall zu Wert.",
       titleHtml: "Von Schrott zu Pulver.<br>Von Abfall zu Wert.",
-      lede: "Flexycle Powders verwandelt dünne Kupferrückstände aus der Batterie- und Elektronikfertigung mechanisch in Hochleistungspulver — mit einem Bruchteil der Energie eines Schmelzprozesses, sortiert in vier Korngrößen-Klassen.",
+      lede: "Flexycle Powders verwandelt dünne Kupferrückstände aus der Batterie- und Elektronikfertigung mechanisch in Hochleistungspulver — mit einem Bruchteil der Energie eines Schmelzprozesses, sortiert in sechs Korngrößen-Klassen.",
       spectrumLabel: "Korngrößen-Spektrum",
-      spectrumCta: "Alle vier Klassen ansehen →",
+      spectrumCta: "Alle sechs Klassen ansehen →",
       stats: [
         { value: "&gt;0,9", label: "Sphärizität" },
         { value: "100%", label: "regionale Lieferkette" },
-        { value: "10–150", label: "<span style=\"text-transform:none\">µm</span> Korngrößenbereich" },
+        { value: "&lt;20–150", label: "<span style=\"text-transform:none\">µm</span> Korngrößenbereich" },
         { value: "Bis zu 99,95%", label: "Kupferreinheit" }
       ],
       process: {
@@ -291,29 +318,29 @@ window.FLX_I18N = {
             "Beginnt bei dünnen Kupferrückständen aus Batterie- und Elektronikfertigung",
             "Kein Schmelzschritt — mechanische Zerkleinerung und Klassierung",
             "Deutlich geringerer Energieeinsatz pro Kilogramm",
-            "Vier kalibrierte Klassen, abgestimmt nach Korngröße und Morphologie"
+            "Sechs kalibrierte Klassen, abgestimmt nach Korngröße und Morphologie"
           ]
         }
       },
       applications: {
         title: "Wo Flexycle-Pulver zum Einsatz kommt",
         items: [
-          { title: "Additive Fertigung", desc: "Das hochsphärische Flexycle-AM versorgt LPBF- und DED-Anlagen für dichte Bauteile aus Reinkupfer." },
-          { title: "Elektronik", desc: "Flexycle-Si sintert zu feinen leitfähigen Strukturen und Bauteilen." },
+          { title: "Additive Fertigung", desc: "Das hochsphärische FCP-AM versorgt LPBF- und DED-Anlagen für dichte Bauteile aus Reinkupfer." },
+          { title: "Elektronik", desc: "FCP-20 sintert zu feinen leitfähigen Strukturen und Bauteilen." },
           { title: "Batterietechnik", desc: "Produktionsrückstände aus der Batteriefertigung werden erneut zu Einsatzstoff — der Kreislauf schließt sich." },
-          { title: "Wärmemanagement", desc: "Das grobe Granulat von Flexycle-G eignet sich für Wärmetauscher und Kühlstrukturen." }
+          { title: "Pulvermetallurgie", desc: "Die breite Klassierung von FCP-PM eignet sich für klassische Press-Sinter-Anwendungen, von Lagern bis zu Strukturbauteilen." }
         ]
       },
       cta: { title: "Fordern Sie ein auf Ihren Prozess abgestimmtes Muster an.", button: "Angebot anfragen" }
     },
     products: {
       eyebrow: "Produktpalette",
-      title: "Vier Klassen, ein Spektrum.",
-      lede: "Jede Flexycle-Klasse hat eine feste Position im Korngrößen-Spektrum unten — von ultrafeinem Sinterpulver bis zu grobem Granulat für Wärmeanwendungen. Wählen Sie ein Band, um zum Datenblatt zu springen.",
+      title: "Sechs Klassen, ein Spektrum.",
+      lede: "Jede FCP-Klasse hat eine feste Position im Korngrößen-Spektrum unten — von ultrafeinem Sinterpulver bis zu breitem Press-Sinter-Granulat. Mehrere Klassen überschneiden sich im Korngrößenbereich, daher hat jede ihre eigene Zeile. Klasse anklicken, um zum Datenblatt zu springen.",
       spectrumHint: "Klasse anklicken für das vollständige Datenblatt",
+      customFraction: "Sie benötigen eine andere Fraktion? Auf Anfrage klassieren wir auch individuelle Korngrößenfraktionen.",
       specLabels: {
         particleSize: "Korngröße",
-        particleSizeD50: "Korngröße (D50)",
         sphericity: "Sphärizität",
         morphology: "Morphologie",
         apparentDensity: "Klopfdichte",
@@ -324,15 +351,16 @@ window.FLX_I18N = {
         greenStrength: "Grünfestigkeit",
         copperContent: "Kupfergehalt",
         oxygenContent: "Sauerstoffgehalt",
+        consolidationRoute: "Konsolidierungsroute",
         feedstock: "Einsatzstoff"
       },
       applicationsLabel: "Anwendungen",
-      si: {
+      fcp20: {
         eyebrow: "Sintern &amp; Elektronik · ultrafein",
         tagline: "Ultrafeines Pulver für sinteraktive Elektronik.",
-        desc: "Flexycle-Si wird bis in den einstelligen Mikrometerbereich klassiert und erreicht dadurch eine hohe spezifische Oberfläche — das ergibt hohe Sinteraktivität für leitfähige Pasten, Kontakte und feine Sinterstrukturen.",
+        desc: "FCP-20 wird unterhalb von 20 µm klassiert und erreicht dadurch eine hohe spezifische Oberfläche — das ergibt hohe Sinteraktivität für leitfähige Pasten, Kontakte und feine Sinterstrukturen.",
         specs: {
-          particleSizeD50: "5–20 µm",
+          particleSize: "&lt;20 µm",
           specificSurface: "Hoch (BET)",
           tapDensity: "~3,8 g/cm³",
           copperContent: "≥99,8%",
@@ -340,47 +368,73 @@ window.FLX_I18N = {
         },
         applications: "Elektronik, gesinterte Kontakte, leitfähige Pasten"
       },
-      am: {
+      fcpbj: {
+        eyebrow: "Additive Fertigung · Binder Jetting",
+        tagline: "Feines sphärisches Pulver für Binder Jetting.",
+        desc: "Für gleichmäßiges Recoating und hohe Gründichte beim Binder-Jetting-Druck klassiert, unterstützt FCP-BJ feine Detailauflösung vor dem abschließenden Sinterschritt zur vollen Dichte.",
+        specs: {
+          particleSize: "20–45 µm",
+          flowability: "~16 s/50 g",
+          apparentDensity: "~4,5 g/cm³",
+          copperContent: "≥99,8%",
+          feedstock: "100% recycelt"
+        },
+        applications: "Binder Jetting, komplexe Geometrien, Serien-AM-Produktion"
+      },
+      fcpam: {
         eyebrow: "Additive Fertigung · LPBF/DED",
         tagline: "Sphärisches Pulver für die Laserverarbeitung.",
-        desc: "Hochsphärisch und rieselfähig ist Flexycle-AM für Laser Powder Bed Fusion und Directed Energy Deposition kalibriert und liefert dichte Bauteile aus Reinkupfer — ohne den Energieaufwand einer Primär-Zerstäubung.",
+        desc: "Hochsphärisch und rieselfähig ist FCP-AM für Laser Powder Bed Fusion und Directed Energy Deposition kalibriert und liefert dichte Bauteile aus Reinkupfer — ohne den Energieaufwand einer Primär-Zerstäubung.",
         specs: {
-          particleSize: "15–45 µm",
+          particleSize: "20–63 µm",
           sphericity: "&gt;0,9",
-          apparentDensity: "~4,9 g/cm³",
-          flowability: "~14 s/50 g",
+          apparentDensity: "~4,9 g/cm³",
+          flowability: "~14 s/50 g",
           copperContent: "≥99,9%",
-          oxygenContent: "≤400 ppm",
+          oxygenContent: "≤400 ppm",
           feedstock: "100% recycelt"
         },
         applications: "LPBF von Reinkupfer-Bauteilen, DED, hochleitfähige Komponenten"
       },
-      pm: {
-        eyebrow: "Pulvermetallurgie · Pressen &amp; Sintern",
-        tagline: "Unregelmäßige Morphologie für hohe Grünfestigkeit.",
-        desc: "Die unregelmäßigen, dendritischen Partikel von Flexycle-PM verzahnen sich unter Druck und ergeben feste Grünlinge für klassische Press-Sinter-Verfahren.",
+      fcpebm: {
+        eyebrow: "Additive Fertigung · Electron Beam Melting",
+        tagline: "Gröberes sphärisches Pulver für die Elektronenstrahlverarbeitung.",
+        desc: "Kalibriert für den größeren Strahlfleck und die Vakuumumgebung des Elektronenstrahlschmelzens (EBM), verbindet FCP-EBM gute Fließfähigkeit mit reduziertem Feinanteil für eine stabile Pulverbett-Verteilung.",
+        specs: {
+          particleSize: "63–100 µm",
+          sphericity: "&gt;0,85",
+          apparentDensity: "~5,1 g/cm³",
+          copperContent: "≥99,9%",
+          feedstock: "100% recycelt"
+        },
+        applications: "EBM von Kupferbauteilen, hochleitfähige Komponenten"
+      },
+      fcpsi: {
+        eyebrow: "Sintern · SPS &amp; drucklos",
+        tagline: "Entwickelt für Spark-Plasma- und drucklose Sinterung.",
+        desc: "FCP-Si ist für die direkte Verdichtung mittels Spark-Plasma-Sintern (SPS) oder drucklosem Sintern kalibriert und erreicht hohe Dichten ohne separaten Pressschritt.",
         specs: {
           particleSize: "45–150 µm",
+          consolidationRoute: "SPS / drucklose Sinterung",
+          apparentDensity: "~4,0 g/cm³",
+          copperContent: "≥99,7%",
+          feedstock: "100% recycelt"
+        },
+        applications: "SPS-verdichtete Bauteile, drucklos gesinterte Komponenten, Funktionsbauteile"
+      },
+      fcppm: {
+        eyebrow: "Pulvermetallurgie · Pressen &amp; Sintern",
+        tagline: "Unregelmäßige Morphologie für hohe Grünfestigkeit.",
+        desc: "Die unregelmäßigen, dendritischen Partikel von FCP-PM verzahnen sich unter Druck und ergeben feste Grünlinge für klassische Press-Sinter-Verfahren. Die breiteste der sechs Klassen, für allgemeine pulvermetallurgische Anwendungen ohne engen prozessspezifischen Schnitt.",
+        specs: {
+          particleSize: "20–150 µm",
           morphology: "Unregelmäßig / dendritisch",
-          apparentDensity: "~2,6 g/cm³",
+          apparentDensity: "~2,6 g/cm³",
           greenStrength: "Gut",
           copperContent: "≥99,7%",
           feedstock: "100% recycelt"
         },
         applications: "Press-Sinter-Bauteile, Lager, Strukturbauteile"
-      },
-      g: {
-        eyebrow: "Thermisch &amp; funktional · grobes Granulat",
-        tagline: "Grobes Granulat für thermische Massenanwendungen.",
-        desc: "Die gröbste Flexycle-Klasse wird als granulares Material mit hoher Schüttdichte geliefert und eignet sich für thermische und funktionale Füllanwendungen.",
-        specs: {
-          particleSize: "150–500 µm",
-          morphology: "Granular",
-          bulkDensity: "Hoch",
-          copperContent: "≥99,5%",
-          feedstock: "100% recycelt"
-        },
-        applications: "Wärmetauscher, Kühlstrukturen, thermische Füllung"
       }
     },
     company: {
@@ -392,7 +446,7 @@ window.FLX_I18N = {
       values: [
         { title: "Mechanisch, nicht geschmolzen", desc: "Jeder Prozessschritt vermeidet das erneute Schmelzen des Metalls und senkt den Energiebedarf an der Quelle." },
         { title: "Kreislauf von Grund auf", desc: "Der Einsatzstoff stammt aus Produktionsrückständen statt aus frischem Bergbau — der Kreislauf schließt sich, bevor das Metall zu Abfall wird." },
-        { title: "Kalibriert, nicht generisch", desc: "Vier definierte Klassen bedeuten: Kunden bestellen nach Korngröße und Morphologie — kein Einheitspulver für alles." }
+        { title: "Kalibriert, nicht generisch", desc: "Sechs definierte Klassen bedeuten: Kunden bestellen nach Korngröße und Morphologie — kein Einheitspulver für alles." }
       ],
       teamTitle: "Führungsteam",
       roles: {
@@ -434,7 +488,7 @@ window.FLX_I18N = {
         name: "Name", company: "Unternehmen (optional)", companyRequired: "Unternehmen",
         email: "E-Mail", message: "Nachricht",
         grade: "Interessante Klasse",
-        gradeOptions: ["Flexycle-Si", "Flexycle-AM", "Flexycle-PM", "Flexycle-G", "Noch unklar"],
+        gradeOptions: ["FCP-20", "FCP-BJ", "FCP-AM", "FCP-EBM", "FCP-Si", "FCP-PM", "Noch unklar"],
         quantity: "Geschätzte Menge",
         submitGeneral: "Nachricht senden",
         submitQuote: "Angebot anfragen",

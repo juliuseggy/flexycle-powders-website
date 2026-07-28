@@ -1,13 +1,15 @@
 /* ==========================================================================
    Flexycle Powders — Micron spectrum
-   Band positions are pre-computed (log scale, 5–500 µm) as inline custom
-   properties in the HTML. This script only reveals the component when it
-   scrolls into view and staggers the bands.
+   Row bar positions are pre-computed (log scale, 5–150 µm) as inline custom
+   properties in the HTML — one row per grade, since several grades' cuts
+   overlap and can no longer share a single non-overlapping band track. This
+   script only reveals the component when it scrolls into view and staggers
+   the rows.
    ========================================================================== */
 
 (function () {
   function initSpectrum(el) {
-    var bands = el.querySelectorAll('.spectrum__band');
+    var bands = el.querySelectorAll('.spectrum__row-bar');
     bands.forEach(function (band, i) {
       band.style.setProperty('--reveal-delay', (i * 90) + 'ms');
     });

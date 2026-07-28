@@ -23,19 +23,23 @@
 
   main > section { display: none !important; }
 
-  body.printing-si #si,
-  body.printing-am #am,
-  body.printing-pm #pm,
-  body.printing-g  #g {
+  body.printing-fcp20  #fcp20,
+  body.printing-fcpbj  #fcpbj,
+  body.printing-fcpam  #fcpam,
+  body.printing-fcpebm #fcpebm,
+  body.printing-fcpsi  #fcpsi,
+  body.printing-fcppm  #fcppm {
     display: block !important;
     padding: 0 !important;
     border: 0 !important;
   }
 
-  body.printing-si .print-only,
-  body.printing-am .print-only,
-  body.printing-pm .print-only,
-  body.printing-g  .print-only {
+  body.printing-fcp20  .print-only,
+  body.printing-fcpbj  .print-only,
+  body.printing-fcpam  .print-only,
+  body.printing-fcpebm .print-only,
+  body.printing-fcpsi  .print-only,
+  body.printing-fcppm  .print-only {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
