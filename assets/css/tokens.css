@@ -32,20 +32,26 @@
   --sage-200: #8FB0AC;
 
   /* ---- Semantic roles ----
-     Dark-first: the page body is dark (--bg). ".section-contrast" is a
-     deliberate light "island" used sparingly to break up the page — the
-     inverse of what it meant in a light-first scheme, same mechanism. */
+     Dark-first, and now dark-only: the page is one continuous dark field.
+     Sections no longer own a flat background colour — a flat block ends in
+     a hard seam, which is what makes a page read as stacked template parts.
+     Instead they lift the tone through the translucent veils below, applied
+     as a gradient that starts and ends fully transparent, so the shift
+     bleeds in and out and the eye never finds an edge. */
   --bg: var(--dark-900);
   --bg-alt: var(--dark-800);
   --bg-raised: var(--dark-800);
   --bg-deep: var(--dark-900);
-  --bg-contrast: var(--sage);
-  --bg-contrast-alt: var(--cream);
+
+  /* Translucent patina lift, not an opaque colour: these must be able to
+     fade to nothing at the section boundary. */
+  --surface-veil: rgba(94, 162, 152, 0.05);
+  --surface-veil-strong: rgba(94, 162, 152, 0.085);
+  /* Ambient bloom marking where a section begins — light instead of a line. */
+  --seam-bloom: rgba(94, 162, 152, 0.14);
 
   --text: var(--paper);
   --text-soft: var(--teal-200);
-  --text-on-contrast: var(--ink);
-  --text-on-contrast-soft: var(--ink-600);
 
   --accent: var(--copper);
   --accent-hover: var(--copper-hover);
@@ -55,7 +61,6 @@
 
   --border: rgba(157, 192, 188, 0.25);
   --border-soft: rgba(157, 192, 188, 0.16);
-  --border-on-contrast: var(--sage);
 
   /* The single signature gradient: raw copper oxidising into teal patina. */
   --gradient-patina: linear-gradient(90deg, var(--copper) 0%, var(--orange) 22%, var(--teal-300) 62%, var(--teal-800) 100%);

@@ -155,11 +155,8 @@
 }
 .btn--outline:hover { border-color: var(--accent); color: var(--accent); }
 
-.section-contrast .btn--outline {
-  border-color: var(--ink);
-  color: var(--ink);
-}
-.section-contrast .btn--outline:hover { border-color: var(--accent-hover); color: var(--accent-hover); }
+/* (.section-contrast no longer inverts .btn--outline — it is dark ground now,
+   so the button's default light treatment above already applies.) */
 
 .btn--ghost {
   background: transparent;
@@ -516,10 +513,8 @@
 .compare__col {
   position: relative;
   overflow: hidden;
-  /* Explicit copper rather than --border-on-contrast: that token now equals
-     .section-contrast's own (muted-sage) background, making the border
-     invisible against it. Copper also matches this card's "conventional"
-     identity (its hover spotlight glow is already copper-tinted below). */
+  /* Copper matches this card's "conventional" identity — its hover spotlight
+     glow is already copper-tinted below. */
   border: 1px solid var(--copper);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -942,7 +937,25 @@
 
 .product-section {
   padding-block: var(--space-9);
-  border-top: 1px solid var(--border-soft);
+  position: relative;
+}
+/* Divider between grades. A full-bleed 1px border cuts the page into stacked
+   panels; this is the same rule with both ends dissolved, so it separates the
+   grades without drawing a hard edge across the layout. */
+.product-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border-soft) 18%,
+    var(--border-soft) 82%,
+    transparent 100%
+  );
 }
 .product-section__grid {
   display: grid;

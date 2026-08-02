@@ -18,6 +18,13 @@
   body { background: #FFFFFF; color: #0E2E30; font-size: 11pt; }
   h1, h2, h3, h4, h5 { color: #0E2E30 !important; }
 
+  /* The screen atmosphere (fixed ambient field, section veils, seam blooms)
+     must not tint the sheet — print-color-adjust:exact above would honour it. */
+  body::before,
+  .section-alt::before,
+  .section-contrast::before { display: none !important; }
+  .section-alt, .section-contrast { background: none !important; }
+
   .site-header, .site-footer, .nav__mobile, .hero, .spectrum,
   .stats, .no-print, .btn, .lang-switch { display: none !important; }
 

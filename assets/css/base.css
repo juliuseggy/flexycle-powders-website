@@ -30,6 +30,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* A standing atmosphere behind the whole page: patina drawn toward the top,
+   a trace of copper at the foot. Gives the flat field depth so the section
+   veils read as light on a surface rather than as painted panels.
+   position:fixed keeps it a single composited layer — it never repaints on
+   scroll, unlike background-attachment:fixed. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 90% 55% at 50% -8%, rgba(94, 162, 152, 0.07), transparent 70%),
+    radial-gradient(ellipse 75% 45% at 50% 108%, rgba(199, 111, 61, 0.05), transparent 70%);
+}
+
 img, svg, video { max-width: 100%; display: block; }
 
 h1, h2, h3, h4, h5 {
@@ -121,18 +137,63 @@ section { padding-block: var(--space-9); }
   section { padding-block: var(--space-7); }
 }
 
-.section-contrast {
-  background: var(--bg-contrast);
-  color: var(--text-on-contrast);
-}
-.section-contrast h1, .section-contrast h2, .section-contrast h3, .section-contrast h4 {
-  color: var(--text-on-contrast);
-}
-.section-contrast p { color: var(--text-on-contrast-soft); }
-.section-contrast a { color: var(--teal-800); }
-.section-contrast a:hover { color: var(--copper-hover); }
+/* --------------------------------------------------------------------------
+   Section transitions
 
-.section-alt { background: var(--bg-alt); }
+   Both modifiers used to paint a flat block (--bg-alt, and a light sage
+   island for .section-contrast). Two opaque blocks meeting produces a hard
+   horizontal seam, and a stack of those seams is exactly what makes a page
+   look assembled from a template kit.
+
+   The tonal shift now rides on a gradient that is fully transparent at 0%
+   and 100%, so it grows out of the page and dissolves back into it. Nothing
+   changes abruptly, so there is no line to see.
+   -------------------------------------------------------------------------- */
+.section-alt,
+.section-contrast {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-alt {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--surface-veil) 22%,
+    var(--surface-veil) 78%,
+    transparent 100%
+  );
+}
+
+.section-contrast {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--surface-veil-strong) 20%,
+    var(--surface-veil-strong) 80%,
+    transparent 100%
+  );
+}
+
+/* Where a section begins, a wide soft bloom rather than an edge: the entry
+   is marked by light falling off in every direction, which cannot band. */
+.section-alt::before,
+.section-contrast::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: min(1240px, 130%);
+  height: clamp(220px, 30vw, 400px);
+  background: radial-gradient(ellipse at center, var(--seam-bloom), transparent 68%);
+  pointer-events: none;
+}
+
+/* No type overrides here any more: the section sits on the same dark ground
+   as everything else, so headings, body copy and links keep the page-wide
+   treatment. Only the background distinguishes it. */
 
 hr.rule {
   border: 0;
