@@ -196,6 +196,7 @@ window.FLX_I18N = {
       title: "Eight hundred and fifty years of mining, one new material loop.",
       lede: "Flexycle Powders was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
       story: "Freiberg has mined and processed metal since the 12th century. Flexycle continues that lineage with a different resource: not ore from the ground, but thin copper residues that today's battery and electronics industry produces in growing volumes. Our founding team, all research engineers from TU Bergakademie Freiberg, built a mechanical process that turns that residue directly into calibrated powder — skipping the melt step that conventional powder production depends on.",
+      video: { label: "Company film — coming soon" },
       valuesTitle: "What we hold to",
       values: [
         { title: "Mechanical, not melted", desc: "Every process step avoids re-melting the metal, cutting energy demand at the source." },
@@ -205,7 +206,7 @@ window.FLX_I18N = {
       teamTitle: "Leadership",
       roles: {
         mech: "Mechanical Engineer",
-        ind: "Industrial Engineer",
+        cs: "Computer Engineer",
         env: "Environmental Engineer"
       }
     },
@@ -466,6 +467,7 @@ window.FLX_I18N = {
       title: "Achthundertfünfzig Jahre Bergbau, ein neuer Materialkreislauf.",
       lede: "Flexycle Powders wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
       story: "Freiberg baut und verarbeitet seit dem 12. Jahrhundert Metall ab. Flexycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünne Kupferrückstände, die die heutige Batterie- und Elektronikindustrie in wachsenden Mengen erzeugt. Unser Gründungsteam — allesamt Forschungsingenieure der TU Bergakademie Freiberg — hat ein mechanisches Verfahren entwickelt, das diese Rückstände direkt in kalibriertes Pulver überführt und dabei den Schmelzschritt überspringt, auf den konventionelle Pulverproduktion angewiesen ist.",
+      video: { label: "Imagefilm — folgt in Kürze" },
       valuesTitle: "Woran wir uns halten",
       values: [
         { title: "Mechanisch, nicht geschmolzen", desc: "Jeder Prozessschritt vermeidet das erneute Schmelzen des Metalls und senkt den Energiebedarf an der Quelle." },
@@ -475,7 +477,7 @@ window.FLX_I18N = {
       teamTitle: "Führungsteam",
       roles: {
         mech: "Maschinenbauingenieur",
-        ind: "Wirtschaftsingenieur",
+        cs: "Informatikingenieur",
         env: "Umweltingenieur"
       }
     },

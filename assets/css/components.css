@@ -846,6 +846,49 @@
 .morph-glyph--fcppm polygon { fill: var(--teal-800); }
 
 /* ---------------------------------------------------------------------- */
+/* Video placeholder (company page) — not a real player, deliberately not   */
+/* styled as clickable (no hover/cursor change) since it can't play         */
+/* anything yet. See markup comment for what replaces it once ready.       */
+/* ---------------------------------------------------------------------- */
+.video-placeholder__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-width: 56rem;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(199, 111, 61, 0.18), var(--bg-alt) 70%);
+  border: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+.video-placeholder__play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(10, 36, 38, 0.55);
+  color: var(--paper);
+}
+.video-placeholder__play svg { width: 26px; height: 26px; margin-left: 3px; }
+.video-placeholder__label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--paper);
+  background: rgba(10, 36, 38, 0.45);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+}
+
+/* ---------------------------------------------------------------------- */
 /* Product tilt card — mouse-reactive 3D tilt, morphology glyph as the      */
 /* full-bleed backdrop, headline particle-size spec as the standout tag.    */
 /* Adapted from a pasted React/Tailwind "InteractiveProductCard" prompt:    */
