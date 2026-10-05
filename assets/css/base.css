@@ -132,6 +132,10 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 .skip-link:focus { top: var(--space-4); }
 
+/* The section blooms below are wider than the viewport on phones (130 %);
+   clip sideways only, so they still bleed up into the previous section. */
+main { overflow-x: clip; }
+
 section { padding-block: var(--space-9); }
 @media (max-width: 640px) {
   section { padding-block: var(--space-7); }

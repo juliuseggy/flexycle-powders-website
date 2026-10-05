@@ -62,8 +62,18 @@
   </section>
 
   <section>
-    <div class="container" data-blur-group style="max-width:68ch">
-      <p class="blur-fade" style="font-size:var(--fs-400)" data-i18n="company.story">Freiberg has mined and processed metal since the 12th century. Flexycle continues that lineage with a different resource: not ore from the ground, but thin copper residues that today's battery and electronics industry produces in growing volumes. Our founding team, all research engineers from TU Bergakademie Freiberg, built a mechanical process that turns that residue directly into calibrated powder — skipping the melt step that conventional powder production depends on.</p>
+    <div class="container" data-blur-group>
+      <div class="split split--even" style="align-items:center">
+        <p class="blur-fade" style="font-size:var(--fs-400)" data-i18n="company.story">Freiberg has mined and processed metal since the 12th century. Flexycle continues that lineage with a different resource: not ore from the ground, but the thin copper foil that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.</p>
+        <!-- Image placeholder: replace .img-ph__frame with <img src="assets/img/lab.jpg" alt="..." loading="lazy">. -->
+        <figure class="img-ph blur-fade" style="--ratio:4 / 3">
+          <div class="img-ph__frame">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
+            <span class="img-ph__label" data-i18n="ph.lab">Photo: our lab at IART, TU Bergakademie Freiberg</span>
+            <span class="img-ph__file">assets/img/lab.jpg · 4:3</span>
+          </div>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -116,6 +126,14 @@
   <section>
     <div class="container" data-blur-group>
       <h2 class="blur-fade" data-i18n="company.teamTitle">Leadership</h2>
+      <!-- Image placeholder: replace .img-ph__frame with <img src="assets/img/team.jpg" alt="..." loading="lazy">. -->
+      <figure class="img-ph blur-fade" style="--ratio:21 / 9">
+        <div class="img-ph__frame">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
+          <span class="img-ph__label" data-i18n="ph.team">Photo: the founding team</span>
+          <span class="img-ph__file">assets/img/team.jpg · 21:9</span>
+        </div>
+      </figure>
       <!-- Avatars are gradient/initials placeholders until real photos are
            supplied — swap each .team-showcase__photo's background for a
            photo (e.g. add an <img> inside it) without touching the hover
@@ -146,7 +164,7 @@
               </a>
             </span>
             <span class="team-showcase__role">CEO</span>
-            <span class="team-showcase__title" data-i18n="company.roles.mech">Mechanical Engineer</span>
+            <span class="team-showcase__title" data-i18n-html="company.roles.jg">Production &amp; lightweight engineering · strategy &amp; customers</span>
           </div>
           <div class="team-showcase__row" tabindex="0" data-member="tb">
             <span class="team-showcase__pill" aria-hidden="true"></span>
@@ -160,7 +178,7 @@
               </a>
             </span>
             <span class="team-showcase__role">CFO</span>
-            <span class="team-showcase__title" data-i18n="company.roles.cs">Computer Engineer</span>
+            <span class="team-showcase__title" data-i18n-html="company.roles.tb">Computer engineering · finance &amp; economic viability</span>
           </div>
           <div class="team-showcase__row" tabindex="0" data-member="et">
             <span class="team-showcase__pill" aria-hidden="true"></span>
@@ -174,7 +192,7 @@
               </a>
             </span>
             <span class="team-showcase__role">COO</span>
-            <span class="team-showcase__title" data-i18n="company.roles.env">Environmental Engineer</span>
+            <span class="team-showcase__title" data-i18n-html="company.roles.et">Environmental engineering · process development &amp; validation</span>
           </div>
           <div class="team-showcase__row" tabindex="0" data-member="pn">
             <span class="team-showcase__pill" aria-hidden="true"></span>
@@ -188,10 +206,86 @@
               </a>
             </span>
             <span class="team-showcase__role">CTO</span>
-            <span class="team-showcase__title" data-i18n="company.roles.mech">Mechanical Engineer</span>
+            <span class="team-showcase__title" data-i18n-html="company.roles.pn">Mechanical engineering · comminution &amp; automation</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Milestones: EXIST application §4.1, §4.3, §8. Real chronology, so the
+       dated list form carries information. -->
+  <section class="section-contrast" id="milestones">
+    <div class="container" data-blur-group>
+      <p class="eyebrow blur-fade" data-i18n="company.milestones.eyebrow">Milestones</p>
+      <h2 class="blur-fade" data-i18n="company.milestones.title">From research project to company</h2>
+      <ol class="timeline">
+        <li class="timeline__item blur-fade">
+          <span class="timeline__date">2022–2024</span>
+          <div>
+            <h3 data-i18n="company.milestones.items.0.title">CuprAlUp</h3>
+            <p data-i18n="company.milestones.items.0.desc">A research project funded through the German Federal Ministry for Economic Affairs (ZIM). It looked at fine copper fractions from battery production for the first time and ran the first laser cladding tests with mechanically made powder.</p>
+          </div>
+        </li>
+        <li class="timeline__item blur-fade">
+          <span class="timeline__date">2023–2024</span>
+          <div>
+            <h3 data-i18n="company.milestones.items.1.title">Patent applications</h3>
+            <p data-i18n="company.milestones.items.1.desc">German application DE 10 2023 115 631 filed in June 2023, followed by the European application EP 4 480 604 in June 2024.</p>
+          </div>
+        </li>
+        <li class="timeline__item blur-fade">
+          <span class="timeline__date">→ 2026</span>
+          <div>
+            <h3 data-i18n="company.milestones.items.2.title">LiCARE</h3>
+            <p data-i18n="company.milestones.items.2.desc">A project funded by the German Federal Environmental Foundation (DBU), extending the work to coating applications and further material streams.</p>
+          </div>
+        </li>
+        <li class="timeline__item blur-fade">
+          <span class="timeline__date">2025–2026</span>
+          <div>
+            <h3 data-i18n-html="company.milestones.items.3.title">Validation funding &amp; pilot plant</h3>
+            <p data-i18n="company.milestones.items.3.desc">Funded by the Sächsische Aufbaubank and the EU, we are assessing the technical and economic case for a spin-off. In parallel, a semi-industrial pilot plant is being set up on the CircEcon circular-economy campus in Lusatia.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--next blur-fade">
+          <span class="timeline__date">12/2026–05/2028</span>
+          <div>
+            <h3 data-i18n="company.milestones.items.4.title">EXIST research transfer</h3>
+            <p data-i18n="company.milestones.items.4.desc">Funded through the EXIST programme: scaling the process up to a pilot line, producing standardised powder batches, testing them with pilot users and preparing the spin-off.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--next blur-fade">
+          <span class="timeline__date">2028</span>
+          <div>
+            <h3 data-i18n="company.milestones.items.5.title">Incorporation</h3>
+            <p data-i18n="company.milestones.items.5.desc">Planned founding as a GmbH in Chemnitz, close to the TU Chemnitz technology campus and 40 km from Freiberg.</p>
+          </div>
+        </li>
+      </ol>
+      <!-- Image placeholder: replace .img-ph__frame with <img src="assets/img/pilot-plant.jpg" alt="..." loading="lazy">. -->
+      <figure class="img-ph blur-fade" style="--ratio:21 / 9">
+        <div class="img-ph__frame">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
+          <span class="img-ph__label" data-i18n="ph.pilot">Photo: pilot plant at the CircEcon campus, Lusatia</span>
+          <span class="img-ph__file">assets/img/pilot-plant.jpg · 21:9</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Research network: EXIST application §3. -->
+  <section>
+    <div class="container" data-blur-group>
+      <h2 class="blur-fade" data-i18n="company.network.title">Research network</h2>
+      <p class="hero__lede blur-fade" data-i18n="company.network.lede">Partners for testing, qualification and scale-up.</p>
+      <ul class="people people--wide blur-fade" style="margin-top:var(--space-7)">
+        <li><span class="people__name">TU Bergakademie Freiberg · IART</span><span class="people__role" data-i18n="company.network.partners.0">Home institute, with labs for analysis, liberation and comminution</span></li>
+        <li><span class="people__name">TU Chemnitz</span><span class="people__role" data-i18n="company.network.partners.1">Additive manufacturing trials</span></li>
+        <li><span class="people__name">Fraunhofer IWU</span><span class="people__role" data-i18n="company.network.partners.2">Additive manufacturing trials, including LPBF</span></li>
+        <li><span class="people__name">SAXEED</span><span class="people__role" data-i18n="company.network.partners.3">Founders' network that has supported the team for over three years</span></li>
+        <li><span class="people__name">CircEcon</span><span class="people__role" data-i18n="company.network.partners.4">Circular-economy campus in Lusatia, site of our pilot plant</span></li>
+      </ul>
     </div>
   </section>
 
@@ -231,6 +325,11 @@
           <li><a href="imprint.html" data-i18n="footer.imprint">Imprint</a></li>
           <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
         </ul>
+      </div>
+    </div>
+    <div class="site-footer__funding">
+      <div class="site-footer__funding-panel">
+        <img src="assets/img/foerderhinweis.png" alt="Co-financed by the European Union and the Free State of Saxony" loading="lazy">
       </div>
     </div>
     <div class="site-footer__bottom">

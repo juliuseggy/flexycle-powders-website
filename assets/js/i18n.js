@@ -30,14 +30,14 @@ window.FLX_I18N = {
       eyebrow: "Deep tech · recycled copper powder",
       title: "From Scrap to Powder. From Waste to Value.",
       titleHtml: "From Scrap to Powder.<br>From Waste to Value.",
-      lede: "Flexycle Powders converts thin copper residues from battery and electronics manufacturing into high-performance powder — mechanically, at a fraction of the energy a melt process needs, sorted into six grades by particle size.",
+      lede: "Flexycle Powders turns copper foil residues from battery cell production into high-performance powder. Our patented process is purely mechanical — no melting, no inert gas — and sorts the powder into six grades by particle size.",
       spectrumLabel: "Particle-size spectrum",
       spectrumCta: "See all six grades →",
       stats: [
-        { value: "&gt;0.9", label: "sphericity" },
-        { value: "100%", label: "regional supply chain" },
-        { value: "&lt;20–150", label: "<span style=\"text-transform:none\">µm</span> particle size range" },
-        { value: "Up to 99.95%", label: "copper purity" }
+        { value: "&gt;97%", label: "less energy than gas atomisation" },
+        { value: "&lt;100 °C", label: "process temperature" },
+        { value: "~2×", label: "laser absorption at 1070 nm" },
+        { value: "&gt;99.9%", label: "copper purity" }
       ],
       process: {
         eyebrow: "The process",
@@ -48,29 +48,29 @@ window.FLX_I18N = {
         conventional: {
           title: "Conventional atomisation",
           items: [
-            "Starts from virgin cathode copper",
-            "Melts metal at ~1085 °C, then atomises with gas or water",
-            "High energy input per kilogram of powder",
-            "Fixed morphology, limited grade differentiation"
+            "Starts from primary copper",
+            "Melts the metal at ~1085 °C and atomises it, usually under inert gas",
+            "9,000 kWh and more per tonne for gas atomisation",
+            "Smooth, glossy particles reflect infrared lasers"
           ]
         },
         flexycle: {
           title: "Flexycle Process",
           items: [
-            "Starts from thin copper residues from battery &amp; electronics production",
-            "No melting step — mechanical size reduction and classification",
-            "Substantially lower energy input per kilogram",
-            "Six calibrated grades, tuned by particle size and morphology"
+            "Starts from copper foil residues from battery cell production",
+            "No melting — mechanical comminution and classification below 100 °C",
+            "Around 650 kWh per tonne, no inert gas",
+            "Rough, spheroidal particles absorb laser light and interlock under pressure"
           ]
         }
       },
       applications: {
         title: "Where Flexycle powder goes to work",
         items: [
-          { title: "Additive manufacturing", desc: "Highly spherical FCP-AM feeds LPBF and DED systems for dense, pure-copper parts." },
-          { title: "Electronics", desc: "FCP-20 sinters into fine conductive structures and components." },
-          { title: "Battery technology", desc: "Production residues from battery manufacturing become feedstock again, closing the loop." },
-          { title: "Powder metallurgy", desc: "FCP-PM's broad classification suits standard press-and-sinter routes, from bearings to structural parts." }
+          { title: "Additive manufacturing", desc: "FCP-AM absorbs about twice as much 1070 nm laser light as gas-atomised powder, for LPBF and DED on standard infrared machines." },
+          { title: "Press & sinter", desc: "Rough particles interlock for high green strength, from plain bearings to structural parts." },
+          { title: "Cold spray", desc: "Copper coatings, for example on aluminium busbars for e-mobility. A rough particle surface can improve adhesion." },
+          { title: "Power electronics", desc: "Fine fractions as a starting material for copper-based sinter pastes, in development with users." }
         ]
       },
       gallery: {
@@ -84,6 +84,22 @@ window.FLX_I18N = {
           "Sintering — SPS-consolidated functional parts",
           "Powder metallurgy — bearings and structural parts"
         ]
+      },
+      energy: {
+        eyebrow: "Energy demand",
+        title: "650 kWh per tonne. Melt routes need many times more.",
+        lede: "Nothing is melted and no inert gas is needed, so the mechanical route uses a fraction of the energy of established powder production.",
+        chartLabel: "Specific energy demand, kWh per tonne of copper powder",
+        values: ["~650", "2,000–2,500", "~4,000", "9,000–166,000", "~25,000"],
+        ticks: ["0", "5,000", "10,000", "15,000", "20,000", "25,000"],
+        rows: [
+          "Flexycle mechanical process",
+          "Water atomisation",
+          "Electrolytic powder",
+          "Gas atomisation (literature range)",
+          "Free-fall hot-gas atomisation (N₂)"
+        ],
+        note: "Lighter segments show a range. The gas-atomisation range continues far beyond the chart. Sources: Ehmsen et al., J. Manuf. Syst. 82 (2025); Cebula et al., Sustain. Mater. Technol. 33 (2022)."
       },
       cta: { title: "Get a sample sized to your process.", button: "Request a quote" }
     },
@@ -103,6 +119,7 @@ window.FLX_I18N = {
         specificSurface: "Specific surface",
         flowability: "Flowability (Hall)",
         greenStrength: "Green strength",
+        absorption: "Laser absorption (1070 nm)",
         copperContent: "Copper content",
         oxygenContent: "Oxygen content",
         consolidationRoute: "Consolidation route",
@@ -117,7 +134,7 @@ window.FLX_I18N = {
           particleSize: "&lt;20 µm",
           specificSurface: "High (BET)",
           tapDensity: "~3.8 g/cm³",
-          copperContent: "≥99.8%",
+          copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
         },
         applications: "Electronics, sintered contacts, conductive pastes"
@@ -130,7 +147,7 @@ window.FLX_I18N = {
           particleSize: "20–45 µm",
           flowability: "~16 s/50 g",
           apparentDensity: "~4.5 g/cm³",
-          copperContent: "≥99.8%",
+          copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
         },
         applications: "Binder jetting, complex geometries, batch AM production"
@@ -138,14 +155,16 @@ window.FLX_I18N = {
       fcpam: {
         eyebrow: "Additive manufacturing · LPBF/DED",
         tagline: "Spherical powder built for laser processing.",
-        desc: "Highly spherical and free-flowing, FCP-AM is calibrated for laser powder bed fusion and directed energy deposition, producing dense, pure-copper parts without the energy cost of virgin atomisation.",
+        desc: "Spheroidal and free-flowing, FCP-AM is calibrated for laser powder bed fusion and directed energy deposition. Its rough surface absorbs about twice as much 1070 nm laser light as gas-atomised powder, which widens the process window on standard infrared machines.",
         specs: {
           particleSize: "20–63 µm",
-          sphericity: "&gt;0.9",
-          apparentDensity: "~4.9 g/cm³",
+          sphericity: "~0.87",
+          apparentDensity: "~4.0 g/cm³",
+          tapDensity: "~4.8 g/cm³",
           flowability: "~14 s/50 g",
-          copperContent: "≥99.9%",
+          copperContent: "&gt;99.9%",
           oxygenContent: "≤400 ppm",
+          absorption: "~2× gas-atomised",
           feedstock: "100% recycled"
         },
         applications: "LPBF of pure-copper parts, DED, high-conductivity components"
@@ -158,7 +177,7 @@ window.FLX_I18N = {
           particleSize: "63–100 µm",
           sphericity: "&gt;0.85",
           apparentDensity: "~5.1 g/cm³",
-          copperContent: "≥99.9%",
+          copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
         },
         applications: "EBM of copper components, high-conductivity parts"
@@ -171,31 +190,36 @@ window.FLX_I18N = {
           particleSize: "45–150 µm",
           consolidationRoute: "SPS / pressureless sintering",
           apparentDensity: "~4.0 g/cm³",
-          copperContent: "≥99.7%",
+          copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
         },
         applications: "SPS-consolidated parts, pressureless-sintered components, functional structures"
       },
       fcppm: {
         eyebrow: "Powder metallurgy · press &amp; sinter",
-        tagline: "Irregular morphology, built for green strength.",
-        desc: "FCP-PM's irregular, dendritic particles interlock under pressure, giving strong green compacts for classic press-and-sinter routes. The broadest of the six grades, covering general powder-metallurgy use where a tight process-specific cut isn't required.",
+        tagline: "Rough surface, built for green strength.",
+        desc: "FCP-PM's rough particle surfaces interlock under pressure, giving strong green compacts for classic press-and-sinter routes — only 8–10 % below water-atomised powder in first trials. The broadest of the six grades, for general powder-metallurgy use where a tight process-specific cut isn't required.",
         specs: {
           particleSize: "20–150 µm",
-          morphology: "Irregular / dendritic",
+          morphology: "Rough, spheroidal",
           apparentDensity: "~2.6 g/cm³",
-          greenStrength: "Good",
-          copperContent: "≥99.7%",
+          greenStrength: "8–10 % below water-atomised",
+          copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
         },
         applications: "Press &amp; sinter components, bearings, structural parts"
+      },
+      tune: {
+        eyebrow: "Configurable",
+        title: "Purity or absorption: tuned to your process",
+        desc: "Our feedstock is graphite-coated anode foil. Process settings decide how much graphite stays in the powder: a little more raises laser absorption, less gives the highest copper purity for conductive parts. Tell us what your process needs and we set the grade up for it, including custom size cuts."
       }
     },
     company: {
       eyebrow: "Company",
       title: "Eight hundred and fifty years of mining, one new material loop.",
       lede: "Flexycle Powders was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
-      story: "Freiberg has mined and processed metal since the 12th century. Flexycle continues that lineage with a different resource: not ore from the ground, but thin copper residues that today's battery and electronics industry produces in growing volumes. Our founding team, all research engineers from TU Bergakademie Freiberg, built a mechanical process that turns that residue directly into calibrated powder — skipping the melt step that conventional powder production depends on.",
+      story: "Freiberg has mined and processed metal since the 12th century. Flexycle continues that lineage with a different resource: not ore from the ground, but the thin copper foil that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.",
       video: { label: "Company film — coming soon" },
       valuesTitle: "What we hold to",
       values: [
@@ -207,13 +231,40 @@ window.FLX_I18N = {
       roles: {
         mech: "Mechanical Engineer",
         cs: "Computer Engineer",
-        env: "Environmental Engineer"
+        env: "Environmental Engineer",
+        tb: "Computer engineering · finance &amp; economic viability",
+        jg: "Production &amp; lightweight engineering · strategy &amp; customers",
+        et: "Environmental engineering · process development &amp; validation",
+        pn: "Mechanical engineering · comminution &amp; automation"
+      },
+      milestones: {
+        eyebrow: "Milestones",
+        title: "From research project to company",
+        items: [
+          { title: "CuprAlUp", desc: "A research project funded through the German Federal Ministry for Economic Affairs (ZIM). It looked at fine copper fractions from battery production for the first time and ran the first laser cladding tests with mechanically made powder." },
+          { title: "Patent applications", desc: "German application DE 10 2023 115 631 filed in June 2023, followed by the European application EP 4 480 604 in June 2024." },
+          { title: "LiCARE", desc: "A project funded by the German Federal Environmental Foundation (DBU), extending the work to coating applications and further material streams." },
+          { title: "Validation funding &amp; pilot plant", desc: "Funded by the Sächsische Aufbaubank and the EU, we are assessing the technical and economic case for a spin-off. In parallel, a semi-industrial pilot plant is being set up on the CircEcon circular-economy campus in Lusatia." },
+          { title: "EXIST research transfer", desc: "Funded through the EXIST programme: scaling the process up to a pilot line, producing standardised powder batches, testing them with pilot users and preparing the spin-off." },
+          { title: "Incorporation", desc: "Planned founding as a GmbH in Chemnitz, close to the TU Chemnitz technology campus and 40 km from Freiberg." }
+        ]
+      },
+      network: {
+        title: "Research network",
+        lede: "Partners for testing, qualification and scale-up.",
+        partners: [
+          "Home institute, with labs for analysis, liberation and comminution",
+          "Additive manufacturing trials",
+          "Additive manufacturing trials, including LPBF",
+          "Founders' network that has supported the team for over three years",
+          "Circular-economy campus in Lusatia, site of our pilot plant"
+        ]
       }
     },
     career: {
       eyebrow: "Career",
       title: "Build the mechanical alternative with us.",
-      lede: "We're a small, engineering-led team out of Freiberg. If you don't see an open role but want to work on closed-loop metallurgy, we'd like to hear from you.",
+      lede: "We're a small, engineering-led team from Freiberg, taking a patented process from the lab to a pilot line. If you don't see an open role but want to work on closed-loop metallurgy, we'd like to hear from you.",
       openTitle: "Open applications",
       openBody: "Tell us about your background and what you'd want to work on — we review every application personally.",
       form: {
@@ -234,7 +285,7 @@ window.FLX_I18N = {
     contact: {
       eyebrow: "Contact",
       title: "Talk to the team.",
-      lede: "Questions about a grade, a sample, or a partnership — reach us directly.",
+      lede: "Questions about a grade, sample material for your own trials, or a research partnership — reach us directly.",
       infoTitle: "Contact details",
       address: "Freiberg, Saxony, Germany",
       generalTitle: "General inquiry",
@@ -252,6 +303,15 @@ window.FLX_I18N = {
         errorRequired: "This field is required.",
         errorEmail: "Enter a valid email address."
       }
+    },
+    ph: {
+      feedstock: "Photo: copper foil residues from battery cell production",
+      powder: "Photo: finished copper powder",
+      sem: "Micrograph: FCP particles (SEM)",
+      lab: "Photo: our lab at IART, TU Bergakademie Freiberg",
+      team: "Photo: the founding team",
+      pilot: "Photo: pilot plant at the CircEcon campus, Lusatia",
+      teamWork: "Photo: the team at work in the lab"
     },
     legal: {
       imprintTitle: "Imprint",
@@ -301,14 +361,14 @@ window.FLX_I18N = {
       eyebrow: "Deep-Tech · recyceltes Kupferpulver",
       title: "Von Schrott zu Pulver. Von Abfall zu Wert.",
       titleHtml: "Von Schrott zu Pulver.<br>Von Abfall zu Wert.",
-      lede: "Flexycle Powders verwandelt dünne Kupferrückstände aus der Batterie- und Elektronikfertigung mechanisch in Hochleistungspulver — mit einem Bruchteil der Energie eines Schmelzprozesses, sortiert in sechs Korngrößen-Klassen.",
+      lede: "Flexycle Powders macht aus Kupferfolien-Resten der Batteriezellfertigung Hochleistungspulver. Unser patentiertes Verfahren ist rein mechanisch — ohne Schmelzen, ohne Inertgas — und sortiert das Pulver in sechs Korngrößen-Klassen.",
       spectrumLabel: "Korngrößen-Spektrum",
       spectrumCta: "Alle sechs Klassen ansehen →",
       stats: [
-        { value: "&gt;0,9", label: "Sphärizität" },
-        { value: "100%", label: "regionale Lieferkette" },
-        { value: "&lt;20–150", label: "<span style=\"text-transform:none\">µm</span> Korngrößenbereich" },
-        { value: "Bis zu 99,95%", label: "Kupferreinheit" }
+        { value: "&gt;97%", label: "weniger Energie als Gasverdüsung" },
+        { value: "&lt;100 °C", label: "Prozesstemperatur" },
+        { value: "~2×", label: "Laserabsorption bei 1070 nm" },
+        { value: "&gt;99,9%", label: "Kupferreinheit" }
       ],
       process: {
         eyebrow: "Der Prozess",
@@ -319,29 +379,29 @@ window.FLX_I18N = {
         conventional: {
           title: "Konventionelle Zerstäubung",
           items: [
-            "Beginnt bei primärer Kathodenkupfer",
-            "Schmilzt Metall bei ~1085 °C, zerstäubt dann mit Gas oder Wasser",
-            "Hoher Energieeinsatz pro Kilogramm Pulver",
-            "Feste Morphologie, kaum Klassen-Differenzierung"
+            "Beginnt bei Primärkupfer",
+            "Schmilzt das Metall bei ~1085 °C und verdüst es, meist unter Inertgas",
+            "9.000 kWh und mehr pro Tonne bei der Gasverdüsung",
+            "Glatte, glänzende Partikel reflektieren Infrarotlaser"
           ]
         },
         flexycle: {
           title: "Flexycle Process",
           items: [
-            "Beginnt bei dünnen Kupferrückständen aus Batterie- und Elektronikfertigung",
-            "Kein Schmelzschritt — mechanische Zerkleinerung und Klassierung",
-            "Deutlich geringerer Energieeinsatz pro Kilogramm",
-            "Sechs kalibrierte Klassen, abgestimmt nach Korngröße und Morphologie"
+            "Beginnt bei Kupferfolien-Resten aus der Batteriezellfertigung",
+            "Kein Schmelzen — mechanische Zerkleinerung und Klassierung unter 100 °C",
+            "Rund 650 kWh pro Tonne, ohne Inertgas",
+            "Raue, verkugelte Partikel absorbieren Laserlicht und verklammern sich beim Pressen"
           ]
         }
       },
       applications: {
         title: "Wo Flexycle-Pulver zum Einsatz kommt",
         items: [
-          { title: "Additive Fertigung", desc: "Das hochsphärische FCP-AM versorgt LPBF- und DED-Anlagen für dichte Bauteile aus Reinkupfer." },
-          { title: "Elektronik", desc: "FCP-20 sintert zu feinen leitfähigen Strukturen und Bauteilen." },
-          { title: "Batterietechnik", desc: "Produktionsrückstände aus der Batteriefertigung werden erneut zu Einsatzstoff — der Kreislauf schließt sich." },
-          { title: "Pulvermetallurgie", desc: "Die breite Klassierung von FCP-PM eignet sich für klassische Press-Sinter-Anwendungen, von Lagern bis zu Strukturbauteilen." }
+          { title: "Additive Fertigung", desc: "FCP-AM absorbiert etwa doppelt so viel Laserlicht bei 1070 nm wie gasverdüstes Pulver — für LPBF und DED auf gängigen Infrarot-Anlagen." },
+          { title: "Pressen & Sintern", desc: "Raue Partikel verklammern sich zu hoher Grünfestigkeit, von Gleitlagern bis zu Strukturbauteilen." },
+          { title: "Kaltgas­spritzen", desc: "Kupferbeschichtungen, etwa auf Aluminium-Stromschienen für die E-Mobilität. Eine raue Partikeloberfläche kann die Haftung verbessern." },
+          { title: "Leistungs­elektronik", desc: "Feine Fraktionen als Ausgangsmaterial für kupferbasierte Sinterpasten, in Entwicklung mit Anwendern." }
         ]
       },
       gallery: {
@@ -356,6 +416,22 @@ window.FLX_I18N = {
           "Pulvermetallurgie — Lager und Strukturbauteile"
         ]
       },
+      energy: {
+        eyebrow: "Energiebedarf",
+        title: "650 kWh pro Tonne. Schmelzrouten brauchen ein Vielfaches.",
+        lede: "Nichts wird geschmolzen und kein Inertgas gebraucht — der mechanische Weg benötigt nur einen Bruchteil der Energie etablierter Pulverherstellung.",
+        chartLabel: "Spezifischer Energiebedarf, kWh pro Tonne Kupferpulver",
+        values: ["~650", "2.000–2.500", "~4.000", "9.000–166.000", "~25.000"],
+        ticks: ["0", "5.000", "10.000", "15.000", "20.000", "25.000"],
+        rows: [
+          "Flexycle, mechanisches Verfahren",
+          "Wasserverdüsung",
+          "Elektrolytisch hergestelltes Pulver",
+          "Gasverdüsung (Spanne laut Literatur)",
+          "Free-Fall-Hot-Gas-Atomisierung (N₂)"
+        ],
+        note: "Hellere Abschnitte zeigen eine Spanne. Die Spanne der Gasverdüsung reicht weit über das Diagramm hinaus. Quellen: Ehmsen et al., J. Manuf. Syst. 82 (2025); Cebula et al., Sustain. Mater. Technol. 33 (2022)."
+      },
       cta: { title: "Fordern Sie ein auf Ihren Prozess abgestimmtes Muster an.", button: "Angebot anfragen" }
     },
     products: {
@@ -368,12 +444,13 @@ window.FLX_I18N = {
         particleSize: "Korngröße",
         sphericity: "Sphärizität",
         morphology: "Morphologie",
-        apparentDensity: "Klopfdichte",
+        apparentDensity: "Schüttdichte",
         tapDensity: "Stampfdichte",
         bulkDensity: "Schüttdichte",
         specificSurface: "Spezifische Oberfläche",
         flowability: "Fließfähigkeit (Hall)",
         greenStrength: "Grünfestigkeit",
+        absorption: "Laserabsorption (1070 nm)",
         copperContent: "Kupfergehalt",
         oxygenContent: "Sauerstoffgehalt",
         consolidationRoute: "Konsolidierungsroute",
@@ -388,7 +465,7 @@ window.FLX_I18N = {
           particleSize: "&lt;20 µm",
           specificSurface: "Hoch (BET)",
           tapDensity: "~3,8 g/cm³",
-          copperContent: "≥99,8%",
+          copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
         },
         applications: "Elektronik, gesinterte Kontakte, leitfähige Pasten"
@@ -401,7 +478,7 @@ window.FLX_I18N = {
           particleSize: "20–45 µm",
           flowability: "~16 s/50 g",
           apparentDensity: "~4,5 g/cm³",
-          copperContent: "≥99,8%",
+          copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
         },
         applications: "Binder Jetting, komplexe Geometrien, Serien-AM-Produktion"
@@ -409,14 +486,16 @@ window.FLX_I18N = {
       fcpam: {
         eyebrow: "Additive Fertigung · LPBF/DED",
         tagline: "Sphärisches Pulver für die Laserverarbeitung.",
-        desc: "Hochsphärisch und rieselfähig ist FCP-AM für Laser Powder Bed Fusion und Directed Energy Deposition kalibriert und liefert dichte Bauteile aus Reinkupfer — ohne den Energieaufwand einer Primär-Zerstäubung.",
+        desc: "Verkugelt und rieselfähig ist FCP-AM für Laser Powder Bed Fusion und Directed Energy Deposition kalibriert. Seine raue Oberfläche absorbiert etwa doppelt so viel Laserlicht bei 1070 nm wie gasverdüstes Pulver und erweitert so das Prozessfenster auf gängigen Infrarot-Anlagen.",
         specs: {
           particleSize: "20–63 µm",
-          sphericity: "&gt;0,9",
-          apparentDensity: "~4,9 g/cm³",
+          sphericity: "~0,87",
+          apparentDensity: "~4,0 g/cm³",
+          tapDensity: "~4,8 g/cm³",
           flowability: "~14 s/50 g",
-          copperContent: "≥99,9%",
+          copperContent: "&gt;99,9%",
           oxygenContent: "≤400 ppm",
+          absorption: "~2× gasverdüst",
           feedstock: "100% recycelt"
         },
         applications: "LPBF von Reinkupfer-Bauteilen, DED, hochleitfähige Komponenten"
@@ -429,7 +508,7 @@ window.FLX_I18N = {
           particleSize: "63–100 µm",
           sphericity: "&gt;0,85",
           apparentDensity: "~5,1 g/cm³",
-          copperContent: "≥99,9%",
+          copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
         },
         applications: "EBM von Kupferbauteilen, hochleitfähige Komponenten"
@@ -442,31 +521,36 @@ window.FLX_I18N = {
           particleSize: "45–150 µm",
           consolidationRoute: "SPS / drucklose Sinterung",
           apparentDensity: "~4,0 g/cm³",
-          copperContent: "≥99,7%",
+          copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
         },
         applications: "SPS-verdichtete Bauteile, drucklos gesinterte Komponenten, Funktionsbauteile"
       },
       fcppm: {
         eyebrow: "Pulvermetallurgie · Pressen &amp; Sintern",
-        tagline: "Unregelmäßige Morphologie für hohe Grünfestigkeit.",
-        desc: "Die unregelmäßigen, dendritischen Partikel von FCP-PM verzahnen sich unter Druck und ergeben feste Grünlinge für klassische Press-Sinter-Verfahren. Die breiteste der sechs Klassen, für allgemeine pulvermetallurgische Anwendungen ohne engen prozessspezifischen Schnitt.",
+        tagline: "Raue Oberfläche für hohe Grünfestigkeit.",
+        desc: "Die rauen Partikeloberflächen von FCP-PM verklammern sich unter Druck und ergeben feste Grünlinge für klassische Press-Sinter-Verfahren — in ersten Versuchen nur 8–10 % unter wasserverdüstem Pulver. Die breiteste der sechs Klassen, für allgemeine pulvermetallurgische Anwendungen ohne engen prozessspezifischen Schnitt.",
         specs: {
           particleSize: "20–150 µm",
-          morphology: "Unregelmäßig / dendritisch",
+          morphology: "Rau, verkugelt",
           apparentDensity: "~2,6 g/cm³",
-          greenStrength: "Gut",
-          copperContent: "≥99,7%",
+          greenStrength: "8–10 % unter wasserverdüst",
+          copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
         },
         applications: "Press-Sinter-Bauteile, Lager, Strukturbauteile"
+      },
+      tune: {
+        eyebrow: "Konfigurierbar",
+        title: "Reinheit oder Absorption: abgestimmt auf Ihren Prozess",
+        desc: "Unser Einsatzstoff ist graphitbeschichtete Anodenfolie. Die Prozesseinstellungen bestimmen, wie viel Graphit im Pulver bleibt: etwas mehr erhöht die Laserabsorption, weniger ergibt die höchste Kupferreinheit für leitfähige Bauteile. Sagen Sie uns, was Ihr Prozess braucht — wir stellen die Klasse darauf ein, auch mit individuellen Korngrößenschnitten."
       }
     },
     company: {
       eyebrow: "Unternehmen",
       title: "Achthundertfünfzig Jahre Bergbau, ein neuer Materialkreislauf.",
       lede: "Flexycle Powders wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
-      story: "Freiberg baut und verarbeitet seit dem 12. Jahrhundert Metall ab. Flexycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünne Kupferrückstände, die die heutige Batterie- und Elektronikindustrie in wachsenden Mengen erzeugt. Unser Gründungsteam — allesamt Forschungsingenieure der TU Bergakademie Freiberg — hat ein mechanisches Verfahren entwickelt, das diese Rückstände direkt in kalibriertes Pulver überführt und dabei den Schmelzschritt überspringt, auf den konventionelle Pulverproduktion angewiesen ist.",
+      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. Flexycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünne Kupferfolie, die in der Batteriezellfertigung in wachsenden Mengen übrig bleibt. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt: einen mechanischen Weg, der diese Reststoffe direkt in kalibriertes Pulver überführt und den Schmelzschritt überspringt, auf den die konventionelle Pulverherstellung angewiesen ist.",
       video: { label: "Imagefilm — folgt in Kürze" },
       valuesTitle: "Woran wir uns halten",
       values: [
@@ -478,13 +562,40 @@ window.FLX_I18N = {
       roles: {
         mech: "Maschinenbauingenieur",
         cs: "Informatikingenieur",
-        env: "Umweltingenieur"
+        env: "Umweltingenieur",
+        tb: "Informatik · Finanzen &amp; Wirtschaftlichkeit",
+        jg: "Automobilproduktion &amp; Leichtbau · Strategie &amp; Kunden",
+        et: "Umwelttechnik · Prozessentwicklung &amp; Validierung",
+        pn: "Maschinenbau · Zerkleinerung &amp; Automatisierung"
+      },
+      milestones: {
+        eyebrow: "Meilensteine",
+        title: "Vom Forschungsprojekt zum Unternehmen",
+        items: [
+          { title: "CuprAlUp", desc: "Ein über das ZIM-Programm des Bundeswirtschaftsministeriums gefördertes Forschungsprojekt. Erstmals standen feine Kupferfraktionen aus der Batteriefertigung im Fokus — mit ersten Tests im Laserauftragsschweißen mit mechanisch erzeugtem Pulver." },
+          { title: "Patentanmeldungen", desc: "Deutsche Anmeldung DE 10 2023 115 631 im Juni 2023, gefolgt von der europäischen Anmeldung EP 4 480 604 im Juni 2024." },
+          { title: "LiCARE", desc: "Ein von der Deutschen Bundesstiftung Umwelt (DBU) gefördertes Projekt, das die Arbeiten auf Beschichtungsanwendungen und weitere Stoffströme ausweitet." },
+          { title: "Validierungsförderung &amp; Pilotanlage", desc: "Gefördert von der Sächsischen Aufbaubank und der EU prüfen wir die technische und wirtschaftliche Tragfähigkeit einer Ausgründung. Parallel entsteht auf dem Kreislaufwirtschafts-Campus CircEcon in der Lausitz eine Pilotanlage im semiindustriellen Maßstab." },
+          { title: "EXIST-Forschungstransfer", desc: "Gefördert im EXIST-Programm: Hochskalierung des Verfahrens zur Pilotlinie, standardisierte Pulverchargen, Tests mit Pilotanwendern und Vorbereitung der Ausgründung." },
+          { title: "Gründung", desc: "Geplante Gründung als GmbH in Chemnitz, nahe dem Technologie-Campus der TU Chemnitz und 40 km von Freiberg entfernt." }
+        ]
+      },
+      network: {
+        title: "Forschungsnetzwerk",
+        lede: "Partner für Tests, Qualifizierung und Hochskalierung.",
+        partners: [
+          "Heimatinstitut mit Laboren für Analytik, Aufschluss und Zerkleinerung",
+          "Tests in der additiven Fertigung",
+          "Tests in der additiven Fertigung, u. a. LPBF",
+          "Gründungsnetzwerk, das das Team seit über drei Jahren begleitet",
+          "Kreislaufwirtschafts-Campus in der Lausitz, Standort unserer Pilotanlage"
+        ]
       }
     },
     career: {
       eyebrow: "Karriere",
       title: "Bauen Sie die mechanische Alternative mit uns.",
-      lede: "Wir sind ein kleines, ingenieurgeführtes Team aus Freiberg. Sehen Sie keine passende offene Stelle, wollen aber an geschlossenen Metallkreisläufen mitarbeiten? Dann melden Sie sich gern.",
+      lede: "Wir sind ein kleines, ingenieurgeführtes Team aus Freiberg und bringen ein patentiertes Verfahren vom Labor in die Pilotlinie. Sehen Sie keine passende offene Stelle, wollen aber an geschlossenen Metallkreisläufen mitarbeiten? Dann melden Sie sich gern.",
       openTitle: "Initiativbewerbung",
       openBody: "Erzählen Sie uns von Ihrem Hintergrund und woran Sie arbeiten möchten — wir lesen jede Bewerbung persönlich.",
       form: {
@@ -505,7 +616,7 @@ window.FLX_I18N = {
     contact: {
       eyebrow: "Kontakt",
       title: "Sprechen Sie mit dem Team.",
-      lede: "Fragen zu einer Klasse, einem Muster oder einer Partnerschaft — erreichen Sie uns direkt.",
+      lede: "Fragen zu einer Klasse, Probenmaterial für eigene Versuche oder einer Forschungspartnerschaft — erreichen Sie uns direkt.",
       infoTitle: "Kontaktdaten",
       address: "Freiberg, Sachsen, Deutschland",
       generalTitle: "Allgemeine Anfrage",
@@ -523,6 +634,15 @@ window.FLX_I18N = {
         errorRequired: "Dieses Feld ist erforderlich.",
         errorEmail: "Bitte eine gültige E-Mail-Adresse angeben."
       }
+    },
+    ph: {
+      feedstock: "Foto: Kupferfolien-Reste aus der Batteriezellfertigung",
+      powder: "Foto: fertiges Kupferpulver",
+      sem: "Mikroskopaufnahme: FCP-Partikel (REM)",
+      lab: "Foto: unser Labor am IART, TU Bergakademie Freiberg",
+      team: "Foto: das Gründungsteam",
+      pilot: "Foto: Pilotanlage auf dem CircEcon-Campus, Lausitz",
+      teamWork: "Foto: das Team bei der Arbeit im Labor"
     },
     legal: {
       imprintTitle: "Impressum",
