@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — Components
+   FlexCycle Solutions — Components
    ========================================================================== */
 
 /* ---------------------------------------------------------------------- */
@@ -28,7 +28,7 @@
   text-decoration: none;
 }
 .logo__img {
-  height: 34px;
+  height: 46px;
   width: auto;
   display: block;
 }
@@ -537,7 +537,7 @@
 }
 .compare__col > * { position: relative; z-index: 1; }
 
-/* "Grain & Patina": conventional stays copper, Flexycle Process shifts to the teal patina end. */
+/* "Grain & Patina": conventional stays copper, FlexCycle Process shifts to the teal patina end. */
 .compare__col--flexycle {
   border-color: var(--teal-800);
   background: rgba(22, 95, 99, 0.08);
@@ -1084,6 +1084,7 @@
   padding-block: var(--space-8) var(--space-6);
 }
 .site-footer a { color: var(--paper); text-decoration: none; }
+.site-footer .logo__img { height: 72px; }
 .site-footer a:hover { color: var(--orange-300); }
 .site-footer__grid {
   display: grid;
@@ -1144,7 +1145,7 @@
 /* ---------------------------------------------------------------------- */
 /* Content sections from the EXIST application: energy chart (home),      */
 /* milestones timeline and research network (company).                   */
-/* Melt routes stay copper, Flexycle shifts to patina, as in .compare.    */
+/* Melt routes stay copper, FlexCycle shifts to patina, as in .compare.    */
 /* ---------------------------------------------------------------------- */
 /* Shared small type for chart captions and source notes. */
 .energy__caption {

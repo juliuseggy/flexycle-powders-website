@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — Main
+   FlexCycle Solutions — Main
    Mobile nav, generic scroll-reveal, stat count-up, datasheet print trigger.
    Runs after i18n.js (loaded first) so translated text is already in place.
    ========================================================================== */

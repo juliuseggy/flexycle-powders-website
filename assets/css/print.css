@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — Datasheet print view
+   FlexCycle Solutions — Datasheet print view
    Triggered by forms.js/spectrum.js setting body.printing-<grade> before
    calling window.print(). Only the matching product section is shown.
    ========================================================================== */

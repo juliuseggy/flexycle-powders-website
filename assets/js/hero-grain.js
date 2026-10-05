@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — Hero grain field
+   FlexCycle Solutions — Hero grain field
    Ambient drifting copper/teal particles behind the landing-page hero —
    a literal reading of the product (copper powder grains), not a generic
    effect. Skipped entirely under prefers-reduced-motion.

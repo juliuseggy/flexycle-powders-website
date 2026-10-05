@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — Micron spectrum
+   FlexCycle Solutions — Micron spectrum
    Row bar positions are pre-computed (log scale, 5–150 µm) as inline custom
    properties in the HTML — one row per grade, since several grades' cuts
    overlap and can no longer share a single non-overlapping band track. This

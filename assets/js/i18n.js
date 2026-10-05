@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — i18n
+   FlexCycle Solutions — i18n
    Elements are marked with data-i18n / data-i18n-html / data-i18n-placeholder
    / data-i18n-aria-label attributes holding a dot-path into FLX_I18N[lang].
    ========================================================================== */
@@ -23,14 +23,14 @@ window.FLX_I18N = {
       legal: "Legal",
       imprint: "Imprint",
       privacy: "Privacy policy",
-      rights: "© 2026 Flexycle Powders. All rights reserved.",
+      rights: "© 2026 FlexCycle Solutions. All rights reserved.",
       address: "Freiberg, Saxony, Germany"
     },
     home: {
       eyebrow: "Deep tech · recycled copper powder",
       title: "From Scrap to Powder. From Waste to Value.",
       titleHtml: "From Scrap to Powder.<br>From Waste to Value.",
-      lede: "Flexycle Powders turns copper foil residues from battery cell production into high-performance powder. Our patented process is purely mechanical — no melting, no inert gas — and sorts the powder into six grades by particle size.",
+      lede: "FlexCycle Solutions turns copper foil residues from battery cell production into high-performance powder. Our patented process is purely mechanical — no melting, no inert gas — and sorts the powder into six grades by particle size.",
       spectrumLabel: "Particle-size spectrum",
       spectrumCta: "See all six grades →",
       stats: [
@@ -42,7 +42,7 @@ window.FLX_I18N = {
       process: {
         eyebrow: "The process",
         title: "Mechanical conversion, not melt atomisation.",
-        lede: "Conventional copper powder is made by melting virgin cathode and atomising it with gas or water — an energy-intensive route that starts from primary metal. Flexycle takes thin metallic residues already close to the right form factor and refines them mechanically into calibrated powder."
+        lede: "Conventional copper powder is made by melting virgin cathode and atomising it with gas or water — an energy-intensive route that starts from primary metal. FlexCycle takes thin metallic residues already close to the right form factor and refines them mechanically into calibrated powder."
       },
       compare: {
         conventional: {
@@ -55,7 +55,7 @@ window.FLX_I18N = {
           ]
         },
         flexycle: {
-          title: "Flexycle Process",
+          title: "FlexCycle Process",
           items: [
             "Starts from copper foil residues from battery cell production",
             "No melting — mechanical comminution and classification below 100 °C",
@@ -65,7 +65,7 @@ window.FLX_I18N = {
         }
       },
       applications: {
-        title: "Where Flexycle powder goes to work",
+        title: "Where FlexCycle powder goes to work",
         items: [
           { title: "Additive manufacturing", desc: "FCP-AM absorbs about twice as much 1070 nm laser light as gas-atomised powder, for LPBF and DED on standard infrared machines." },
           { title: "Press & sinter", desc: "Rough particles interlock for high green strength, from plain bearings to structural parts." },
@@ -93,7 +93,7 @@ window.FLX_I18N = {
         values: ["~650", "2,000–2,500", "~4,000", "9,000–166,000", "~25,000"],
         ticks: ["0", "5,000", "10,000", "15,000", "20,000", "25,000"],
         rows: [
-          "Flexycle mechanical process",
+          "FlexCycle mechanical process",
           "Water atomisation",
           "Electrolytic powder",
           "Gas atomisation (literature range)",
@@ -218,8 +218,8 @@ window.FLX_I18N = {
     company: {
       eyebrow: "Company",
       title: "Eight hundred and fifty years of mining, one new material loop.",
-      lede: "Flexycle Powders was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
-      story: "Freiberg has mined and processed metal since the 12th century. Flexycle continues that lineage with a different resource: not ore from the ground, but the thin copper foil that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.",
+      lede: "FlexCycle Solutions was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
+      story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but the thin copper foil that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.",
       video: { label: "Company film — coming soon" },
       valuesTitle: "What we hold to",
       values: [
@@ -277,7 +277,7 @@ window.FLX_I18N = {
         portfolio: "Portfolio link (optional)",
         submit: "Send application",
         success: "Thanks — your application has been sent. We'll get back to you soon.",
-        error: "Something went wrong sending your application — please email us directly at info@flexcyclesolutions.com instead.",
+        error: "Something went wrong sending your application — please email us directly at julius-eik.grimmenstein@iart.tu-freiberg.de instead.",
         errorRequired: "This field is required.",
         errorEmail: "Enter a valid email address."
       }
@@ -324,15 +324,15 @@ window.FLX_I18N = {
       toBeCompleted: "To be completed",
       privacyTitle: "Privacy policy",
       privacyBody: "This placeholder privacy policy should be reviewed and completed with qualified legal counsel before the site goes live, covering data collected via the contact, career and quote forms.",
-      privacyIntro: "Flexycle Powders does not run its own server-side data collection on this site. Most forms hand your input to your own email client via a mailto: link; the career form is the one exception, described below.",
+      privacyIntro: "FlexCycle Solutions does not run its own server-side data collection on this site. Most forms hand your input to your own email client via a mailto: link; the career form is the one exception, described below.",
       privacyWhoTitle: "Controller",
-      privacyWho: "Flexycle Powders, Freiberg, Saxony, Germany — info@flexcyclesolutions.com",
+      privacyWho: "FlexCycle Solutions, Freiberg, Saxony, Germany — julius-eik.grimmenstein@iart.tu-freiberg.de",
       privacyFormsTitle: "Contact and quote forms",
-      privacyForms: "Submitting a form opens a pre-filled email in your email client; the content you typed is only transmitted once you actually send that email, to info@flexcyclesolutions.com. Nothing is stored on our servers by the form itself.",
+      privacyForms: "Submitting a form opens a pre-filled email in your email client; the content you typed is only transmitted once you actually send that email, to julius-eik.grimmenstein@iart.tu-freiberg.de. Nothing is stored on our servers by the form itself.",
       privacyFormsCareerTitle: "Career / open-application form",
-      privacyFormsCareer: "The career form is submitted directly, including any attached CV file, to info@flexcyclesolutions.com via Web3Forms (web3forms.com), a third-party form-processing service acting as our processor. Web3Forms transmits the submission to us by email and does not publish it; its servers may be located outside the EU. Consult its own privacy policy at web3forms.com for details on its processing.",
+      privacyFormsCareer: "The career form is submitted directly, including any attached CV file, to julius-eik.grimmenstein@iart.tu-freiberg.de via Web3Forms (web3forms.com), a third-party form-processing service acting as our processor. Web3Forms transmits the submission to us by email and does not publish it; its servers may be located outside the EU. Consult its own privacy policy at web3forms.com for details on its processing.",
       privacyRightsTitle: "Your rights",
-      privacyRights: "Under the GDPR you have the right to access, correct, delete or restrict processing of any personal data you send us, and to object to its processing. Contact info@flexcyclesolutions.com for any such request."
+      privacyRights: "Under the GDPR you have the right to access, correct, delete or restrict processing of any personal data you send us, and to object to its processing. Contact julius-eik.grimmenstein@iart.tu-freiberg.de for any such request."
     }
   },
 
@@ -354,14 +354,14 @@ window.FLX_I18N = {
       legal: "Rechtliches",
       imprint: "Impressum",
       privacy: "Datenschutz",
-      rights: "© 2026 Flexycle Powders. Alle Rechte vorbehalten.",
+      rights: "© 2026 FlexCycle Solutions. Alle Rechte vorbehalten.",
       address: "Freiberg, Sachsen, Deutschland"
     },
     home: {
       eyebrow: "Deep-Tech · recyceltes Kupferpulver",
       title: "Von Schrott zu Pulver. Von Abfall zu Wert.",
       titleHtml: "Von Schrott zu Pulver.<br>Von Abfall zu Wert.",
-      lede: "Flexycle Powders macht aus Kupferfolien-Resten der Batteriezellfertigung Hochleistungspulver. Unser patentiertes Verfahren ist rein mechanisch — ohne Schmelzen, ohne Inertgas — und sortiert das Pulver in sechs Korngrößen-Klassen.",
+      lede: "FlexCycle Solutions macht aus Kupferfolien-Resten der Batteriezellfertigung Hochleistungspulver. Unser patentiertes Verfahren ist rein mechanisch — ohne Schmelzen, ohne Inertgas — und sortiert das Pulver in sechs Korngrößen-Klassen.",
       spectrumLabel: "Korngrößen-Spektrum",
       spectrumCta: "Alle sechs Klassen ansehen →",
       stats: [
@@ -373,7 +373,7 @@ window.FLX_I18N = {
       process: {
         eyebrow: "Der Prozess",
         title: "Mechanische Umwandlung statt Schmelzzerstäubung.",
-        lede: "Herkömmliches Kupferpulver entsteht durch Schmelzen von Primärkathode und Zerstäubung mit Gas oder Wasser — ein energieintensiver Weg, der bei Primärmetall beginnt. Flexycle nimmt dünne metallische Rückstände, die der Zielform bereits nahekommen, und verfeinert sie mechanisch zu kalibriertem Pulver."
+        lede: "Herkömmliches Kupferpulver entsteht durch Schmelzen von Primärkathode und Zerstäubung mit Gas oder Wasser — ein energieintensiver Weg, der bei Primärmetall beginnt. FlexCycle nimmt dünne metallische Rückstände, die der Zielform bereits nahekommen, und verfeinert sie mechanisch zu kalibriertem Pulver."
       },
       compare: {
         conventional: {
@@ -386,7 +386,7 @@ window.FLX_I18N = {
           ]
         },
         flexycle: {
-          title: "Flexycle Process",
+          title: "FlexCycle Process",
           items: [
             "Beginnt bei Kupferfolien-Resten aus der Batteriezellfertigung",
             "Kein Schmelzen — mechanische Zerkleinerung und Klassierung unter 100 °C",
@@ -396,7 +396,7 @@ window.FLX_I18N = {
         }
       },
       applications: {
-        title: "Wo Flexycle-Pulver zum Einsatz kommt",
+        title: "Wo FlexCycle-Pulver zum Einsatz kommt",
         items: [
           { title: "Additive Fertigung", desc: "FCP-AM absorbiert etwa doppelt so viel Laserlicht bei 1070 nm wie gasverdüstes Pulver — für LPBF und DED auf gängigen Infrarot-Anlagen." },
           { title: "Pressen & Sintern", desc: "Raue Partikel verklammern sich zu hoher Grünfestigkeit, von Gleitlagern bis zu Strukturbauteilen." },
@@ -424,7 +424,7 @@ window.FLX_I18N = {
         values: ["~650", "2.000–2.500", "~4.000", "9.000–166.000", "~25.000"],
         ticks: ["0", "5.000", "10.000", "15.000", "20.000", "25.000"],
         rows: [
-          "Flexycle, mechanisches Verfahren",
+          "FlexCycle, mechanisches Verfahren",
           "Wasserverdüsung",
           "Elektrolytisch hergestelltes Pulver",
           "Gasverdüsung (Spanne laut Literatur)",
@@ -549,8 +549,8 @@ window.FLX_I18N = {
     company: {
       eyebrow: "Unternehmen",
       title: "Achthundertfünfzig Jahre Bergbau, ein neuer Materialkreislauf.",
-      lede: "Flexycle Powders wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
-      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. Flexycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünne Kupferfolie, die in der Batteriezellfertigung in wachsenden Mengen übrig bleibt. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt: einen mechanischen Weg, der diese Reststoffe direkt in kalibriertes Pulver überführt und den Schmelzschritt überspringt, auf den die konventionelle Pulverherstellung angewiesen ist.",
+      lede: "FlexCycle Solutions wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
+      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünne Kupferfolie, die in der Batteriezellfertigung in wachsenden Mengen übrig bleibt. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt: einen mechanischen Weg, der diese Reststoffe direkt in kalibriertes Pulver überführt und den Schmelzschritt überspringt, auf den die konventionelle Pulverherstellung angewiesen ist.",
       video: { label: "Imagefilm — folgt in Kürze" },
       valuesTitle: "Woran wir uns halten",
       values: [
@@ -608,7 +608,7 @@ window.FLX_I18N = {
         portfolio: "Portfolio-Link (optional)",
         submit: "Bewerbung senden",
         success: "Danke — Ihre Bewerbung wurde versendet. Wir melden uns bei Ihnen.",
-        error: "Beim Versand der Bewerbung ist etwas schiefgelaufen — bitte schreiben Sie uns direkt an info@flexcyclesolutions.com.",
+        error: "Beim Versand der Bewerbung ist etwas schiefgelaufen — bitte schreiben Sie uns direkt an julius-eik.grimmenstein@iart.tu-freiberg.de.",
         errorRequired: "Dieses Feld ist erforderlich.",
         errorEmail: "Bitte eine gültige E-Mail-Adresse angeben."
       }
@@ -655,15 +655,15 @@ window.FLX_I18N = {
       toBeCompleted: "Wird ergänzt",
       privacyTitle: "Datenschutzerklärung",
       privacyBody: "Diese Platzhalter-Datenschutzerklärung sollte vor dem Livegang durch fachkundige Rechtsberatung geprüft und vervollständigt werden — insbesondere im Hinblick auf die über Kontakt-, Karriere- und Angebotsformulare erhobenen Daten.",
-      privacyIntro: "Flexycle Powders betreibt auf dieser Website keine eigene serverseitige Datenerhebung. Die meisten Formulare übergeben Ihre Eingaben über einen mailto:-Link an Ihr eigenes E-Mail-Programm; eine Ausnahme ist das Karriereformular, siehe unten.",
+      privacyIntro: "FlexCycle Solutions betreibt auf dieser Website keine eigene serverseitige Datenerhebung. Die meisten Formulare übergeben Ihre Eingaben über einen mailto:-Link an Ihr eigenes E-Mail-Programm; eine Ausnahme ist das Karriereformular, siehe unten.",
       privacyWhoTitle: "Verantwortlicher",
-      privacyWho: "Flexycle Powders, Freiberg, Sachsen, Deutschland — info@flexcyclesolutions.com",
+      privacyWho: "FlexCycle Solutions, Freiberg, Sachsen, Deutschland — julius-eik.grimmenstein@iart.tu-freiberg.de",
       privacyFormsTitle: "Kontakt- und Angebotsformulare",
-      privacyForms: "Beim Absenden eines Formulars öffnet sich eine vorausgefüllte E-Mail in Ihrem E-Mail-Programm; die eingegebenen Inhalte werden erst übermittelt, wenn Sie diese E-Mail tatsächlich an info@flexcyclesolutions.com senden. Das Formular selbst speichert dabei nichts auf unseren Servern.",
+      privacyForms: "Beim Absenden eines Formulars öffnet sich eine vorausgefüllte E-Mail in Ihrem E-Mail-Programm; die eingegebenen Inhalte werden erst übermittelt, wenn Sie diese E-Mail tatsächlich an julius-eik.grimmenstein@iart.tu-freiberg.de senden. Das Formular selbst speichert dabei nichts auf unseren Servern.",
       privacyFormsCareerTitle: "Karriereformular / Initiativbewerbung",
-      privacyFormsCareer: "Das Karriereformular wird inklusive eines eventuell angehängten Lebenslaufs direkt über Web3Forms (web3forms.com) an info@flexcyclesolutions.com übermittelt — einen Drittanbieter, der hier als Auftragsverarbeiter fungiert. Web3Forms leitet die Einsendung per E-Mail an uns weiter und veröffentlicht sie nicht; die Server des Anbieters können außerhalb der EU liegen. Details zur Verarbeitung durch Web3Forms finden Sie in dessen eigener Datenschutzerklärung auf web3forms.com.",
+      privacyFormsCareer: "Das Karriereformular wird inklusive eines eventuell angehängten Lebenslaufs direkt über Web3Forms (web3forms.com) an julius-eik.grimmenstein@iart.tu-freiberg.de übermittelt — einen Drittanbieter, der hier als Auftragsverarbeiter fungiert. Web3Forms leitet die Einsendung per E-Mail an uns weiter und veröffentlicht sie nicht; die Server des Anbieters können außerhalb der EU liegen. Details zur Verarbeitung durch Web3Forms finden Sie in dessen eigener Datenschutzerklärung auf web3forms.com.",
       privacyRightsTitle: "Ihre Rechte",
-      privacyRights: "Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer an uns gesendeten personenbezogenen Daten sowie ein Widerspruchsrecht. Wenden Sie sich hierfür an info@flexcyclesolutions.com."
+      privacyRights: "Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer an uns gesendeten personenbezogenen Daten sowie ein Widerspruchsrecht. Wenden Sie sich hierfür an julius-eik.grimmenstein@iart.tu-freiberg.de."
     }
   }
 };

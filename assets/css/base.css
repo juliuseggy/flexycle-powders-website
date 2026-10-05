@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — Base
+   FlexCycle Solutions — Base
    Reset, base typography, layout primitives.
    ========================================================================== */
 
@@ -73,6 +73,8 @@ a {
   text-underline-offset: 0.15em;
 }
 a:hover { color: var(--accent); }
+/* The contact address is long; let it wrap on narrow phones instead of overflowing. */
+a[href^="mailto:"] { overflow-wrap: anywhere; }
 
 :focus-visible {
   outline: 2px solid var(--accent);

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flexycle Powders — Forms
+   FlexCycle Solutions — Forms
    Contact and quote forms (data-mailto) have no backend: valid submissions
    are handed to the visitor's email client via a mailto: link built from the
    form's own fields. Swap the mailto: href construction below for a real
