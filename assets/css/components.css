@@ -802,6 +802,10 @@
   vertical-align: middle;
 }
 .team-showcase__row.is-active .team-showcase__socials { opacity: 1; transform: none; }
+/* Touch screens have no hover to reveal them, so keep mail/LinkedIn visible. */
+@media (hover: none) {
+  .team-showcase__socials { opacity: 1; transform: none; }
+}
 .team-showcase__social {
   display: inline-flex;
   align-items: center;
@@ -1362,5 +1366,6 @@
 .img-ph__file { font-family: var(--font-mono); font-size: var(--fs-100); color: var(--text-soft); }
 .img-pair { margin-top: var(--space-7); }
 .img-band { padding-block: 0; }
-.team-showcase + .img-ph, h2 + .img-ph { margin-top: var(--space-6); }
+h2 + .img-ph { margin-top: var(--space-6); }
+.team-showcase + .img-ph { margin-top: var(--space-8); }
 .timeline + .img-ph { margin-top: var(--space-8); }

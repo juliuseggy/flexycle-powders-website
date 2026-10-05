@@ -185,11 +185,6 @@
       el.addEventListener('blur', function () { setActive(null); });
     });
 
-    // Mail/LinkedIn are placeholder (href="#") until real per-person links
-    // exist — swallow the click instead of jumping to the top of the page.
-    showcase.querySelectorAll('.team-showcase__social').forEach(function (a) {
-      a.addEventListener('click', function (e) { e.preventDefault(); });
-    });
   }
 
   // Application gallery (landing page): hover-expand strip + click-to-open
