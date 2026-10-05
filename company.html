@@ -10,10 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026100505">
-<link rel="stylesheet" href="assets/css/base.css?v=2026100505">
-<link rel="stylesheet" href="assets/css/components.css?v=2026100505">
-<link rel="stylesheet" href="assets/css/print.css?v=2026100505">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026100506">
+<link rel="stylesheet" href="assets/css/base.css?v=2026100506">
+<link rel="stylesheet" href="assets/css/components.css?v=2026100506">
+<link rel="stylesheet" href="assets/css/print.css?v=2026100506">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -77,20 +77,22 @@
     </div>
   </section>
 
-  <!-- Company image film — not delivered yet. Once the final file/host is
-       ready, replace .video-placeholder__frame's contents with a real
-       <video controls preload="none" poster="..."><source src="..."></video>
-       or a hosted-platform <iframe>; sizing/rounding stays as-is. -->
   <section>
-    <div class="container" data-blur-group>
-      <div class="video-placeholder blur-fade">
-        <div class="video-placeholder__frame">
-          <span class="video-placeholder__play" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          </span>
-          <p class="video-placeholder__label" data-i18n="company.video.label">Company film — coming soon</p>
-        </div>
-      </div>
+    <div class="container">
+      <!-- Image film, self-hosted (no third-party player, no cookies). Source:
+           assets/video.mp4 (not committed), cropped to 1920x880 and compressed
+           with ffmpeg. `controls` is removed by initFilm() in main.js and only
+           returns once playback starts; without JS the native player shows. -->
+      <figure class="film blur-fade" data-film>
+        <video class="film__video" src="assets/video/flexcycle-film.mp4" poster="assets/video/flexcycle-film-poster.jpg"
+               width="1920" height="880" preload="none" playsinline controls
+               aria-label="FlexCycle Solutions image film" data-i18n-aria-label="film.aria"></video>
+        <button type="button" class="film__play" data-film-play hidden>
+          <span class="film__play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film__play-label" data-i18n="film.play">Watch the film</span>
+          <span class="film__play-time">1:00</span>
+        </button>
+      </figure>
     </div>
   </section>
 
@@ -331,11 +333,11 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026100505"></script>
-<script src="assets/js/main.js?v=2026100505"></script>
-<script src="assets/js/spectrum.js?v=2026100505"></script>
-<script src="assets/js/forms.js?v=2026100505"></script>
-<script src="assets/js/hero-grain.js?v=2026100505"></script>
+<script src="assets/js/i18n.js?v=2026100506"></script>
+<script src="assets/js/main.js?v=2026100506"></script>
+<script src="assets/js/spectrum.js?v=2026100506"></script>
+<script src="assets/js/forms.js?v=2026100506"></script>
+<script src="assets/js/hero-grain.js?v=2026100506"></script>
 <script type="module">
 /* FlexCycle Solutions — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven

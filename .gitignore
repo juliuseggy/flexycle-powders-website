@@ -2,3 +2,7 @@
 .agents/
 .claude/
 skills-lock.json
+
+# Original film master (140 MB, over GitHub's 100 MB limit). The web
+# version lives in assets/video/flexcycle-film.mp4.
+assets/video.mp4

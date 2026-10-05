@@ -859,46 +859,66 @@
 .morph-glyph--fcppm polygon { fill: var(--teal-800); }
 
 /* ---------------------------------------------------------------------- */
-/* Video placeholder (company page) — not a real player, deliberately not   */
-/* styled as clickable (no hover/cursor change) since it can't play         */
-/* anything yet. See markup comment for what replaces it once ready.       */
+/* Image film (home + company). Poster with one large play control; native */
+/* controls appear once the film runs (initFilm in main.js).              */
 /* ---------------------------------------------------------------------- */
-.video-placeholder__frame {
+.film-section { padding-top: var(--space-7); }
+.film {
   position: relative;
-  aspect-ratio: 16 / 9;
-  max-width: 56rem;
-  margin-inline: auto;
+  margin: 0;
+  aspect-ratio: 24 / 11;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: radial-gradient(circle at center, rgba(199, 111, 61, 0.18), var(--bg-alt) 70%);
+  background: var(--dark-900);
   border: 1px solid var(--border-soft);
+  box-shadow: 0 32px 64px -32px rgba(0, 0, 0, 0.6);
+}
+.film__video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.film__play {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-4);
-}
-.video-placeholder__play {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: rgba(10, 36, 38, 0.55);
+  gap: var(--space-3);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
   color: var(--paper);
+  background: linear-gradient(180deg, rgba(10, 36, 38, 0.05) 30%, rgba(10, 36, 38, 0.6) 100%);
 }
-.video-placeholder__play svg { width: 26px; height: 26px; margin-left: 3px; }
-.video-placeholder__label {
-  margin: 0;
+.film__play[hidden] { display: none; }
+.film__play-icon {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  transition: transform var(--dur-base) var(--ease-out), background-color var(--dur-base) var(--ease-out);
+}
+.film__play-icon svg { width: 32px; height: 32px; margin-left: 4px; }
+.film__play:hover .film__play-icon,
+.film__play:focus-visible .film__play-icon { transform: scale(1.06); background: var(--accent-hover); }
+.film__play:focus-visible { outline: 2px solid var(--accent); outline-offset: -6px; border-radius: var(--radius-lg); }
+.film__play-label { font-family: var(--font-display); font-size: var(--fs-400); font-weight: 600; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5); }
+.film__play-time {
   font-family: var(--font-mono);
   font-size: var(--fs-100);
-  text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
-  color: var(--paper);
-  background: rgba(10, 36, 38, 0.45);
-  padding: var(--space-2) var(--space-4);
+  padding: 2px var(--space-3);
   border-radius: 999px;
+  background: rgba(10, 36, 38, 0.6);
+}
+@media (max-width: 640px) {
+  /* The 24:11 frame is only ~160px tall on phones: smaller control, no duration pill. */
+  .film__play { gap: var(--space-2); }
+  .film__play-icon { width: 56px; height: 56px; }
+  .film__play-icon svg { width: 22px; height: 22px; margin-left: 3px; }
+  .film__play-label { font-size: var(--fs-200); }
+  .film__play-time { display: none; }
 }
 
 /* ---------------------------------------------------------------------- */

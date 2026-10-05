@@ -273,6 +273,30 @@
     modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
   }
 
+  // Image film: hide native controls behind one large play button until the
+  // film starts; show the button again once it has ended. Without JS the
+  // <video controls> markup stays fully usable.
+  function initFilm() {
+    document.querySelectorAll('[data-film]').forEach(function (fig) {
+      var video = fig.querySelector('video');
+      var btn = fig.querySelector('[data-film-play]');
+      if (!video || !btn) return;
+      video.controls = false;
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        video.controls = true;
+        var p = video.play();
+        if (p && p.catch) p.catch(function () { /* blocked: native controls remain */ });
+      });
+      video.addEventListener('play', function () { btn.hidden = true; video.controls = true; });
+      video.addEventListener('ended', function () {
+        btn.hidden = false;
+        video.controls = false;
+        video.load(); // back to the poster frame
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
     initBlurFadeStagger();
@@ -284,5 +308,6 @@
     initTeamShowcase();
     initTiltCards();
     initGallery();
+    initFilm();
   });
 })();

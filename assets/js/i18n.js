@@ -220,7 +220,6 @@ window.FLX_I18N = {
       title: "Eight hundred and fifty years of mining, one new material loop.",
       lede: "FlexCycle Solutions was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
       story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.",
-      video: { label: "Company film — coming soon" },
       valuesTitle: "What we hold to",
       values: [
         { title: "Mechanical, not melted", desc: "Every process step avoids re-melting the metal, cutting energy demand at the source." },
@@ -305,6 +304,7 @@ window.FLX_I18N = {
         errorEmail: "Enter a valid email address."
       }
     },
+    film: { play: "Watch the film", aria: "FlexCycle Solutions image film" },
     ph: {
       feedstock: "Photo: thin-walled copper residues from battery cell production",
       powder: "Photo: finished copper powder",
@@ -551,7 +551,6 @@ window.FLX_I18N = {
       title: "Achthundertfünfzig Jahre Bergbau, ein neuer Materialkreislauf.",
       lede: "FlexCycle Solutions wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
       story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünnwandige Kupferreststoffe, die in der Batteriezellfertigung in wachsenden Mengen übrig bleiben. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt: einen mechanischen Weg, der diese Reststoffe direkt in kalibriertes Pulver überführt und den Schmelzschritt überspringt, auf den die konventionelle Pulverherstellung angewiesen ist.",
-      video: { label: "Imagefilm — folgt in Kürze" },
       valuesTitle: "Woran wir uns halten",
       values: [
         { title: "Mechanisch, nicht geschmolzen", desc: "Jeder Prozessschritt vermeidet das erneute Schmelzen des Metalls und senkt den Energiebedarf an der Quelle." },
@@ -636,6 +635,7 @@ window.FLX_I18N = {
         errorEmail: "Bitte eine gültige E-Mail-Adresse angeben."
       }
     },
+    film: { play: "Imagefilm ansehen", aria: "Imagefilm von FlexCycle Solutions" },
     ph: {
       feedstock: "Foto: dünnwandige Kupferreststoffe aus der Batteriezellfertigung",
       powder: "Foto: fertiges Kupferpulver",
