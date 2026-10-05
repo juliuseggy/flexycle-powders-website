@@ -747,6 +747,15 @@
   color: rgba(251, 250, 248, 0.92);
   font-weight: 700;
 }
+.team-showcase__photo > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.team-showcase__photo.has-photo::after { content: none; }
 .team-showcase__photo.is-active { filter: grayscale(0) brightness(1); }
 .team-showcase__photo.is-dimmed { opacity: 0.55; }
 
@@ -1333,7 +1342,7 @@
   aspect-ratio: var(--ratio, 16 / 9);
   border-radius: var(--radius-lg);
 }
-.img-ph > img { object-fit: cover; }
+.img-ph > img { height: auto; object-fit: cover; }
 .img-ph__frame {
   display: flex;
   flex-direction: column;

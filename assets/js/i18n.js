@@ -1,7 +1,7 @@
 /* ==========================================================================
    FlexCycle Solutions — i18n
    Elements are marked with data-i18n / data-i18n-html / data-i18n-placeholder
-   / data-i18n-aria-label attributes holding a dot-path into FLX_I18N[lang].
+   / data-i18n-aria-label / data-i18n-alt attributes holding a dot-path into FLX_I18N[lang].
    ========================================================================== */
 
 window.FLX_I18N = {
@@ -228,6 +228,7 @@ window.FLX_I18N = {
         { title: "Calibrated, not generic", desc: "Six defined grades mean customers order by particle size and morphology, not a single one-size-fits-all powder." }
       ],
       teamTitle: "Leadership",
+      teamPhotoAlt: "The FlexCycle Solutions team in Freiberg",
       roles: {
         mech: "Mechanical Engineer",
         cs: "Computer Engineer",
@@ -309,7 +310,6 @@ window.FLX_I18N = {
       powder: "Photo: finished copper powder",
       sem: "Micrograph: FCP particles (SEM)",
       lab: "Photo: our lab at IART, TU Bergakademie Freiberg",
-      team: "Photo: the founding team",
       pilot: "Photo: pilot plant at the CircEcon campus, Lusatia",
       teamWork: "Photo: the team at work in the lab"
     },
@@ -559,6 +559,7 @@ window.FLX_I18N = {
         { title: "Kalibriert, nicht generisch", desc: "Sechs definierte Klassen bedeuten: Kunden bestellen nach Korngröße und Morphologie — kein Einheitspulver für alles." }
       ],
       teamTitle: "Führungsteam",
+      teamPhotoAlt: "Das Team von FlexCycle Solutions in Freiberg",
       roles: {
         mech: "Maschinenbauingenieur",
         cs: "Informatikingenieur",
@@ -640,7 +641,6 @@ window.FLX_I18N = {
       powder: "Foto: fertiges Kupferpulver",
       sem: "Mikroskopaufnahme: FCP-Partikel (REM)",
       lab: "Foto: unser Labor am IART, TU Bergakademie Freiberg",
-      team: "Foto: das Gründungsteam",
       pilot: "Foto: Pilotanlage auf dem CircEcon-Campus, Lausitz",
       teamWork: "Foto: das Team bei der Arbeit im Labor"
     },
@@ -695,6 +695,10 @@ window.FLX_I18N = {
     document.querySelectorAll('[data-i18n-aria-label]').forEach(function (el) {
       var val = resolve(dict, el.getAttribute('data-i18n-aria-label'));
       if (val !== null) el.setAttribute('aria-label', val);
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var val = resolve(dict, el.getAttribute('data-i18n-alt'));
+      if (val !== null) el.setAttribute('alt', val);
     });
 
     localStorage.setItem('flx-lang', lang);

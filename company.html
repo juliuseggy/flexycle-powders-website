@@ -10,10 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026100503">
-<link rel="stylesheet" href="assets/css/base.css?v=2026100503">
-<link rel="stylesheet" href="assets/css/components.css?v=2026100503">
-<link rel="stylesheet" href="assets/css/print.css?v=2026100503">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026100504">
+<link rel="stylesheet" href="assets/css/base.css?v=2026100504">
+<link rel="stylesheet" href="assets/css/components.css?v=2026100504">
+<link rel="stylesheet" href="assets/css/print.css?v=2026100504">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -126,27 +126,22 @@
   <section>
     <div class="container" data-blur-group>
       <h2 class="blur-fade" data-i18n="company.teamTitle">Leadership</h2>
-      <!-- Image placeholder: replace .img-ph__frame with <img src="assets/img/team.jpg" alt="..." loading="lazy">. -->
-      <figure class="img-ph blur-fade" style="--ratio:21 / 9">
-        <div class="img-ph__frame">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
-          <span class="img-ph__label" data-i18n="ph.team">Photo: the founding team</span>
-          <span class="img-ph__file">assets/img/team.jpg · 21:9</span>
-        </div>
+      <figure class="img-ph blur-fade" style="--ratio:3 / 2">
+        <img src="assets/img/team.jpg" width="1537" height="1023" loading="lazy" decoding="async"
+             alt="The FlexCycle Solutions team in Freiberg" data-i18n-alt="company.teamPhotoAlt">
       </figure>
-      <!-- Avatars are gradient/initials placeholders until real photos are
-           supplied — swap each .team-showcase__photo's background for a
-           photo (e.g. add an <img> inside it) without touching the hover
-           logic in main.js, which keys off matching data-member values. -->
+      <!-- Portraits sit inside each .team-showcase__photo; the hover logic in
+           main.js keys off matching data-member values, not the images. The
+           initials remain as a fallback for anyone without a photo. -->
       <div class="team-showcase blur-fade" style="margin-top:var(--space-7)">
         <div class="team-showcase__photos" aria-hidden="true">
           <div class="team-showcase__col team-showcase__col--1">
-            <div class="team-showcase__photo" data-member="jg" data-initials="JG"></div>
-            <div class="team-showcase__photo" data-member="et" data-initials="ET"></div>
+            <div class="team-showcase__photo has-photo" data-member="jg" data-initials="JG"><img src="assets/img/team-jg.jpg" alt="" loading="lazy" decoding="async"></div>
+            <div class="team-showcase__photo has-photo" data-member="et" data-initials="ET"><img src="assets/img/team-et.jpg" alt="" loading="lazy" decoding="async"></div>
           </div>
           <div class="team-showcase__col team-showcase__col--2">
-            <div class="team-showcase__photo" data-member="tb" data-initials="TB"></div>
-            <div class="team-showcase__photo" data-member="pn" data-initials="PN"></div>
+            <div class="team-showcase__photo has-photo" data-member="tb" data-initials="TB"><img src="assets/img/team-tb.jpg" alt="" loading="lazy" decoding="async"></div>
+            <div class="team-showcase__photo has-photo" data-member="pn" data-initials="PN"><img src="assets/img/team-pn.jpg" alt="" loading="lazy" decoding="async"></div>
           </div>
         </div>
         <div class="team-showcase__list">
@@ -338,11 +333,11 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026100503"></script>
-<script src="assets/js/main.js?v=2026100503"></script>
-<script src="assets/js/spectrum.js?v=2026100503"></script>
-<script src="assets/js/forms.js?v=2026100503"></script>
-<script src="assets/js/hero-grain.js?v=2026100503"></script>
+<script src="assets/js/i18n.js?v=2026100504"></script>
+<script src="assets/js/main.js?v=2026100504"></script>
+<script src="assets/js/spectrum.js?v=2026100504"></script>
+<script src="assets/js/forms.js?v=2026100504"></script>
+<script src="assets/js/hero-grain.js?v=2026100504"></script>
 <script type="module">
 /* FlexCycle Solutions — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven
