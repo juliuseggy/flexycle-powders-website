@@ -30,7 +30,7 @@ window.FLX_I18N = {
       eyebrow: "Deep tech · recycled copper powder",
       title: "From Scrap to Powder. From Waste to Value.",
       titleHtml: "From Scrap to Powder.<br>From Waste to Value.",
-      lede: "FlexCycle Solutions turns copper foil residues from battery cell production into high-performance powder. Our patented process is purely mechanical — no melting, no inert gas — and sorts the powder into six grades by particle size.",
+      lede: "FlexCycle Solutions turns thin-walled copper residues from battery cell production into high-performance powder. Our patented process is purely mechanical — no melting, no inert gas — and sorts the powder into six grades by particle size.",
       spectrumLabel: "Particle-size spectrum",
       spectrumCta: "See all six grades →",
       stats: [
@@ -42,13 +42,13 @@ window.FLX_I18N = {
       process: {
         eyebrow: "The process",
         title: "Mechanical conversion, not melt atomisation.",
-        lede: "Conventional copper powder is made by melting virgin cathode and atomising it with gas or water — an energy-intensive route that starts from primary metal. FlexCycle takes thin metallic residues already close to the right form factor and refines them mechanically into calibrated powder."
+        lede: "Conventional copper powder is made by melting primary or secondary copper and then atomising it with gas or water — an energy-intensive route. FlexCycle takes thin-walled metallic residues already close to the right form factor and refines them mechanically into powder."
       },
       compare: {
         conventional: {
           title: "Conventional atomisation",
           items: [
-            "Starts from primary copper",
+            "Starts from primary or secondary copper",
             "Melts the metal at ~1085 °C and atomises it, usually under inert gas",
             "9,000 kWh and more per tonne for gas atomisation",
             "Smooth, glossy particles reflect infrared lasers"
@@ -57,7 +57,7 @@ window.FLX_I18N = {
         flexycle: {
           title: "FlexCycle Process",
           items: [
-            "Starts from copper foil residues from battery cell production",
+            "Starts from thin-walled copper residues from battery cell production",
             "No melting — mechanical comminution and classification below 100 °C",
             "Around 650 kWh per tonne, no inert gas",
             "Rough, spheroidal particles absorb laser light and interlock under pressure"
@@ -212,14 +212,14 @@ window.FLX_I18N = {
       tune: {
         eyebrow: "Configurable",
         title: "Purity or absorption: tuned to your process",
-        desc: "Our feedstock is graphite-coated anode foil. Process settings decide how much graphite stays in the powder: a little more raises laser absorption, less gives the highest copper purity for conductive parts. Tell us what your process needs and we set the grade up for it, including custom size cuts."
+        desc: "Our feedstock is thin-walled, graphite-coated copper material. Process settings decide how much graphite stays in the powder: a little more raises laser absorption, less gives the highest copper purity for conductive parts. Tell us what your process needs and we set the grade up for it, including custom size cuts."
       }
     },
     company: {
       eyebrow: "Company",
       title: "Eight hundred and fifty years of mining, one new material loop.",
       lede: "FlexCycle Solutions was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
-      story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but the thin copper foil that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.",
+      story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.",
       video: { label: "Company film — coming soon" },
       valuesTitle: "What we hold to",
       values: [
@@ -305,7 +305,7 @@ window.FLX_I18N = {
       }
     },
     ph: {
-      feedstock: "Photo: copper foil residues from battery cell production",
+      feedstock: "Photo: thin-walled copper residues from battery cell production",
       powder: "Photo: finished copper powder",
       sem: "Micrograph: FCP particles (SEM)",
       lab: "Photo: our lab at IART, TU Bergakademie Freiberg",
@@ -361,7 +361,7 @@ window.FLX_I18N = {
       eyebrow: "Deep-Tech · recyceltes Kupferpulver",
       title: "Von Schrott zu Pulver. Von Abfall zu Wert.",
       titleHtml: "Von Schrott zu Pulver.<br>Von Abfall zu Wert.",
-      lede: "FlexCycle Solutions macht aus Kupferfolien-Resten der Batteriezellfertigung Hochleistungspulver. Unser patentiertes Verfahren ist rein mechanisch — ohne Schmelzen, ohne Inertgas — und sortiert das Pulver in sechs Korngrößen-Klassen.",
+      lede: "FlexCycle Solutions macht aus dünnwandigen Kupferreststoffen der Batteriezellfertigung Hochleistungspulver. Unser patentiertes Verfahren ist rein mechanisch — ohne Schmelzen, ohne Inertgas — und sortiert das Pulver in sechs Korngrößen-Klassen.",
       spectrumLabel: "Korngrößen-Spektrum",
       spectrumCta: "Alle sechs Klassen ansehen →",
       stats: [
@@ -373,13 +373,13 @@ window.FLX_I18N = {
       process: {
         eyebrow: "Der Prozess",
         title: "Mechanische Umwandlung statt Schmelzzerstäubung.",
-        lede: "Herkömmliches Kupferpulver entsteht durch Schmelzen von Primärkathode und Zerstäubung mit Gas oder Wasser — ein energieintensiver Weg, der bei Primärmetall beginnt. FlexCycle nimmt dünne metallische Rückstände, die der Zielform bereits nahekommen, und verfeinert sie mechanisch zu kalibriertem Pulver."
+        lede: "Herkömmliches Kupferpulver entsteht durch Aufschmelzen von Primär- oder Sekundärkupfer mit anschließender Verdüsung durch Gas oder Wasser — ein energieintensiver Weg. FlexCycle nimmt dünnwandige metallische Rückstände, die der Zielform bereits nahekommen, und verarbeitet sie mechanisch zu Pulver."
       },
       compare: {
         conventional: {
           title: "Konventionelle Zerstäubung",
           items: [
-            "Beginnt bei Primärkupfer",
+            "Beginnt bei Primär- oder Sekundärkupfer",
             "Schmilzt das Metall bei ~1085 °C und verdüst es, meist unter Inertgas",
             "9.000 kWh und mehr pro Tonne bei der Gasverdüsung",
             "Glatte, glänzende Partikel reflektieren Infrarotlaser"
@@ -388,7 +388,7 @@ window.FLX_I18N = {
         flexycle: {
           title: "FlexCycle Process",
           items: [
-            "Beginnt bei Kupferfolien-Resten aus der Batteriezellfertigung",
+            "Beginnt bei dünnwandigen Kupferreststoffen aus der Batteriezellfertigung",
             "Kein Schmelzen — mechanische Zerkleinerung und Klassierung unter 100 °C",
             "Rund 650 kWh pro Tonne, ohne Inertgas",
             "Raue, verkugelte Partikel absorbieren Laserlicht und verklammern sich beim Pressen"
@@ -543,14 +543,14 @@ window.FLX_I18N = {
       tune: {
         eyebrow: "Konfigurierbar",
         title: "Reinheit oder Absorption: abgestimmt auf Ihren Prozess",
-        desc: "Unser Einsatzstoff ist graphitbeschichtete Anodenfolie. Die Prozesseinstellungen bestimmen, wie viel Graphit im Pulver bleibt: etwas mehr erhöht die Laserabsorption, weniger ergibt die höchste Kupferreinheit für leitfähige Bauteile. Sagen Sie uns, was Ihr Prozess braucht — wir stellen die Klasse darauf ein, auch mit individuellen Korngrößenschnitten."
+        desc: "Unser Einsatzstoff ist dünnwandiges, graphitbeschichtetes Kupfermaterial. Die Prozesseinstellungen bestimmen, wie viel Graphit im Pulver bleibt: etwas mehr erhöht die Laserabsorption, weniger ergibt die höchste Kupferreinheit für leitfähige Bauteile. Sagen Sie uns, was Ihr Prozess braucht — wir stellen die Klasse darauf ein, auch mit individuellen Korngrößenschnitten."
       }
     },
     company: {
       eyebrow: "Unternehmen",
       title: "Achthundertfünfzig Jahre Bergbau, ein neuer Materialkreislauf.",
       lede: "FlexCycle Solutions wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
-      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünne Kupferfolie, die in der Batteriezellfertigung in wachsenden Mengen übrig bleibt. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt: einen mechanischen Weg, der diese Reststoffe direkt in kalibriertes Pulver überführt und den Schmelzschritt überspringt, auf den die konventionelle Pulverherstellung angewiesen ist.",
+      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünnwandige Kupferreststoffe, die in der Batteriezellfertigung in wachsenden Mengen übrig bleiben. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt: einen mechanischen Weg, der diese Reststoffe direkt in kalibriertes Pulver überführt und den Schmelzschritt überspringt, auf den die konventionelle Pulverherstellung angewiesen ist.",
       video: { label: "Imagefilm — folgt in Kürze" },
       valuesTitle: "Woran wir uns halten",
       values: [
@@ -636,7 +636,7 @@ window.FLX_I18N = {
       }
     },
     ph: {
-      feedstock: "Foto: Kupferfolien-Reste aus der Batteriezellfertigung",
+      feedstock: "Foto: dünnwandige Kupferreststoffe aus der Batteriezellfertigung",
       powder: "Foto: fertiges Kupferpulver",
       sem: "Mikroskopaufnahme: FCP-Partikel (REM)",
       lab: "Foto: unser Labor am IART, TU Bergakademie Freiberg",
