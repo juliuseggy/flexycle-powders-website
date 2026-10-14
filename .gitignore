@@ -6,3 +6,23 @@ skills-lock.json
 # Original film master (140 MB, over GitHub's 100 MB limit). The web
 # version lives in assets/video/flexcycle-film.mp4.
 assets/video.mp4
+
+# Photo originals; resized web copies live in assets/img/.
+assets/feedstock.jpg
+assets/powder.jpeg
+
+# Logo originals; trimmed web copies live in assets/img/.
+assets/exist.png
+assets/saxeed.jpg
+assets/TUBAF.svg
+assets/BMWE.png
+assets/IART.png
+assets/Freiberg.jpg
+assets/lab.jpg
+# Product micrograph originals; 4:5 web crops live in assets/img/product-*.jpg.
+assets/20.tif
+assets/BJ.tif
+assets/AM.jpg
+assets/EBM.jpg
+assets/Si.tif
+assets/PM.tif

@@ -1,16 +1,22 @@
 /* ==========================================================================
    FlexCycle Solutions — Forms
-   Contact and quote forms (data-mailto) have no backend: valid submissions
-   are handed to the visitor's email client via a mailto: link built from the
-   form's own fields. Swap the mailto: href construction below for a real
-   endpoint (e.g. Formspree / Netlify Forms) when one is available — the
-   markup does not need to change.
+   Contact and quote forms (data-direct) are sent straight to Web3Forms
+   (web3forms.com), which forwards each submission to us by email. The
+   success message only shows once Web3Forms confirms receipt.
+
+   WEB3FORMS_KEY below is the one place the access key lives. While it is
+   empty, these forms fall back to the old mailto: hand-off (data-mailto),
+   so they never silently go nowhere.
 
    The career form (data-web3forms) posts directly to web3forms.com instead,
    since mailto: links cannot carry the CV file attachment.
    ========================================================================== */
 
 (function () {
+  // Access key from web3forms.com (it is public by design: it only lets a
+  // form deliver mail to the address it was created for).
+  var WEB3FORMS_KEY = 'f6d02337-571e-4b75-949e-147ba7c52088';
+
   function buildMailto(form) {
     var to = form.getAttribute('data-mailto');
     var subject = form.getAttribute('data-subject') || document.title;
@@ -67,8 +73,47 @@
       if (!validateForm(form)) return;
 
       window.location.href = buildMailto(form);
-      showStatus(form, 'success');
+      showStatus(form, 'mailto');
       form.reset();
+    });
+  }
+
+  // Direct submission (contact + quote forms). Sent as FormData, which is a
+  // CORS "simple request" (no preflight; Web3Forms rejects JSON preflights),
+  // and the JSON response says whether the mail was accepted, so the
+  // success/error message is real.
+  function initDirectForm(form) {
+    if (!WEB3FORMS_KEY) { initForm(form); return; }
+    watchRequiredFields(form);
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.querySelectorAll('.form__status').forEach(function (el) { el.classList.remove('is-visible'); });
+      if (!validateForm(form)) return;
+
+      var bot = form.querySelector('[name="botcheck"]');
+      if (bot && bot.checked) return; // honeypot ticked: silently drop spam bots
+      var payload = new FormData();
+      payload.append('access_key', WEB3FORMS_KEY);
+      payload.append('subject', form.getAttribute('data-subject') || document.title);
+      payload.append('from_name', 'FlexCycle Solutions website');
+      form.querySelectorAll('input, textarea, select').forEach(function (field) {
+        if (!field.name || field.name === 'botcheck') return;
+        var value = (field.value || '').trim();
+        if (value) payload.append(field.name, value);
+      });
+
+      if (submitBtn) submitBtn.disabled = true;
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: payload })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (!data || !data.success) throw new Error((data && data.message) || 'rejected');
+          showStatus(form, 'success');
+          form.reset();
+        })
+        .catch(function () { showStatus(form, 'error'); })
+        .then(function () { if (submitBtn) submitBtn.disabled = false; });
     });
   }
 
@@ -127,6 +172,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('form.form[data-web3forms]').forEach(initWeb3Form);
-    document.querySelectorAll('form.form[data-mailto]').forEach(initForm);
+    document.querySelectorAll('form.form[data-direct]').forEach(initDirectForm);
+    document.querySelectorAll('form.form[data-mailto]:not([data-direct])').forEach(initForm);
   });
 })();

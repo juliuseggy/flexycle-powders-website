@@ -189,9 +189,8 @@
 
   // Application gallery (landing page): hover-expand strip + click-to-open
   // lightbox. Ported from a pasted React/Framer-Motion "ExpandableGallery"
-  // prompt — flex-grow on hover instead of animated width, and the modal
-  // clones whichever item's morph-glyph was clicked instead of swapping an
-  // <img src>, since these are inline SVG placeholders, not photos yet.
+  // prompt — flex-grow on hover instead of animated width; the modal clones
+  // the clicked item's photo.
   function initGallery() {
     var gallery = document.querySelector('[data-gallery]');
     if (!gallery) return;
@@ -226,9 +225,13 @@
 
     function renderModal(index) {
       currentIndex = index;
-      var glyph = items[index].querySelector('.morph-glyph');
+      var media = items[index].querySelector('.gallery__image > img, .gallery__image > svg');
       modalImage.innerHTML = '';
-      if (glyph) modalImage.appendChild(glyph.cloneNode(true));
+      if (media) {
+        var copy = media.cloneNode(true);
+        if (copy.tagName === 'IMG') copy.loading = 'eager';
+        modalImage.appendChild(copy);
+      }
       var caption = items[index].querySelector('.gallery__caption');
       modalCaption.textContent = caption ? caption.textContent : '';
       modalCounter.textContent = (index + 1) + ' / ' + items.length;
@@ -297,6 +300,51 @@
     });
   }
 
+  // Funding logos (footer): fill one group with repeats until it is wider
+  // than the strip, then duplicate the group so the -50% scroll loops without
+  // a visible jump. Speed is constant (px/s) regardless of how many logos.
+  function initFundingMarquee() {
+    var strip = document.querySelector('[data-funding-marquee]');
+    if (!strip) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var group = strip.querySelector('.funding-marquee__group');
+    var originals = Array.prototype.slice.call(group.children);
+    if (!originals.length) return;
+
+    var track = document.createElement('div');
+    track.className = 'funding-marquee__track';
+    strip.insertBefore(track, group);
+    track.appendChild(group);
+    strip.classList.add('is-running');
+
+    function hiddenClone(node) {
+      var c = node.cloneNode(true);
+      c.setAttribute('aria-hidden', 'true');
+      c.querySelectorAll('img').forEach(function (img) { img.alt = ''; img.removeAttribute('data-i18n-alt'); img.loading = 'eager'; });
+      return c;
+    }
+    function build() {
+      while (track.children.length > 1) track.removeChild(track.lastChild);
+      while (group.children.length > originals.length) group.removeChild(group.lastChild);
+      var guard = 0;
+      while (group.scrollWidth < strip.clientWidth && guard++ < 20) {
+        originals.forEach(function (li) { group.appendChild(hiddenClone(li)); });
+      }
+      track.appendChild(hiddenClone(group));
+      strip.style.setProperty('--marquee-duration', Math.max(group.scrollWidth / 45, 12) + 's');
+    }
+    // Widths are only known once the logos have loaded.
+    var imgs = strip.querySelectorAll('img');
+    imgs.forEach(function (img) { img.loading = 'eager'; });
+    var pending = 0;
+    imgs.forEach(function (img) {
+      if (!img.complete) { pending++; img.addEventListener('load', function () { if (--pending === 0) build(); }, { once: true }); }
+    });
+    if (!pending) build();
+    var t;
+    window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(build, 200); });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
     initBlurFadeStagger();
@@ -309,5 +357,6 @@
     initTiltCards();
     initGallery();
     initFilm();
+    initFundingMarquee();
   });
 })();

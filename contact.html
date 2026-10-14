@@ -10,10 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026100506">
-<link rel="stylesheet" href="assets/css/base.css?v=2026100506">
-<link rel="stylesheet" href="assets/css/components.css?v=2026100506">
-<link rel="stylesheet" href="assets/css/print.css?v=2026100506">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026101401">
+<link rel="stylesheet" href="assets/css/base.css?v=2026101401">
+<link rel="stylesheet" href="assets/css/components.css?v=2026101401">
+<link rel="stylesheet" href="assets/css/print.css?v=2026101401">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -26,7 +26,7 @@
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="products.html" data-i18n="nav.products">Products</a></li>
         <li><a href="company.html" data-i18n="nav.company">Company</a></li>
-        <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+        <!-- Career page hidden for now; uncomment to restore: <li><a href="career.html" data-i18n="nav.career">Career</a></li> -->
         <li><a href="contact.html" data-i18n="nav.contact" aria-current="page">Contact</a></li>
       </ul>
       <div class="lang-switch" role="group" aria-label="Language">
@@ -43,7 +43,7 @@
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="products.html" data-i18n="nav.products">Products</a>
       <a href="company.html" data-i18n="nav.company">Company</a>
-      <a href="career.html" data-i18n="nav.career">Career</a>
+      <!-- Career page hidden for now; uncomment to restore: <a href="career.html" data-i18n="nav.career">Career</a> -->
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
   </div>
@@ -76,10 +76,10 @@
       <div class="grid grid-2" style="align-items:start">
         <div id="general">
           <h2 class="blur-fade" data-i18n="contact.generalTitle">General inquiry</h2>
-          <form class="form blur-fade" novalidate data-mailto="julius-eik.grimmenstein@iart.tu-freiberg.de" data-subject="General inquiry — FlexCycle Solutions" style="margin-top:var(--space-6)">
+          <form class="form blur-fade" novalidate data-direct data-mailto="julius-eik.grimmenstein@iart.tu-freiberg.de" data-subject="General inquiry — FlexCycle Solutions" style="margin-top:var(--space-6)">
             <div class="form__row">
               <label for="gen-name" data-i18n="contact.form.name">Name</label>
-              <input id="gen-name" name="Name" type="text" required data-mail-label="Name">
+              <input id="gen-name" name="name" type="text" required data-mail-label="Name">
               <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
             </div>
             <div class="form__row">
@@ -88,7 +88,7 @@
             </div>
             <div class="form__row">
               <label for="gen-email" data-i18n="contact.form.email">Email</label>
-              <input id="gen-email" name="Email" type="email" required data-mail-label="Email">
+              <input id="gen-email" name="email" type="email" required data-mail-label="Email">
               <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
             </div>
             <div class="form__row">
@@ -99,16 +99,19 @@
             <div>
               <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitGeneral">Send message</button>
             </div>
-            <p class="form__status form__status--success" role="status" data-i18n="contact.form.successGeneral">Thanks — your email client should have opened with your message ready to send.</p>
+            <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <p class="form__status form__status--success" role="status" data-i18n="contact.form.sentGeneral">Thanks — your message has been sent. We'll get back to you soon.</p>
+            <p class="form__status form__status--mailto" role="status" data-i18n="contact.form.successGeneral">Thanks — your email client should have opened with your message ready to send.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="contact.form.error">Your message could not be sent. Please email us directly at julius-eik.grimmenstein@iart.tu-freiberg.de.</p>
           </form>
         </div>
 
         <div id="quote" class="contact-forms__quote">
           <h2 class="blur-fade" data-i18n="contact.quoteTitle">Request a quote</h2>
-          <form class="form blur-fade" novalidate data-mailto="julius-eik.grimmenstein@iart.tu-freiberg.de" data-subject="Quote request — FlexCycle Solutions" style="margin-top:var(--space-6)">
+          <form class="form blur-fade" novalidate data-direct data-mailto="julius-eik.grimmenstein@iart.tu-freiberg.de" data-subject="Quote request — FlexCycle Solutions" style="margin-top:var(--space-6)">
             <div class="form__row">
               <label for="q-name" data-i18n="contact.form.name">Name</label>
-              <input id="q-name" name="Name" type="text" required data-mail-label="Name">
+              <input id="q-name" name="name" type="text" required data-mail-label="Name">
               <span class="form__error" data-i18n="contact.form.errorRequired">This field is required.</span>
             </div>
             <div class="form__row">
@@ -118,7 +121,7 @@
             </div>
             <div class="form__row">
               <label for="q-email" data-i18n="contact.form.email">Email</label>
-              <input id="q-email" name="Email" type="email" required data-mail-label="Email">
+              <input id="q-email" name="email" type="email" required data-mail-label="Email">
               <span class="form__error" data-i18n="contact.form.errorEmail">Enter a valid email address.</span>
             </div>
             <div class="form__row">
@@ -144,7 +147,10 @@
             <div>
               <button class="btn btn--primary" type="submit" data-i18n="contact.form.submitQuote">Request quote</button>
             </div>
-            <p class="form__status form__status--success" role="status" data-i18n="contact.form.successQuote">Thanks — your email client should have opened with your request ready to send.</p>
+            <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <p class="form__status form__status--success" role="status" data-i18n="contact.form.sentQuote">Thanks — your request has been sent. We'll get back to you soon.</p>
+            <p class="form__status form__status--mailto" role="status" data-i18n="contact.form.successQuote">Thanks — your email client should have opened with your request ready to send.</p>
+            <p class="form__status form__status--error" role="alert" data-i18n="contact.form.error">Your message could not be sent. Please email us directly at julius-eik.grimmenstein@iart.tu-freiberg.de.</p>
           </form>
         </div>
       </div>
@@ -170,7 +176,7 @@
         <ul>
           <li><a href="products.html" data-i18n="nav.products">Products</a></li>
           <li><a href="company.html" data-i18n="nav.company">Company</a></li>
-          <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+          <!-- Career page hidden for now; uncomment to restore: <li><a href="career.html" data-i18n="nav.career">Career</a></li> -->
         </ul>
       </div>
       <div>
@@ -182,10 +188,28 @@
         </ul>
       </div>
     </div>
-    <div class="site-footer__funding">
-      <div class="site-footer__funding-panel">
-        <img src="assets/img/foerderhinweis.png" alt="Co-financed by the European Union and the Free State of Saxony" loading="lazy">
-      </div>
+    <!-- Supporters & funding logos as a continuous strip. initFundingMarquee()
+         in main.js repeats the items to fill the width and starts the scroll;
+         without JS or with reduced motion they simply sit side by side. To
+         add a logo, add one <li> here (on every page). -->
+    <p class="funding-marquee__title" data-i18n="footer.supporters">Supporters</p>
+    <div class="funding-marquee" data-funding-marquee>
+      <ul class="funding-marquee__group">
+        <li><img src="assets/img/funding-eu.png" width="795" height="161" loading="lazy" decoding="async"
+                 alt="Co-financed by the European Union" data-i18n-alt="footer.funding.eu"></li>
+        <li><img src="assets/img/funding-saxony.png" width="1152" height="182" loading="lazy" decoding="async"
+                 alt="This measure is co-financed by tax revenue on the basis of the budget passed by the Saxon State Parliament." data-i18n-alt="footer.funding.saxony"></li>
+        <li><img class="funding-marquee__logo--bmwe" src="assets/img/funding-bmwe.png" width="295" height="320" loading="lazy" decoding="async"
+                 alt="Funded by the Federal Ministry for Economic Affairs and Energy on the basis of a decision by the German Bundestag" data-i18n-alt="footer.funding.bmwe"></li>
+        <li><img class="funding-marquee__logo--exist" src="assets/img/funding-exist.png" width="379" height="240" loading="lazy" decoding="async"
+                 alt="EXIST – Existenzgründungen aus der Wissenschaft"></li>
+        <li><img class="funding-marquee__logo--tubaf" src="assets/img/supporter-tubaf.svg" width="583" height="205" loading="lazy" decoding="async"
+                 alt="TU Bergakademie Freiberg"></li>
+        <li><img class="funding-marquee__logo--iart" src="assets/img/supporter-iart.png" width="439" height="240" loading="lazy" decoding="async"
+                 alt="IART – Institute of Mineral Processing Machines and Recycling Systems Technology" data-i18n-alt="footer.funding.iart"></li>
+        <li><img class="funding-marquee__logo--saxeed" src="assets/img/supporter-saxeed.jpg" width="315" height="240" loading="lazy" decoding="async"
+                 alt="SAXEED"></li>
+      </ul>
     </div>
     <div class="site-footer__bottom">
       <span data-i18n="footer.rights">© 2026 FlexCycle Solutions. All rights reserved.</span>
@@ -193,11 +217,11 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026100506"></script>
-<script src="assets/js/main.js?v=2026100506"></script>
-<script src="assets/js/spectrum.js?v=2026100506"></script>
-<script src="assets/js/forms.js?v=2026100506"></script>
-<script src="assets/js/hero-grain.js?v=2026100506"></script>
+<script src="assets/js/i18n.js?v=2026101401"></script>
+<script src="assets/js/main.js?v=2026101401"></script>
+<script src="assets/js/spectrum.js?v=2026101401"></script>
+<script src="assets/js/forms.js?v=2026101401"></script>
+<script src="assets/js/hero-grain.js?v=2026101401"></script>
 <script type="module">
 /* FlexCycle Solutions — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven

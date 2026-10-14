@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="company.title">FlexCycle Solutions — Company</title>
-<meta name="description" content="FlexCycle Solutions was spun out of TU Bergakademie Freiberg, the world's oldest mining academy, to turn metallic production residues into calibrated copper powder.">
+<meta name="description" content="FlexCycle Solutions was spun out of TU Bergakademie Freiberg, the world's oldest mining academy, to turn metallic production residues into copper powder.">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026100506">
-<link rel="stylesheet" href="assets/css/base.css?v=2026100506">
-<link rel="stylesheet" href="assets/css/components.css?v=2026100506">
-<link rel="stylesheet" href="assets/css/print.css?v=2026100506">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026101401">
+<link rel="stylesheet" href="assets/css/base.css?v=2026101401">
+<link rel="stylesheet" href="assets/css/components.css?v=2026101401">
+<link rel="stylesheet" href="assets/css/print.css?v=2026101401">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -26,7 +26,7 @@
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="products.html" data-i18n="nav.products">Products</a></li>
         <li><a href="company.html" data-i18n="nav.company" aria-current="page">Company</a></li>
-        <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+        <!-- Career page hidden for now; uncomment to restore: <li><a href="career.html" data-i18n="nav.career">Career</a></li> -->
         <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="lang-switch" role="group" aria-label="Language">
@@ -43,7 +43,7 @@
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="products.html" data-i18n="nav.products">Products</a>
       <a href="company.html" data-i18n="nav.company">Company</a>
-      <a href="career.html" data-i18n="nav.career">Career</a>
+      <!-- Career page hidden for now; uncomment to restore: <a href="career.html" data-i18n="nav.career">Career</a> -->
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
   </div>
@@ -63,15 +63,14 @@
 
   <section>
     <div class="container" data-blur-group>
-      <div class="split split--even" style="align-items:center">
-        <p class="blur-fade" style="font-size:var(--fs-400)" data-i18n="company.story">Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.</p>
-        <!-- Image placeholder: replace .img-ph__frame with <img src="assets/img/lab.jpg" alt="..." loading="lazy">. -->
-        <figure class="img-ph blur-fade" style="--ratio:4 / 3">
-          <div class="img-ph__frame">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
-            <span class="img-ph__label" data-i18n="ph.lab">Photo: our lab at IART, TU Bergakademie Freiberg</span>
-            <span class="img-ph__file">assets/img/lab.jpg · 4:3</span>
-          </div>
+      <div class="split split--media" style="align-items:center">
+        <p class="blur-fade" style="font-size:var(--fs-400)" data-i18n="company.story">Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg. This mechanical route turns that residue directly into powder, skipping the melt step that conventional powder production depends on.</p>
+        <!-- Lab photo (credit: IART). Portrait 4:5 web copy of assets/lab.jpg
+             (git-ignored original). -->
+        <figure class="img-ph img-ph--portrait blur-fade" style="--ratio:4 / 5">
+          <img src="assets/img/lab.jpg" width="1200" height="1500" loading="lazy" decoding="async"
+               alt="Test rig in the IART lab" data-i18n-alt="company.lab.alt">
+          <figcaption class="img-ph__caption"><span data-i18n="company.lab.label">Our lab at IART</span> — <span data-i18n="company.lab.credit">Photo: IART</span></figcaption>
         </figure>
       </div>
     </div>
@@ -118,7 +117,7 @@
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--copper); margin-bottom:var(--space-4)" aria-hidden="true">
             <path d="M3 6v4M21 6v4M3 8h18"/><path d="M7 14v4M11 14v6M15 14v4M19 14v6"/>
           </svg>
-          <h3 data-i18n="company.values.2.title">Calibrated, not generic</h3>
+          <h3 data-i18n="company.values.2.title">Defined grades, not one-size-fits-all</h3>
           <p style="color:var(--text-soft)" data-i18n="company.values.2.desc">Six defined grades mean customers order by particle size and morphology, not a single one-size-fits-all powder.</p>
         </article>
       </div>
@@ -258,13 +257,13 @@
           </div>
         </li>
       </ol>
-      <!-- Image placeholder: replace .img-ph__frame with <img src="assets/img/pilot-plant.jpg" alt="..." loading="lazy">. -->
+      <!-- Stand-in until there is a photo of the pilot plant: view over
+           Freiberg (credit required: TU Bergakademie Freiberg / Universitätsbibliothek).
+           Web copy cropped to 21:9 from assets/Freiberg.jpg (git-ignored). -->
       <figure class="img-ph blur-fade" style="--ratio:21 / 9">
-        <div class="img-ph__frame">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
-          <span class="img-ph__label" data-i18n="ph.pilot">Photo: pilot plant at the CircEcon campus, Lusatia</span>
-          <span class="img-ph__file">assets/img/pilot-plant.jpg · 21:9</span>
-        </div>
+        <img src="assets/img/freiberg.jpg" width="1920" height="823" loading="lazy" decoding="async"
+             alt="View over Freiberg, Saxony" data-i18n-alt="company.freiberg.alt">
+        <figcaption class="img-ph__caption"><span data-i18n="company.freiberg.label">Freiberg, Saxony</span> — <span data-i18n="company.freiberg.credit">Photo: TU Bergakademie Freiberg / Universitätsbibliothek</span></figcaption>
       </figure>
     </div>
   </section>
@@ -310,7 +309,7 @@
         <ul>
           <li><a href="products.html" data-i18n="nav.products">Products</a></li>
           <li><a href="company.html" data-i18n="nav.company">Company</a></li>
-          <li><a href="career.html" data-i18n="nav.career">Career</a></li>
+          <!-- Career page hidden for now; uncomment to restore: <li><a href="career.html" data-i18n="nav.career">Career</a></li> -->
         </ul>
       </div>
       <div>
@@ -322,10 +321,28 @@
         </ul>
       </div>
     </div>
-    <div class="site-footer__funding">
-      <div class="site-footer__funding-panel">
-        <img src="assets/img/foerderhinweis.png" alt="Co-financed by the European Union and the Free State of Saxony" loading="lazy">
-      </div>
+    <!-- Supporters & funding logos as a continuous strip. initFundingMarquee()
+         in main.js repeats the items to fill the width and starts the scroll;
+         without JS or with reduced motion they simply sit side by side. To
+         add a logo, add one <li> here (on every page). -->
+    <p class="funding-marquee__title" data-i18n="footer.supporters">Supporters</p>
+    <div class="funding-marquee" data-funding-marquee>
+      <ul class="funding-marquee__group">
+        <li><img src="assets/img/funding-eu.png" width="795" height="161" loading="lazy" decoding="async"
+                 alt="Co-financed by the European Union" data-i18n-alt="footer.funding.eu"></li>
+        <li><img src="assets/img/funding-saxony.png" width="1152" height="182" loading="lazy" decoding="async"
+                 alt="This measure is co-financed by tax revenue on the basis of the budget passed by the Saxon State Parliament." data-i18n-alt="footer.funding.saxony"></li>
+        <li><img class="funding-marquee__logo--bmwe" src="assets/img/funding-bmwe.png" width="295" height="320" loading="lazy" decoding="async"
+                 alt="Funded by the Federal Ministry for Economic Affairs and Energy on the basis of a decision by the German Bundestag" data-i18n-alt="footer.funding.bmwe"></li>
+        <li><img class="funding-marquee__logo--exist" src="assets/img/funding-exist.png" width="379" height="240" loading="lazy" decoding="async"
+                 alt="EXIST – Existenzgründungen aus der Wissenschaft"></li>
+        <li><img class="funding-marquee__logo--tubaf" src="assets/img/supporter-tubaf.svg" width="583" height="205" loading="lazy" decoding="async"
+                 alt="TU Bergakademie Freiberg"></li>
+        <li><img class="funding-marquee__logo--iart" src="assets/img/supporter-iart.png" width="439" height="240" loading="lazy" decoding="async"
+                 alt="IART – Institute of Mineral Processing Machines and Recycling Systems Technology" data-i18n-alt="footer.funding.iart"></li>
+        <li><img class="funding-marquee__logo--saxeed" src="assets/img/supporter-saxeed.jpg" width="315" height="240" loading="lazy" decoding="async"
+                 alt="SAXEED"></li>
+      </ul>
     </div>
     <div class="site-footer__bottom">
       <span data-i18n="footer.rights">© 2026 FlexCycle Solutions. All rights reserved.</span>
@@ -333,11 +350,11 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026100506"></script>
-<script src="assets/js/main.js?v=2026100506"></script>
-<script src="assets/js/spectrum.js?v=2026100506"></script>
-<script src="assets/js/forms.js?v=2026100506"></script>
-<script src="assets/js/hero-grain.js?v=2026100506"></script>
+<script src="assets/js/i18n.js?v=2026101401"></script>
+<script src="assets/js/main.js?v=2026101401"></script>
+<script src="assets/js/spectrum.js?v=2026101401"></script>
+<script src="assets/js/forms.js?v=2026101401"></script>
+<script src="assets/js/hero-grain.js?v=2026101401"></script>
 <script type="module">
 /* FlexCycle Solutions — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven

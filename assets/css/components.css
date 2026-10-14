@@ -622,6 +622,14 @@
 .gallery__item.is-hovered { flex: 2.4; }
 .gallery__item.is-dimmed { flex: 0.6; }
 .gallery__image { position: absolute; inset: 0; }
+.gallery__photo,
+.gallery__modal-image > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .gallery__scrim {
   position: absolute;
   inset: 0;
@@ -660,8 +668,9 @@
 .gallery__modal[hidden] { display: none; }
 .gallery__modal-image {
   position: relative;
-  width: min(100%, 34rem);
-  aspect-ratio: 4 / 3;
+  /* Portrait micrographs: 4:5, capped so the frame never exceeds ~70% of the viewport height. */
+  width: min(100%, 28rem, 56vh);
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--bg-alt);
@@ -941,6 +950,13 @@
   cursor: pointer;
   transition: transform 400ms var(--ease-out);
 }
+.tilt-card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .tilt-card__scrim {
   position: absolute;
   inset: 0;
@@ -1104,7 +1120,8 @@
   display: none;
 }
 .form__status.is-visible { display: block; }
-.form__status--success { background: rgba(94, 162, 152, 0.18); color: var(--paper); }
+.form__status--success,
+.form__status--mailto { background: rgba(94, 162, 152, 0.18); color: var(--paper); }
 .form__status--error { background: rgba(199, 111, 61, 0.18); color: var(--paper); }
 .form__row input[type="file"] { padding: var(--space-2) var(--space-3); font-size: var(--fs-200); }
 
@@ -1145,25 +1162,74 @@
   font-size: var(--fs-100);
 }
 .site-footer__bottom ul { list-style: none; display: flex; gap: var(--space-5); padding: 0; margin: 0; }
-.site-footer__funding {
-  margin-top: var(--space-6);
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--border-soft);
-  display: flex;
-  justify-content: center;
+/* Funding logos: light strip (the logos are made for white), scrolling
+   left in a seamless loop. The track holds two identical groups and moves by
+   exactly one group width (-50%). */
+.funding-marquee__title {
+  margin: var(--space-6) 0 var(--space-3);
+  max-width: none;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-soft);
 }
-.site-footer__funding-panel {
-  display: inline-flex;
-  background: var(--paper);
+.funding-marquee {
+  margin-top: 0;
   border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-5);
+  background: #fff; /* pure white: several logos ship on a white ground */
+  overflow: hidden;
 }
-.site-footer__funding-panel img { display: block; width: 260px; max-width: 100%; height: auto; }
+.funding-marquee.is-running {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.funding-marquee__track { display: flex; width: max-content; }
+.funding-marquee__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  list-style: none;
+}
+.funding-marquee__group img { display: block; height: 60px; width: auto; }
+.funding-marquee__group .funding-marquee__logo--exist { height: 64px; }
+.funding-marquee__group .funding-marquee__logo--saxeed { height: 64px; }
+.funding-marquee__group .funding-marquee__logo--tubaf { height: 56px; }
+.funding-marquee__group .funding-marquee__logo--bmwe { height: 104px; }
+.funding-marquee__group .funding-marquee__logo--iart { height: 52px; }
+.funding-marquee.is-running .funding-marquee__group {
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  padding: var(--space-4) var(--space-8) var(--space-4) 0; /* trailing gap keeps the loop seam even */
+}
+.funding-marquee.is-running .funding-marquee__track {
+  animation: funding-scroll var(--marquee-duration, 30s) linear infinite;
+}
+.funding-marquee.is-running:hover .funding-marquee__track { animation-play-state: paused; }
+@keyframes funding-scroll { to { transform: translateX(-50%); } }
+@media (max-width: 640px) {
+  .funding-marquee__group { gap: var(--space-6); }
+  .funding-marquee__group img { height: 48px; }
+  .funding-marquee__group .funding-marquee__logo--exist { height: 50px; }
+  .funding-marquee__group .funding-marquee__logo--saxeed { height: 50px; }
+  .funding-marquee__group .funding-marquee__logo--tubaf { height: 44px; }
+  .funding-marquee__group .funding-marquee__logo--bmwe { height: 80px; }
+  .funding-marquee__group .funding-marquee__logo--iart { height: 42px; }
+  .funding-marquee.is-running .funding-marquee__group { padding-right: var(--space-6); }
+}
 
 /* ---------------------------------------------------------------------- */
 /* Print button                                                             */
 /* ---------------------------------------------------------------------- */
 .print-btn svg { width: 16px; height: 16px; }
+/* Datasheet buttons are hidden for now (markup and print logic stay in place).
+   Delete this rule to show them again. */
+.btn.print-btn { display: none; }
 
 /* ---------------------------------------------------------------------- */
 /* Reveal-on-scroll (generic, respects reduced-motion via base.css)        */
@@ -1384,6 +1450,23 @@
 .img-ph__frame svg { width: 32px; height: 32px; color: var(--structure); }
 .img-ph__label { font-size: var(--fs-200); color: var(--text); max-width: 34ch; }
 .img-ph__file { font-family: var(--font-mono); font-size: var(--fs-100); color: var(--text-soft); }
+.img-ph__caption {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-100);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.img-ph__caption > span:first-child { color: var(--accent); }
+/* Portrait photo beside text: narrower than its column so it does not
+   tower over the copy next to it. */
+.img-ph--portrait { max-width: 16rem; width: 100%; justify-self: center; }
+@media (min-width: 960px) {
+  /* Text takes the room; the photo keeps a fixed, modest width. */
+  .split--media { grid-template-columns: 1fr 18rem; }
+  .img-ph--portrait { max-width: 18rem; justify-self: end; }
+}
 .img-pair { margin-top: var(--space-7); }
 .img-band { padding-block: 0; }
 h2 + .img-ph { margin-top: var(--space-6); }

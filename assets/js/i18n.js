@@ -24,7 +24,14 @@ window.FLX_I18N = {
       imprint: "Imprint",
       privacy: "Privacy policy",
       rights: "© 2026 FlexCycle Solutions. All rights reserved.",
-      address: "Freiberg, Saxony, Germany"
+      address: "Freiberg, Saxony, Germany",
+      supporters: "Supporters",
+      funding: {
+        eu: "Co-financed by the European Union",
+        saxony: "This measure is co-financed by tax revenue on the basis of the budget passed by the Saxon State Parliament.",
+        bmwe: "Funded by the Federal Ministry for Economic Affairs and Energy on the basis of a decision by the German Bundestag",
+        iart: "IART – Institute of Mineral Processing Machines and Recycling Systems Technology"
+      }
     },
     home: {
       eyebrow: "Deep tech · recycled copper powder",
@@ -85,6 +92,10 @@ window.FLX_I18N = {
           "Powder metallurgy — bearings and structural parts"
         ]
       },
+      pair: {
+        feedstock: { label: "Feedstock", text: "thin-walled copper residues", alt: "Thin-walled copper residues" },
+        powder: { label: "Result", text: "copper powder", alt: "Copper powder" }
+      },
       energy: {
         eyebrow: "Energy demand",
         title: "650 kWh per tonne. Melt routes need many times more.",
@@ -127,11 +138,13 @@ window.FLX_I18N = {
       },
       applicationsLabel: "Applications",
       fcp20: {
+        photoAlt: "Micrograph of FCP-20 particles",
         eyebrow: "Sintering &amp; electronics · ultrafine",
         tagline: "Ultrafine powder for sinter-active electronics.",
         desc: "FCP-20 is classified below 20 µm for maximum specific surface area, giving it high sinter activity in conductive pastes, contacts and fine sintered structures.",
         specs: {
           particleSize: "&lt;20 µm",
+          sphericity: "&gt;0.9",
           specificSurface: "High (BET)",
           tapDensity: "~3.8 g/cm³",
           copperContent: "&gt;99.9%",
@@ -140,11 +153,13 @@ window.FLX_I18N = {
         applications: "Electronics, sintered contacts, conductive pastes"
       },
       fcpbj: {
+        photoAlt: "Micrograph of FCP-BJ particles",
         eyebrow: "Additive manufacturing · Binder Jetting",
-        tagline: "Fine spherical powder calibrated for binder jetting.",
+        tagline: "Fine spherical powder for binder jetting.",
         desc: "Classified for consistent recoating and high green density in binder-jet printing, FCP-BJ supports fine feature resolution ahead of the sintering step to full density.",
         specs: {
           particleSize: "20–45 µm",
+          sphericity: "&gt;0.9",
           flowability: "~16 s/50 g",
           apparentDensity: "~4.5 g/cm³",
           copperContent: "&gt;99.9%",
@@ -153,12 +168,13 @@ window.FLX_I18N = {
         applications: "Binder jetting, complex geometries, batch AM production"
       },
       fcpam: {
+        photoAlt: "Micrograph of FCP-AM particles",
         eyebrow: "Additive manufacturing · LPBF/DED",
         tagline: "Spherical powder built for laser processing.",
-        desc: "Spheroidal and free-flowing, FCP-AM is calibrated for laser powder bed fusion and directed energy deposition. Its rough surface absorbs about twice as much 1070 nm laser light as gas-atomised powder, which widens the process window on standard infrared machines.",
+        desc: "Spheroidal and free-flowing, FCP-AM is tailored to laser powder bed fusion and directed energy deposition. Its rough surface absorbs about twice as much 1070 nm laser light as gas-atomised powder, which widens the process window on standard infrared machines.",
         specs: {
           particleSize: "20–63 µm",
-          sphericity: "~0.87",
+          sphericity: "&gt;0.9",
           apparentDensity: "~4.0 g/cm³",
           tapDensity: "~4.8 g/cm³",
           flowability: "~14 s/50 g",
@@ -170,12 +186,13 @@ window.FLX_I18N = {
         applications: "LPBF of pure-copper parts, DED, high-conductivity components"
       },
       fcpebm: {
+        photoAlt: "Micrograph of FCP-EBM particles",
         eyebrow: "Additive manufacturing · Electron Beam Melting",
         tagline: "Coarser spherical powder suited to electron-beam processing.",
-        desc: "Calibrated for the larger beam spot and vacuum environment of electron beam melting, FCP-EBM balances flowability with reduced fines for stable powder-bed spreading.",
+        desc: "Tailored to the larger beam spot and vacuum environment of electron beam melting, FCP-EBM balances flowability with reduced fines for stable powder-bed spreading.",
         specs: {
           particleSize: "63–100 µm",
-          sphericity: "&gt;0.85",
+          sphericity: "&gt;0.9",
           apparentDensity: "~5.1 g/cm³",
           copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
@@ -183,24 +200,30 @@ window.FLX_I18N = {
         applications: "EBM of copper components, high-conductivity parts"
       },
       fcpsi: {
+        photoAlt: "Micrograph of FCP-Si particles",
         eyebrow: "Sintering · SPS &amp; pressureless",
         tagline: "Engineered for spark plasma and pressureless sintering.",
-        desc: "FCP-Si is calibrated for direct consolidation via spark plasma sintering (SPS) or pressureless sintering routes, reaching high density without a separate pressing step.",
+        desc: "FCP-Si is tailored to direct consolidation via spark plasma sintering (SPS) or pressureless sintering routes, reaching high density without a separate pressing step.",
         specs: {
           particleSize: "45–150 µm",
+          sphericity: "&gt;0.9",
           consolidationRoute: "SPS / pressureless sintering",
           apparentDensity: "~4.0 g/cm³",
+          greenStrength: "90 % of water-atomised powder",
+          flowability: "High",
           copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
         },
         applications: "SPS-consolidated parts, pressureless-sintered components, functional structures"
       },
       fcppm: {
+        photoAlt: "Micrograph of FCP-PM particles",
         eyebrow: "Powder metallurgy · press &amp; sinter",
         tagline: "Rough surface, built for green strength.",
         desc: "FCP-PM's rough particle surfaces interlock under pressure, giving strong green compacts for classic press-and-sinter routes — only 8–10 % below water-atomised powder in first trials. The broadest of the six grades, for general powder-metallurgy use where a tight process-specific cut isn't required.",
         specs: {
           particleSize: "20–150 µm",
+          sphericity: "&gt;0.9",
           morphology: "Rough, spheroidal",
           apparentDensity: "~2.6 g/cm³",
           greenStrength: "8–10 % below water-atomised",
@@ -208,26 +231,23 @@ window.FLX_I18N = {
           feedstock: "100% recycled"
         },
         applications: "Press &amp; sinter components, bearings, structural parts"
-      },
-      tune: {
-        eyebrow: "Configurable",
-        title: "Purity or absorption: tuned to your process",
-        desc: "Our feedstock is thin-walled, graphite-coated copper material. Process settings decide how much graphite stays in the powder: a little more raises laser absorption, less gives the highest copper purity for conductive parts. Tell us what your process needs and we set the grade up for it, including custom size cuts."
       }
     },
     company: {
       eyebrow: "Company",
       title: "Eight hundred and fifty years of mining, one new material loop.",
       lede: "FlexCycle Solutions was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
-      story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg: a mechanical route that turns that residue directly into calibrated powder, skipping the melt step that conventional powder production depends on.",
+      story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg. This mechanical route turns that residue directly into powder, skipping the melt step that conventional powder production depends on.",
       valuesTitle: "What we hold to",
       values: [
         { title: "Mechanical, not melted", desc: "Every process step avoids re-melting the metal, cutting energy demand at the source." },
         { title: "Closed-loop by design", desc: "Feedstock comes from production residues, not fresh mining — the loop closes before the metal ever becomes waste." },
-        { title: "Calibrated, not generic", desc: "Six defined grades mean customers order by particle size and morphology, not a single one-size-fits-all powder." }
+        { title: "Defined grades, not one-size-fits-all", desc: "Six defined grades mean customers order by particle size and morphology, not a single one-size-fits-all powder." }
       ],
       teamTitle: "Leadership",
       teamPhotoAlt: "The FlexCycle Solutions team in Freiberg",
+      lab: { label: "Our lab at IART", credit: "Photo: IART", alt: "Test rig in the IART lab" },
+      freiberg: { label: "Freiberg, Saxony", credit: "Photo: TU Bergakademie Freiberg / Universitätsbibliothek", alt: "View over Freiberg, Saxony" },
       roles: {
         mech: "Mechanical Engineer",
         cs: "Computer Engineer",
@@ -300,17 +320,16 @@ window.FLX_I18N = {
         submitQuote: "Request quote",
         successGeneral: "Thanks — your email client should have opened with your message ready to send.",
         successQuote: "Thanks — your email client should have opened with your request ready to send.",
+        sentGeneral: "Thanks — your message has been sent. We'll get back to you soon.",
+        sentQuote: "Thanks — your request has been sent. We'll get back to you soon.",
+        error: "Your message could not be sent. Please email us directly at julius-eik.grimmenstein@iart.tu-freiberg.de.",
         errorRequired: "This field is required.",
         errorEmail: "Enter a valid email address."
       }
     },
     film: { play: "Watch the film", aria: "FlexCycle Solutions image film" },
     ph: {
-      feedstock: "Photo: thin-walled copper residues from battery cell production",
-      powder: "Photo: finished copper powder",
       sem: "Micrograph: FCP particles (SEM)",
-      lab: "Photo: our lab at IART, TU Bergakademie Freiberg",
-      pilot: "Photo: pilot plant at the CircEcon campus, Lusatia",
       teamWork: "Photo: the team at work in the lab"
     },
     legal: {
@@ -324,11 +343,11 @@ window.FLX_I18N = {
       toBeCompleted: "To be completed",
       privacyTitle: "Privacy policy",
       privacyBody: "This placeholder privacy policy should be reviewed and completed with qualified legal counsel before the site goes live, covering data collected via the contact, career and quote forms.",
-      privacyIntro: "FlexCycle Solutions does not run its own server-side data collection on this site. Most forms hand your input to your own email client via a mailto: link; the career form is the one exception, described below.",
+      privacyIntro: "FlexCycle Solutions does not run its own server-side data collection on this site. Form submissions are transmitted via the form service Web3Forms and delivered to us by email, as described below.",
       privacyWhoTitle: "Controller",
       privacyWho: "FlexCycle Solutions, Freiberg, Saxony, Germany — julius-eik.grimmenstein@iart.tu-freiberg.de",
       privacyFormsTitle: "Contact and quote forms",
-      privacyForms: "Submitting a form opens a pre-filled email in your email client; the content you typed is only transmitted once you actually send that email, to julius-eik.grimmenstein@iart.tu-freiberg.de. Nothing is stored on our servers by the form itself.",
+      privacyForms: "When you submit the contact or quote form, your input is transmitted directly to julius-eik.grimmenstein@iart.tu-freiberg.de via Web3Forms (web3forms.com), a third-party form-processing service acting as our processor. Web3Forms forwards the submission to us by email and does not publish it; its servers may be located outside the EU. Consult its own privacy policy at web3forms.com for details on its processing.",
       privacyFormsCareerTitle: "Career / open-application form",
       privacyFormsCareer: "The career form is submitted directly, including any attached CV file, to julius-eik.grimmenstein@iart.tu-freiberg.de via Web3Forms (web3forms.com), a third-party form-processing service acting as our processor. Web3Forms transmits the submission to us by email and does not publish it; its servers may be located outside the EU. Consult its own privacy policy at web3forms.com for details on its processing.",
       privacyRightsTitle: "Your rights",
@@ -355,7 +374,14 @@ window.FLX_I18N = {
       imprint: "Impressum",
       privacy: "Datenschutz",
       rights: "© 2026 FlexCycle Solutions. Alle Rechte vorbehalten.",
-      address: "Freiberg, Sachsen, Deutschland"
+      address: "Freiberg, Sachsen, Deutschland",
+      supporters: "Supporter",
+      funding: {
+        eu: "Kofinanziert von der Europäischen Union",
+        saxony: "Diese Maßnahme wird mitfinanziert durch Steuermittel auf der Grundlage des vom Sächsischen Landtag beschlossenen Haushaltes.",
+        bmwe: "Gefördert durch das Bundesministerium für Wirtschaft und Energie aufgrund eines Beschlusses des Deutschen Bundestages",
+        iart: "IART – Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik"
+      }
     },
     home: {
       eyebrow: "Deep-Tech · recyceltes Kupferpulver",
@@ -416,6 +442,10 @@ window.FLX_I18N = {
           "Pulvermetallurgie — Lager und Strukturbauteile"
         ]
       },
+      pair: {
+        feedstock: { label: "Einsatzstoff", text: "dünnwandige Kupferreststoffe", alt: "Dünnwandige Kupferreststoffe" },
+        powder: { label: "Ergebnis", text: "Kupferpulver", alt: "Kupferpulver" }
+      },
       energy: {
         eyebrow: "Energiebedarf",
         title: "650 kWh pro Tonne. Schmelzrouten brauchen ein Vielfaches.",
@@ -458,11 +488,13 @@ window.FLX_I18N = {
       },
       applicationsLabel: "Anwendungen",
       fcp20: {
+        photoAlt: "Mikroskopaufnahme von FCP-20-Partikeln",
         eyebrow: "Sintern &amp; Elektronik · ultrafein",
         tagline: "Ultrafeines Pulver für sinteraktive Elektronik.",
         desc: "FCP-20 wird unterhalb von 20 µm klassiert und erreicht dadurch eine hohe spezifische Oberfläche — das ergibt hohe Sinteraktivität für leitfähige Pasten, Kontakte und feine Sinterstrukturen.",
         specs: {
           particleSize: "&lt;20 µm",
+          sphericity: "&gt;0,9",
           specificSurface: "Hoch (BET)",
           tapDensity: "~3,8 g/cm³",
           copperContent: "&gt;99,9%",
@@ -471,11 +503,13 @@ window.FLX_I18N = {
         applications: "Elektronik, gesinterte Kontakte, leitfähige Pasten"
       },
       fcpbj: {
+        photoAlt: "Mikroskopaufnahme von FCP-BJ-Partikeln",
         eyebrow: "Additive Fertigung · Binder Jetting",
         tagline: "Feines sphärisches Pulver für Binder Jetting.",
         desc: "Für gleichmäßiges Recoating und hohe Gründichte beim Binder-Jetting-Druck klassiert, unterstützt FCP-BJ feine Detailauflösung vor dem abschließenden Sinterschritt zur vollen Dichte.",
         specs: {
           particleSize: "20–45 µm",
+          sphericity: "&gt;0,9",
           flowability: "~16 s/50 g",
           apparentDensity: "~4,5 g/cm³",
           copperContent: "&gt;99,9%",
@@ -484,12 +518,13 @@ window.FLX_I18N = {
         applications: "Binder Jetting, komplexe Geometrien, Serien-AM-Produktion"
       },
       fcpam: {
+        photoAlt: "Mikroskopaufnahme von FCP-AM-Partikeln",
         eyebrow: "Additive Fertigung · LPBF/DED",
         tagline: "Sphärisches Pulver für die Laserverarbeitung.",
-        desc: "Verkugelt und rieselfähig ist FCP-AM für Laser Powder Bed Fusion und Directed Energy Deposition kalibriert. Seine raue Oberfläche absorbiert etwa doppelt so viel Laserlicht bei 1070 nm wie gasverdüstes Pulver und erweitert so das Prozessfenster auf gängigen Infrarot-Anlagen.",
+        desc: "Verkugelt und rieselfähig ist FCP-AM auf Laser Powder Bed Fusion und Directed Energy Deposition abgestimmt. Seine raue Oberfläche absorbiert etwa doppelt so viel Laserlicht bei 1070 nm wie gasverdüstes Pulver und erweitert so das Prozessfenster auf gängigen Infrarot-Anlagen.",
         specs: {
           particleSize: "20–63 µm",
-          sphericity: "~0,87",
+          sphericity: "&gt;0,9",
           apparentDensity: "~4,0 g/cm³",
           tapDensity: "~4,8 g/cm³",
           flowability: "~14 s/50 g",
@@ -501,12 +536,13 @@ window.FLX_I18N = {
         applications: "LPBF von Reinkupfer-Bauteilen, DED, hochleitfähige Komponenten"
       },
       fcpebm: {
+        photoAlt: "Mikroskopaufnahme von FCP-EBM-Partikeln",
         eyebrow: "Additive Fertigung · Electron Beam Melting",
         tagline: "Gröberes sphärisches Pulver für die Elektronenstrahlverarbeitung.",
-        desc: "Kalibriert für den größeren Strahlfleck und die Vakuumumgebung des Elektronenstrahlschmelzens (EBM), verbindet FCP-EBM gute Fließfähigkeit mit reduziertem Feinanteil für eine stabile Pulverbett-Verteilung.",
+        desc: "Abgestimmt auf den größeren Strahlfleck und die Vakuumumgebung des Elektronenstrahlschmelzens (EBM), verbindet FCP-EBM gute Fließfähigkeit mit reduziertem Feinanteil für eine stabile Pulverbett-Verteilung.",
         specs: {
           particleSize: "63–100 µm",
-          sphericity: "&gt;0,85",
+          sphericity: "&gt;0,9",
           apparentDensity: "~5,1 g/cm³",
           copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
@@ -514,24 +550,30 @@ window.FLX_I18N = {
         applications: "EBM von Kupferbauteilen, hochleitfähige Komponenten"
       },
       fcpsi: {
+        photoAlt: "Mikroskopaufnahme von FCP-Si-Partikeln",
         eyebrow: "Sintern · SPS &amp; drucklos",
         tagline: "Entwickelt für Spark-Plasma- und drucklose Sinterung.",
-        desc: "FCP-Si ist für die direkte Verdichtung mittels Spark-Plasma-Sintern (SPS) oder drucklosem Sintern kalibriert und erreicht hohe Dichten ohne separaten Pressschritt.",
+        desc: "FCP-Si ist auf die direkte Verdichtung mittels Spark-Plasma-Sintern (SPS) oder drucklosem Sintern abgestimmt und erreicht hohe Dichten ohne separaten Pressschritt.",
         specs: {
           particleSize: "45–150 µm",
+          sphericity: "&gt;0,9",
           consolidationRoute: "SPS / drucklose Sinterung",
           apparentDensity: "~4,0 g/cm³",
+          greenStrength: "90 % von wasserverdüstem Pulver",
+          flowability: "Hoch",
           copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
         },
         applications: "SPS-verdichtete Bauteile, drucklos gesinterte Komponenten, Funktionsbauteile"
       },
       fcppm: {
+        photoAlt: "Mikroskopaufnahme von FCP-PM-Partikeln",
         eyebrow: "Pulvermetallurgie · Pressen &amp; Sintern",
         tagline: "Raue Oberfläche für hohe Grünfestigkeit.",
         desc: "Die rauen Partikeloberflächen von FCP-PM verklammern sich unter Druck und ergeben feste Grünlinge für klassische Press-Sinter-Verfahren — in ersten Versuchen nur 8–10 % unter wasserverdüstem Pulver. Die breiteste der sechs Klassen, für allgemeine pulvermetallurgische Anwendungen ohne engen prozessspezifischen Schnitt.",
         specs: {
           particleSize: "20–150 µm",
+          sphericity: "&gt;0,9",
           morphology: "Rau, verkugelt",
           apparentDensity: "~2,6 g/cm³",
           greenStrength: "8–10 % unter wasserverdüst",
@@ -539,26 +581,23 @@ window.FLX_I18N = {
           feedstock: "100% recycelt"
         },
         applications: "Press-Sinter-Bauteile, Lager, Strukturbauteile"
-      },
-      tune: {
-        eyebrow: "Konfigurierbar",
-        title: "Reinheit oder Absorption: abgestimmt auf Ihren Prozess",
-        desc: "Unser Einsatzstoff ist dünnwandiges, graphitbeschichtetes Kupfermaterial. Die Prozesseinstellungen bestimmen, wie viel Graphit im Pulver bleibt: etwas mehr erhöht die Laserabsorption, weniger ergibt die höchste Kupferreinheit für leitfähige Bauteile. Sagen Sie uns, was Ihr Prozess braucht — wir stellen die Klasse darauf ein, auch mit individuellen Korngrößenschnitten."
       }
     },
     company: {
       eyebrow: "Unternehmen",
       title: "Achthundertfünfzig Jahre Bergbau, ein neuer Materialkreislauf.",
       lede: "FlexCycle Solutions wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
-      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünnwandige Kupferreststoffe, die in der Batteriezellfertigung in wachsenden Mengen übrig bleiben. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt: einen mechanischen Weg, der diese Reststoffe direkt in kalibriertes Pulver überführt und den Schmelzschritt überspringt, auf den die konventionelle Pulverherstellung angewiesen ist.",
+      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünnwandige Kupferreststoffe, die in der Batteriezellfertigung in wachsenden Mengen übrig bleiben. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt. Dieser mechanische Weg überführt die Reststoffe direkt in Pulver und überspringt den Schmelzschritt, auf den die konventionelle Pulverherstellung angewiesen ist.",
       valuesTitle: "Woran wir uns halten",
       values: [
         { title: "Mechanisch, nicht geschmolzen", desc: "Jeder Prozessschritt vermeidet das erneute Schmelzen des Metalls und senkt den Energiebedarf an der Quelle." },
         { title: "Kreislauf von Grund auf", desc: "Der Einsatzstoff stammt aus Produktionsrückständen statt aus frischem Bergbau — der Kreislauf schließt sich, bevor das Metall zu Abfall wird." },
-        { title: "Kalibriert, nicht generisch", desc: "Sechs definierte Klassen bedeuten: Kunden bestellen nach Korngröße und Morphologie — kein Einheitspulver für alles." }
+        { title: "Definierte Klassen statt Einheitspulver", desc: "Sechs definierte Klassen bedeuten: Kunden bestellen nach Korngröße und Morphologie — kein Einheitspulver für alles." }
       ],
       teamTitle: "Führungsteam",
       teamPhotoAlt: "Das Team von FlexCycle Solutions in Freiberg",
+      lab: { label: "Unser Labor am IART", credit: "Foto: IART", alt: "Versuchsanlage im Labor des IART" },
+      freiberg: { label: "Freiberg, Sachsen", credit: "Foto: TU Bergakademie Freiberg / Universitätsbibliothek", alt: "Blick über Freiberg, Sachsen" },
       roles: {
         mech: "Maschinenbauingenieur",
         cs: "Informatikingenieur",
@@ -631,17 +670,16 @@ window.FLX_I18N = {
         submitQuote: "Angebot anfragen",
         successGeneral: "Danke — Ihr E-Mail-Programm sollte sich mit der versandbereiten Nachricht geöffnet haben.",
         successQuote: "Danke — Ihr E-Mail-Programm sollte sich mit der versandbereiten Anfrage geöffnet haben.",
+        sentGeneral: "Danke — Ihre Nachricht wurde gesendet. Wir melden uns in Kürze.",
+        sentQuote: "Danke — Ihre Anfrage wurde gesendet. Wir melden uns in Kürze.",
+        error: "Ihre Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an julius-eik.grimmenstein@iart.tu-freiberg.de.",
         errorRequired: "Dieses Feld ist erforderlich.",
         errorEmail: "Bitte eine gültige E-Mail-Adresse angeben."
       }
     },
     film: { play: "Imagefilm ansehen", aria: "Imagefilm von FlexCycle Solutions" },
     ph: {
-      feedstock: "Foto: dünnwandige Kupferreststoffe aus der Batteriezellfertigung",
-      powder: "Foto: fertiges Kupferpulver",
       sem: "Mikroskopaufnahme: FCP-Partikel (REM)",
-      lab: "Foto: unser Labor am IART, TU Bergakademie Freiberg",
-      pilot: "Foto: Pilotanlage auf dem CircEcon-Campus, Lausitz",
       teamWork: "Foto: das Team bei der Arbeit im Labor"
     },
     legal: {
@@ -655,11 +693,11 @@ window.FLX_I18N = {
       toBeCompleted: "Wird ergänzt",
       privacyTitle: "Datenschutzerklärung",
       privacyBody: "Diese Platzhalter-Datenschutzerklärung sollte vor dem Livegang durch fachkundige Rechtsberatung geprüft und vervollständigt werden — insbesondere im Hinblick auf die über Kontakt-, Karriere- und Angebotsformulare erhobenen Daten.",
-      privacyIntro: "FlexCycle Solutions betreibt auf dieser Website keine eigene serverseitige Datenerhebung. Die meisten Formulare übergeben Ihre Eingaben über einen mailto:-Link an Ihr eigenes E-Mail-Programm; eine Ausnahme ist das Karriereformular, siehe unten.",
+      privacyIntro: "FlexCycle Solutions betreibt auf dieser Website keine eigene serverseitige Datenerhebung. Formulareingaben werden über den Formulardienst Web3Forms übermittelt und uns per E-Mail zugestellt, wie unten beschrieben.",
       privacyWhoTitle: "Verantwortlicher",
       privacyWho: "FlexCycle Solutions, Freiberg, Sachsen, Deutschland — julius-eik.grimmenstein@iart.tu-freiberg.de",
       privacyFormsTitle: "Kontakt- und Angebotsformulare",
-      privacyForms: "Beim Absenden eines Formulars öffnet sich eine vorausgefüllte E-Mail in Ihrem E-Mail-Programm; die eingegebenen Inhalte werden erst übermittelt, wenn Sie diese E-Mail tatsächlich an julius-eik.grimmenstein@iart.tu-freiberg.de senden. Das Formular selbst speichert dabei nichts auf unseren Servern.",
+      privacyForms: "Wenn Sie das Kontakt- oder Angebotsformular absenden, werden Ihre Eingaben über Web3Forms (web3forms.com) direkt an julius-eik.grimmenstein@iart.tu-freiberg.de übermittelt — einen Drittanbieter, der hier als Auftragsverarbeiter fungiert. Web3Forms leitet die Einsendung per E-Mail an uns weiter und veröffentlicht sie nicht; die Server des Anbieters können außerhalb der EU liegen. Details zur Verarbeitung durch Web3Forms finden Sie in dessen eigener Datenschutzerklärung auf web3forms.com.",
       privacyFormsCareerTitle: "Karriereformular / Initiativbewerbung",
       privacyFormsCareer: "Das Karriereformular wird inklusive eines eventuell angehängten Lebenslaufs direkt über Web3Forms (web3forms.com) an julius-eik.grimmenstein@iart.tu-freiberg.de übermittelt — einen Drittanbieter, der hier als Auftragsverarbeiter fungiert. Web3Forms leitet die Einsendung per E-Mail an uns weiter und veröffentlicht sie nicht; die Server des Anbieters können außerhalb der EU liegen. Details zur Verarbeitung durch Web3Forms finden Sie in dessen eigener Datenschutzerklärung auf web3forms.com.",
       privacyRightsTitle: "Ihre Rechte",
