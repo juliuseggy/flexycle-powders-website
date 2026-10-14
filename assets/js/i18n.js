@@ -82,14 +82,11 @@ window.FLX_I18N = {
       },
       gallery: {
         title: "Application examples",
-        lede: "A closer look at what each grade becomes in the field.",
+        lede: "First parts built from our powder.",
         items: [
-          "Electronics — sintered contacts and conductive pastes",
-          "Binder Jetting — complex geometries in batch production",
-          "LPBF — dense pure-copper parts",
-          "EBM — high-conductivity functional parts",
-          "Sintering — SPS-consolidated functional parts",
-          "Powder metallurgy — bearings and structural parts"
+          "LPBF — printed copper parts",
+          "LPBF — surface of a printed part",
+          "Sintering — sintered copper part"
         ]
       },
       pair: {
@@ -220,13 +217,13 @@ window.FLX_I18N = {
         photoAlt: "Micrograph of FCP-PM particles",
         eyebrow: "Powder metallurgy · press &amp; sinter",
         tagline: "Rough surface, built for green strength.",
-        desc: "FCP-PM's rough particle surfaces interlock under pressure, giving strong green compacts for classic press-and-sinter routes — only 8–10 % below water-atomised powder in first trials. The broadest of the six grades, for general powder-metallurgy use where a tight process-specific cut isn't required.",
+        desc: "FCP-PM's rough particle surfaces interlock under pressure, giving strong green compacts for classic press-and-sinter routes — 90 % of the green strength of water-atomised powder in first trials. The broadest of the six grades, for general powder-metallurgy use where a tight process-specific cut isn't required.",
         specs: {
           particleSize: "20–150 µm",
           sphericity: "&gt;0.9",
           morphology: "Rough, spheroidal",
           apparentDensity: "~2.6 g/cm³",
-          greenStrength: "8–10 % below water-atomised",
+          greenStrength: "90 % of water-atomised powder",
           copperContent: "&gt;99.9%",
           feedstock: "100% recycled"
         },
@@ -432,14 +429,11 @@ window.FLX_I18N = {
       },
       gallery: {
         title: "Anwendungsbeispiele",
-        lede: "Ein genauerer Blick darauf, was aus jeder Klasse in der Praxis wird.",
+        lede: "Erste Bauteile aus unserem Pulver.",
         items: [
-          "Elektronik — gesinterte Kontakte und leitfähige Pasten",
-          "Binder Jetting — komplexe Geometrien in Serienproduktion",
-          "LPBF — dichte Reinkupfer-Bauteile",
-          "EBM — hochleitfähige Funktionsbauteile",
-          "Sintern — SPS-verdichtete Funktionsbauteile",
-          "Pulvermetallurgie — Lager und Strukturbauteile"
+          "LPBF — gedruckte Kupferbauteile",
+          "LPBF — Oberfläche eines gedruckten Bauteils",
+          "Sintern — gesinterter Kupferkörper"
         ]
       },
       pair: {
@@ -570,13 +564,13 @@ window.FLX_I18N = {
         photoAlt: "Mikroskopaufnahme von FCP-PM-Partikeln",
         eyebrow: "Pulvermetallurgie · Pressen &amp; Sintern",
         tagline: "Raue Oberfläche für hohe Grünfestigkeit.",
-        desc: "Die rauen Partikeloberflächen von FCP-PM verklammern sich unter Druck und ergeben feste Grünlinge für klassische Press-Sinter-Verfahren — in ersten Versuchen nur 8–10 % unter wasserverdüstem Pulver. Die breiteste der sechs Klassen, für allgemeine pulvermetallurgische Anwendungen ohne engen prozessspezifischen Schnitt.",
+        desc: "Die rauen Partikeloberflächen von FCP-PM verklammern sich unter Druck und ergeben feste Grünlinge für klassische Press-Sinter-Verfahren — in ersten Versuchen 90 % der Grünfestigkeit von wasserverdüstem Pulver. Die breiteste der sechs Klassen, für allgemeine pulvermetallurgische Anwendungen ohne engen prozessspezifischen Schnitt.",
         specs: {
           particleSize: "20–150 µm",
           sphericity: "&gt;0,9",
           morphology: "Rau, verkugelt",
           apparentDensity: "~2,6 g/cm³",
-          greenStrength: "8–10 % unter wasserverdüst",
+          greenStrength: "90 % von wasserverdüstem Pulver",
           copperContent: "&gt;99,9%",
           feedstock: "100% recycelt"
         },

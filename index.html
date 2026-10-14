@@ -10,10 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026101401">
-<link rel="stylesheet" href="assets/css/base.css?v=2026101401">
-<link rel="stylesheet" href="assets/css/components.css?v=2026101401">
-<link rel="stylesheet" href="assets/css/print.css?v=2026101401">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026101402">
+<link rel="stylesheet" href="assets/css/base.css?v=2026101402">
+<link rel="stylesheet" href="assets/css/components.css?v=2026101402">
+<link rel="stylesheet" href="assets/css/print.css?v=2026101402">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -222,57 +222,36 @@
     </div>
   </section>
 
-  <!-- One item per grade, showing that grade's micrograph (same 4:5 crops as
-       the product cards, assets/img/product-*.jpg). Hover-expand strip +
-       click-to-open lightbox (initGallery in main.js); captions sit as a scrim
-       overlay on the image. -->
+  <!-- Application photos (assets/img/app-*.jpg; originals in assets/ are
+       git-ignored). Hover-expand strip + click-to-open lightbox (initGallery
+       in main.js); captions sit as a scrim overlay on the image. Add a photo by
+       adding one more .gallery__item and its caption in i18n.js. -->
   <section>
     <div class="container" data-blur-group>
       <h2 class="blur-fade" data-i18n="home.gallery.title">Application examples</h2>
-      <p class="blur-fade hero__lede" data-i18n="home.gallery.lede" style="max-width:60ch">A closer look at what each grade becomes in the field.</p>
+      <p class="blur-fade hero__lede" data-i18n="home.gallery.lede" style="max-width:60ch">First parts built from our powder.</p>
       <div class="gallery blur-fade" data-gallery style="margin-top:var(--space-7)">
         <div class="gallery__strip">
           <button type="button" class="gallery__item">
             <span class="gallery__image">
-              <img class="gallery__photo" src="assets/img/product-fcp20.jpg" alt="" loading="lazy" decoding="async">
+              <img class="gallery__photo" src="assets/img/app-lpbf-1.jpg" alt="" loading="lazy" decoding="async">
             </span>
             <span class="gallery__scrim" aria-hidden="true"></span>
-            <span class="gallery__caption" data-i18n="home.gallery.items.0">Electronics — sintered contacts and conductive pastes</span>
+            <span class="gallery__caption" data-i18n="home.gallery.items.0">LPBF — printed copper parts</span>
           </button>
           <button type="button" class="gallery__item">
             <span class="gallery__image">
-              <img class="gallery__photo" src="assets/img/product-fcpbj.jpg" alt="" loading="lazy" decoding="async">
+              <img class="gallery__photo" src="assets/img/app-lpbf-2.jpg" alt="" loading="lazy" decoding="async">
             </span>
             <span class="gallery__scrim" aria-hidden="true"></span>
-            <span class="gallery__caption" data-i18n="home.gallery.items.1">Binder Jetting — complex geometries in batch production</span>
+            <span class="gallery__caption" data-i18n="home.gallery.items.1">LPBF — surface of a printed part</span>
           </button>
           <button type="button" class="gallery__item">
             <span class="gallery__image">
-              <img class="gallery__photo" src="assets/img/product-fcpam.jpg" alt="" loading="lazy" decoding="async">
+              <img class="gallery__photo" src="assets/img/app-sintering.jpg" alt="" loading="lazy" decoding="async">
             </span>
             <span class="gallery__scrim" aria-hidden="true"></span>
-            <span class="gallery__caption" data-i18n="home.gallery.items.2">LPBF — dense pure-copper parts</span>
-          </button>
-          <button type="button" class="gallery__item">
-            <span class="gallery__image">
-              <img class="gallery__photo" src="assets/img/product-fcpebm.jpg" alt="" loading="lazy" decoding="async">
-            </span>
-            <span class="gallery__scrim" aria-hidden="true"></span>
-            <span class="gallery__caption" data-i18n="home.gallery.items.3">EBM — high-conductivity functional parts</span>
-          </button>
-          <button type="button" class="gallery__item">
-            <span class="gallery__image">
-              <img class="gallery__photo" src="assets/img/product-fcpsi.jpg" alt="" loading="lazy" decoding="async">
-            </span>
-            <span class="gallery__scrim" aria-hidden="true"></span>
-            <span class="gallery__caption" data-i18n="home.gallery.items.4">Sintering — SPS-consolidated functional parts</span>
-          </button>
-          <button type="button" class="gallery__item">
-            <span class="gallery__image">
-              <img class="gallery__photo" src="assets/img/product-fcppm.jpg" alt="" loading="lazy" decoding="async">
-            </span>
-            <span class="gallery__scrim" aria-hidden="true"></span>
-            <span class="gallery__caption" data-i18n="home.gallery.items.5">Powder metallurgy — bearings and structural parts</span>
+            <span class="gallery__caption" data-i18n="home.gallery.items.2">Sintering — sintered copper part</span>
           </button>
         </div>
       </div>
@@ -360,10 +339,10 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026101401"></script>
-<script src="assets/js/main.js?v=2026101401"></script>
-<script src="assets/js/spectrum.js?v=2026101401"></script>
-<script src="assets/js/forms.js?v=2026101401"></script><script src="assets/js/hero-grain.js?v=2026101401"></script>
+<script src="assets/js/i18n.js?v=2026101402"></script>
+<script src="assets/js/main.js?v=2026101402"></script>
+<script src="assets/js/spectrum.js?v=2026101402"></script>
+<script src="assets/js/forms.js?v=2026101402"></script><script src="assets/js/hero-grain.js?v=2026101402"></script>
 <script type="module">
 /* FlexCycle Solutions — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven

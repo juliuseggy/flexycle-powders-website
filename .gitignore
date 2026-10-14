@@ -26,3 +26,7 @@ assets/AM.jpg
 assets/EBM.jpg
 assets/Si.tif
 assets/PM.tif
+# Application photo originals; web copies are assets/img/app-*.jpg.
+assets/LPBM 1.JPG
+assets/LPBM 2.jpg
+assets/Sintern.jpeg
