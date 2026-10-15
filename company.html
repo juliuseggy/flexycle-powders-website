@@ -7,13 +7,11 @@
 <meta name="description" content="FlexCycle Solutions was spun out of TU Bergakademie Freiberg, the world's oldest mining academy, to turn metallic production residues into copper powder.">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026101402">
-<link rel="stylesheet" href="assets/css/base.css?v=2026101402">
-<link rel="stylesheet" href="assets/css/components.css?v=2026101402">
-<link rel="stylesheet" href="assets/css/print.css?v=2026101402">
+<link rel="stylesheet" href="assets/css/fonts.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/base.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/components.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/print.css?v=2026101501">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -350,11 +348,11 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026101402"></script>
-<script src="assets/js/main.js?v=2026101402"></script>
-<script src="assets/js/spectrum.js?v=2026101402"></script>
-<script src="assets/js/forms.js?v=2026101402"></script>
-<script src="assets/js/hero-grain.js?v=2026101402"></script>
+<script src="assets/js/i18n.js?v=2026101501"></script>
+<script src="assets/js/main.js?v=2026101501"></script>
+<script src="assets/js/spectrum.js?v=2026101501"></script>
+<script src="assets/js/forms.js?v=2026101501"></script>
+<script src="assets/js/hero-grain.js?v=2026101501"></script>
 <script type="module">
 /* FlexCycle Solutions — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven
@@ -362,12 +360,12 @@
    glow feel, mouse-reactive, coloured from the brand's copper/teal palette.
 
    Inlined (rather than an external module file) so it still runs when this
-   page is opened directly via file:// — browsers block `<script type=module
-   src=local-file>` there via CORS, but an inline module's own dynamic
-   import() of the remote CDN module is unaffected.
+   page is opened directly via file:// without a module script file. three.js
+   is self-hosted (assets/js/vendor/, MIT licence) so no visitor IP reaches a
+   CDN; under file:// the import is blocked and the CSS grain field stays.
 
    Progressive enhancement: skipped entirely under prefers-reduced-motion,
-   without WebGL support, or if the CDN import fails — the CSS grain field
+   without WebGL support, or if the module import fails — the CSS grain field
    (hero-grain.js) stays as the fallback in all of those cases. */
 (async function () {
   const mount = document.querySelector('[data-hero-nebula]');
@@ -378,9 +376,9 @@
 
   let THREE;
   try {
-    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js');
+    THREE = await import('./assets/js/vendor/three.module.min.js');
   } catch (e) {
-    return; // CDN unreachable — CSS grain field remains as the only effect.
+    return; // Module failed to load (e.g. file:// preview) — CSS grain field remains.
   }
 
   // Brand palette — same four hues used by the spectrum bands and morphology glyphs.

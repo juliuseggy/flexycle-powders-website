@@ -3,17 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="legal.imprintTitle">FlexCycle Solutions — Imprint</title>
+<title data-i18n="legal.imprint.pageTitle">FlexCycle Solutions — Imprint</title>
 <meta name="description" content="Legal notice for FlexCycle Solutions.">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026101402">
-<link rel="stylesheet" href="assets/css/base.css?v=2026101402">
-<link rel="stylesheet" href="assets/css/components.css?v=2026101402">
-<link rel="stylesheet" href="assets/css/print.css?v=2026101402">
+<link rel="stylesheet" href="assets/css/fonts.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/base.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/components.css?v=2026101501">
+<link rel="stylesheet" href="assets/css/print.css?v=2026101501">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -51,36 +49,19 @@
 
 <main id="main">
   <section>
-    <div class="container" style="max-width:60ch">
-      <h1 data-i18n="legal.imprintTitle">Imprint</h1>
-
-      <p style="font-size:var(--fs-200); color:var(--copper-hover); border-left:2px solid var(--copper); padding-left:var(--space-4)" data-i18n="legal.imprintPlaceholderNote">
-        The registration details below are placeholders and must be completed with the legal entity's actual register court, register number and VAT ID before this site goes live.
-      </p>
-
-      <p style="margin-top:var(--space-6)">
-        <strong>FlexCycle Solutions</strong><br>
-        <span data-i18n="footer.address">Freiberg, Saxony, Germany</span><br>
-        +49&nbsp;3731&nbsp;39&nbsp;3768<br>
-        <a href="mailto:julius-eik.grimmenstein@iart.tu-freiberg.de">julius-eik.grimmenstein@iart.tu-freiberg.de</a>
-      </p>
-
-      <p>
-        <span data-i18n="legal.representedBy">Represented by</span>: Julius Grimmenstein, M.Sc. (CEO)
-      </p>
-
-      <table class="spec-table">
-        <tbody>
-          <tr><th data-i18n="legal.registerCourt">Register court</th><td data-i18n="legal.toBeCompleted">To be completed</td></tr>
-          <tr><th data-i18n="legal.registerNumber">Register number</th><td data-i18n="legal.toBeCompleted">To be completed</td></tr>
-          <tr><th data-i18n="legal.vatId">VAT ID</th><td data-i18n="legal.toBeCompleted">To be completed</td></tr>
-        </tbody>
-      </table>
-
-      <p style="margin-top:var(--space-6)">
-        <strong data-i18n="legal.contentResponsible">Responsible for content (§ 18 (2) MStV)</strong><br>
-        Julius Grimmenstein, M.Sc. — <span data-i18n="footer.address">Freiberg, Saxony, Germany</span>
-      </p>
+    <div class="container legal">
+      <h1 data-i18n="legal.imprint.title">Imprint</h1>
+      <p class="legal__intro" data-i18n-html="legal.imprint.intro">FlexCycle Solutions is a start-up project in preparation at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) of TU Bergakademie Freiberg. No company has been founded yet; until then, the person named below is the provider of this website.</p>
+      <h2 class="legal__heading" data-i18n="legal.imprint.providerTitle">Information pursuant to § 5 DDG (German Digital Services Act)</h2>
+      <p data-i18n-html="legal.imprint.provider">Julius Eik Grimmenstein<br>c/o TU Bergakademie Freiberg<br>Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART)<br>Lampadiusstraße 4<br>09599 Freiberg<br>Germany</p>
+      <h2 class="legal__heading" data-i18n="legal.imprint.contactTitle">Contact</h2>
+      <p data-i18n-html="legal.imprint.contact">Phone: +49&nbsp;3731&nbsp;39&nbsp;3768<br>Email: <a href="mailto:julius-eik.grimmenstein@iart.tu-freiberg.de">julius-eik.grimmenstein@iart.tu-freiberg.de</a></p>
+      <h2 class="legal__heading" data-i18n="legal.imprint.responsibleTitle">Responsible for content pursuant to § 18 (2) MStV</h2>
+      <p data-i18n-html="legal.imprint.responsible">Julius Eik Grimmenstein, address as above</p>
+      <h2 class="legal__heading" data-i18n="legal.imprint.registerTitle">Commercial register and VAT</h2>
+      <p data-i18n-html="legal.imprint.register">There is no commercial register entry and no VAT identification number yet, as no company has been founded so far.</p>
+      <h2 class="legal__heading" data-i18n="legal.imprint.creditsTitle">Image credits</h2>
+      <p data-i18n-html="legal.imprint.credits">View over Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Lab photo: IART. Unless stated otherwise, all other photos, micrographs and the image film are by the FlexCycle Solutions team and IART. The logos of our supporters belong to their respective owners.</p>
     </div>
   </section>
 </main>
@@ -143,9 +124,9 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026101402"></script>
-<script src="assets/js/main.js?v=2026101402"></script>
-<script src="assets/js/spectrum.js?v=2026101402"></script>
-<script src="assets/js/forms.js?v=2026101402"></script>
+<script src="assets/js/i18n.js?v=2026101501"></script>
+<script src="assets/js/main.js?v=2026101501"></script>
+<script src="assets/js/spectrum.js?v=2026101501"></script>
+<script src="assets/js/forms.js?v=2026101501"></script>
 </body>
 </html>
