@@ -294,7 +294,7 @@ window.FLX_I18N = {
         portfolio: "Portfolio link (optional)",
         submit: "Send application",
         success: "Thanks — your application has been sent. We'll get back to you soon.",
-        error: "Something went wrong sending your application — please email us directly at julius-eik.grimmenstein@iart.tu-freiberg.de instead.",
+        error: "Something went wrong sending your application — please email us directly at info@miona-powders.com instead.",
         errorRequired: "This field is required.",
         errorEmail: "Enter a valid email address."
       }
@@ -319,7 +319,7 @@ window.FLX_I18N = {
         successQuote: "Thanks — your email client should have opened with your request ready to send.",
         sentGeneral: "Thanks — your message has been sent. We'll get back to you soon.",
         sentQuote: "Thanks — your request has been sent. We'll get back to you soon.",
-        error: "Your message could not be sent. Please email us directly at julius-eik.grimmenstein@iart.tu-freiberg.de.",
+        error: "Your message could not be sent. Please email us directly at info@miona-powders.com.",
         errorRequired: "This field is required.",
         errorEmail: "Enter a valid email address."
       }
@@ -337,7 +337,7 @@ window.FLX_I18N = {
         providerTitle: "Information pursuant to § 5 DDG (German Digital Services Act)",
         provider: "Julius Eik Grimmenstein<br>c/o TU Bergakademie Freiberg<br>Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART)<br>Lampadiusstraße 4<br>09599 Freiberg<br>Germany",
         contactTitle: "Contact",
-        contact: "Phone: +49&nbsp;3731&nbsp;39&nbsp;3768<br>Email: <a href=\"mailto:julius-eik.grimmenstein@iart.tu-freiberg.de\">julius-eik.grimmenstein@iart.tu-freiberg.de</a>",
+        contact: "Phone: +49&nbsp;3731&nbsp;39&nbsp;3768<br>Email: <a href=\"mailto:info@miona-powders.com\">info@miona-powders.com</a>",
         responsibleTitle: "Responsible for content pursuant to § 18 (2) MStV",
         responsible: "Julius Eik Grimmenstein, address as above",
         registerTitle: "Commercial register and VAT",
@@ -349,7 +349,7 @@ window.FLX_I18N = {
         pageTitle: "FlexCycle Solutions — Privacy policy",
         title: "Privacy policy",
         controllerTitle: "1. Controller",
-        controller: "Controller within the meaning of the GDPR (start-up project FlexCycle Solutions; no company has been founded yet):<br><br>Julius Eik Grimmenstein<br>c/o TU Bergakademie Freiberg<br>Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART)<br>Lampadiusstraße 4<br>09599 Freiberg<br>Germany<br>Email: <a href=\"mailto:julius-eik.grimmenstein@iart.tu-freiberg.de\">julius-eik.grimmenstein@iart.tu-freiberg.de</a><br>Phone: +49&nbsp;3731&nbsp;39&nbsp;3768",
+        controller: "Controller within the meaning of the GDPR (start-up project FlexCycle Solutions; no company has been founded yet):<br><br>Julius Eik Grimmenstein<br>c/o TU Bergakademie Freiberg<br>Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART)<br>Lampadiusstraße 4<br>09599 Freiberg<br>Germany<br>Email: <a href=\"mailto:info@miona-powders.com\">info@miona-powders.com</a><br>Phone: +49&nbsp;3731&nbsp;39&nbsp;3768",
         overviewTitle: "2. Overview",
         overview: "This website uses no cookies, no tracking and no analytics services. Fonts, scripts, images and the video are delivered exclusively by our hosting provider; visiting the site does not transmit data to any other third parties.",
         hostingTitle: "3. Hosting",
@@ -357,11 +357,11 @@ window.FLX_I18N = {
         formsTitle: "4. Contact and quote forms",
         forms: "If you use the contact or quote form, we process the data you enter (name, company, email address, your message and, for quote requests, grade of interest and estimated quantity) in order to answer your enquiry. The form is transmitted via Web3Forms (web3forms.com), a form service that forwards the submission to us by email and acts as our processor; its servers may be located outside the EU. The legal basis is Art. 6(1)(b) GDPR where your enquiry relates to a possible contract (e.g. a quote request), and otherwise Art. 6(1)(f) GDPR, based on our interest in answering enquiries. We delete your enquiry once it has been dealt with, unless statutory retention obligations apply.",
         emailTitle: "5. Contact by email or phone",
-        email: "If you contact us by email or phone, we process your details to handle your enquiry on the same legal bases as above. Emails to our address are received via the mail servers of TU Bergakademie Freiberg.",
+        email: "If you contact us by email or phone, we process your details to handle your enquiry on the same legal bases as above.",
         storageTitle: "6. Storage in your browser",
         storage: "Your language choice (German or English) is stored in your browser's local storage so that the website keeps it on your next visit. This information never leaves your device. Storing it is necessary for the function you requested (§ 25(2) no. 2 TDDDG). You can delete it at any time in your browser settings.",
         rightsTitle: "7. Your rights",
-        rights: "You have the right to access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18) and data portability (Art. 20). You may object at any time to processing based on Art. 6(1)(f) GDPR (Art. 21). To exercise these rights, please contact <a href=\"mailto:julius-eik.grimmenstein@iart.tu-freiberg.de\">julius-eik.grimmenstein@iart.tu-freiberg.de</a>. You also have the right to lodge a complaint with a data protection supervisory authority, for example the Saxon Data Protection and Transparency Commissioner (Sächsische Datenschutz- und Transparenzbeauftragte).",
+        rights: "You have the right to access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18) and data portability (Art. 20). You may object at any time to processing based on Art. 6(1)(f) GDPR (Art. 21). To exercise these rights, please contact <a href=\"mailto:info@miona-powders.com\">info@miona-powders.com</a>. You also have the right to lodge a complaint with a data protection supervisory authority, for example the Saxon Data Protection and Transparency Commissioner (Sächsische Datenschutz- und Transparenzbeauftragte).",
         updated: "As of October 2026"
       }
     }
@@ -656,7 +656,7 @@ window.FLX_I18N = {
         portfolio: "Portfolio-Link (optional)",
         submit: "Bewerbung senden",
         success: "Danke — Ihre Bewerbung wurde versendet. Wir melden uns bei Ihnen.",
-        error: "Beim Versand der Bewerbung ist etwas schiefgelaufen — bitte schreiben Sie uns direkt an julius-eik.grimmenstein@iart.tu-freiberg.de.",
+        error: "Beim Versand der Bewerbung ist etwas schiefgelaufen — bitte schreiben Sie uns direkt an info@miona-powders.com.",
         errorRequired: "Dieses Feld ist erforderlich.",
         errorEmail: "Bitte eine gültige E-Mail-Adresse angeben."
       }
@@ -681,7 +681,7 @@ window.FLX_I18N = {
         successQuote: "Danke — Ihr E-Mail-Programm sollte sich mit der versandbereiten Anfrage geöffnet haben.",
         sentGeneral: "Danke — Ihre Nachricht wurde gesendet. Wir melden uns in Kürze.",
         sentQuote: "Danke — Ihre Anfrage wurde gesendet. Wir melden uns in Kürze.",
-        error: "Ihre Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an julius-eik.grimmenstein@iart.tu-freiberg.de.",
+        error: "Ihre Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an info@miona-powders.com.",
         errorRequired: "Dieses Feld ist erforderlich.",
         errorEmail: "Bitte eine gültige E-Mail-Adresse angeben."
       }
@@ -699,7 +699,7 @@ window.FLX_I18N = {
         providerTitle: "Angaben gemäß § 5 DDG",
         provider: "Julius Eik Grimmenstein<br>c/o TU Bergakademie Freiberg<br>Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART)<br>Lampadiusstraße 4<br>09599 Freiberg<br>Deutschland",
         contactTitle: "Kontakt",
-        contact: "Telefon: +49&nbsp;3731&nbsp;39&nbsp;3768<br>E-Mail: <a href=\"mailto:julius-eik.grimmenstein@iart.tu-freiberg.de\">julius-eik.grimmenstein@iart.tu-freiberg.de</a>",
+        contact: "Telefon: +49&nbsp;3731&nbsp;39&nbsp;3768<br>E-Mail: <a href=\"mailto:info@miona-powders.com\">info@miona-powders.com</a>",
         responsibleTitle: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
         responsible: "Julius Eik Grimmenstein, Anschrift wie oben",
         registerTitle: "Handelsregister und Umsatzsteuer",
@@ -711,7 +711,7 @@ window.FLX_I18N = {
         pageTitle: "FlexCycle Solutions — Datenschutzerklärung",
         title: "Datenschutzerklärung",
         controllerTitle: "1. Verantwortlicher",
-        controller: "Verantwortlicher im Sinne der DSGVO (Gründungsvorhaben FlexCycle Solutions; eine Gesellschaft ist noch nicht gegründet):<br><br>Julius Eik Grimmenstein<br>c/o TU Bergakademie Freiberg<br>Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART)<br>Lampadiusstraße 4<br>09599 Freiberg<br>Deutschland<br>E-Mail: <a href=\"mailto:julius-eik.grimmenstein@iart.tu-freiberg.de\">julius-eik.grimmenstein@iart.tu-freiberg.de</a><br>Telefon: +49&nbsp;3731&nbsp;39&nbsp;3768",
+        controller: "Verantwortlicher im Sinne der DSGVO (Gründungsvorhaben FlexCycle Solutions; eine Gesellschaft ist noch nicht gegründet):<br><br>Julius Eik Grimmenstein<br>c/o TU Bergakademie Freiberg<br>Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART)<br>Lampadiusstraße 4<br>09599 Freiberg<br>Deutschland<br>E-Mail: <a href=\"mailto:info@miona-powders.com\">info@miona-powders.com</a><br>Telefon: +49&nbsp;3731&nbsp;39&nbsp;3768",
         overviewTitle: "2. Überblick",
         overview: "Diese Website verwendet keine Cookies, kein Tracking und keine Analysedienste. Schriften, Skripte, Bilder und das Video werden ausschließlich von unserem Hosting-Anbieter ausgeliefert; beim Besuch der Website werden keine Daten an weitere Dritte übermittelt.",
         hostingTitle: "3. Hosting",
@@ -719,11 +719,11 @@ window.FLX_I18N = {
         formsTitle: "4. Kontakt- und Angebotsformular",
         forms: "Wenn Sie das Kontakt- oder Angebotsformular nutzen, verarbeiten wir die von Ihnen eingegebenen Daten (Name, Unternehmen, E-Mail-Adresse, Ihre Nachricht sowie bei Angebotsanfragen die gewünschte Klasse und die geschätzte Menge), um Ihre Anfrage zu beantworten. Das Formular wird über Web3Forms (web3forms.com) übermittelt, einen Formulardienst, der die Einsendung per E-Mail an uns weiterleitet und als unser Auftragsverarbeiter tätig ist; dessen Server können außerhalb der EU liegen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit Ihre Anfrage auf einen möglichen Vertrag gerichtet ist (z. B. eine Angebotsanfrage), im Übrigen Art. 6 Abs. 1 lit. f DSGVO auf Grundlage unseres Interesses an der Beantwortung von Anfragen. Wir löschen Ihre Anfrage, sobald sie abschließend bearbeitet ist, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
         emailTitle: "5. Kontakt per E-Mail oder Telefon",
-        email: "Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung Ihrer Anfrage auf denselben Rechtsgrundlagen wie oben. E-Mails an unsere Adresse werden über die E-Mail-Server der TU Bergakademie Freiberg empfangen.",
+        email: "Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung Ihrer Anfrage auf denselben Rechtsgrundlagen wie oben.",
         storageTitle: "6. Speicherung in Ihrem Browser",
         storage: "Ihre Sprachauswahl (Deutsch oder Englisch) wird im lokalen Speicher Ihres Browsers (localStorage) abgelegt, damit die Website sie beim nächsten Besuch beibehält. Diese Information verlässt Ihr Gerät nicht. Die Speicherung ist für die von Ihnen gewünschte Funktion erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Sie können sie jederzeit in den Einstellungen Ihres Browsers löschen.",
         rightsTitle: "7. Ihre Rechte",
-        rights: "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20). Einer Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO können Sie jederzeit widersprechen (Art. 21). Wenden Sie sich dafür an <a href=\"mailto:julius-eik.grimmenstein@iart.tu-freiberg.de\">julius-eik.grimmenstein@iart.tu-freiberg.de</a>. Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel bei der Sächsischen Datenschutz- und Transparenzbeauftragten.",
+        rights: "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20). Einer Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO können Sie jederzeit widersprechen (Art. 21). Wenden Sie sich dafür an <a href=\"mailto:info@miona-powders.com\">info@miona-powders.com</a>. Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel bei der Sächsischen Datenschutz- und Transparenzbeauftragten.",
         updated: "Stand: Oktober 2026"
       }
     }
