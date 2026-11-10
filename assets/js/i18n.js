@@ -6,7 +6,7 @@
 
 window.FLX_I18N = {
   en: {
-    nav: { home: "Home", products: "Products", company: "Company", career: "Career", contact: "Contact" },
+    nav: { home: "Home", products: "Products", company: "Company", news: "News", career: "Career", contact: "Contact" },
     common: {
       skip: "Skip to content",
       readMore: "Learn more",
@@ -278,6 +278,25 @@ window.FLX_I18N = {
         ]
       }
     },
+    news: {
+      pageTitle: "FlexCycle Solutions — News",
+      eyebrow: "News",
+      title: "What's happening at FlexCycle Solutions",
+      lede: "Press, milestones and updates from our team.",
+      posts: {
+        mdr: {
+          date: "10 November 2026",
+          category: "Press",
+          title: "MDR Sachsenspiegel reports on our spin-off from TU Bergakademie Freiberg",
+          play: "Watch the report",
+          videoAria: "MDR Sachsenspiegel report on FlexCycle Solutions",
+          credit: "Video: MDR Sachsenspiegel · Report: Monika Di Carlo",
+          p1: "MDR visited us for its regional news programme Sachsenspiegel at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) of TU Bergakademie Freiberg. The report shows how we turn thin-walled copper residues from battery cell production into high-quality copper powder for additive manufacturing and sintering — purely mechanically, without melting and without inert gas.",
+          p2: "Alongside Eric Trebeck and Julius Eik Grimmenstein from our founding team, Karina Sopp, Vice-Rector for Sustainability and Entrepreneurship at TU Bergakademie Freiberg, also speaks in the report. For us it marks a milestone on the way from research to our own company: from December 2026 we are building our pilot line within the EXIST research transfer programme, and the company is set to be founded in 2028.",
+          p3: "Many thanks to the MDR team and to everyone at TU Bergakademie Freiberg who supports us along the way."
+        }
+      }
+    },
     career: {
       eyebrow: "Career",
       title: "Build the mechanical alternative with us.",
@@ -343,7 +362,7 @@ window.FLX_I18N = {
         registerTitle: "Commercial register and VAT",
         register: "There is no commercial register entry and no VAT identification number yet, as no company has been founded so far.",
         creditsTitle: "Image credits",
-        credits: "View over Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Lab photo: IART. Unless stated otherwise, all other photos, micrographs and the image film are by the FlexCycle Solutions team and IART. The logos of our supporters belong to their respective owners."
+        credits: "View over Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Lab photo: IART. Unless stated otherwise, all other photos, micrographs and the image film are by the FlexCycle Solutions team and IART. Video in the news post of 10 November 2026: MDR Sachsenspiegel. The logos of our supporters belong to their respective owners."
       },
       privacy: {
         pageTitle: "FlexCycle Solutions — Privacy policy",
@@ -368,7 +387,7 @@ window.FLX_I18N = {
   },
 
   de: {
-    nav: { home: "Start", products: "Produkte", company: "Unternehmen", career: "Karriere", contact: "Kontakt" },
+    nav: { home: "Start", products: "Produkte", company: "Unternehmen", news: "Neuigkeiten", career: "Karriere", contact: "Kontakt" },
     common: {
       skip: "Zum Inhalt springen",
       readMore: "Mehr erfahren",
@@ -640,6 +659,25 @@ window.FLX_I18N = {
         ]
       }
     },
+    news: {
+      pageTitle: "FlexCycle Solutions — Neuigkeiten",
+      eyebrow: "Neuigkeiten",
+      title: "Was bei FlexCycle Solutions passiert",
+      lede: "Presse, Meilensteine und Neuigkeiten aus unserem Team.",
+      posts: {
+        mdr: {
+          date: "10. November 2026",
+          category: "Presse",
+          title: "MDR Sachsenspiegel berichtet über unsere Ausgründung aus der TU Bergakademie Freiberg",
+          play: "Beitrag ansehen",
+          videoAria: "Beitrag des MDR Sachsenspiegel über FlexCycle Solutions",
+          credit: "Video: MDR Sachsenspiegel · Bericht: Monika Di Carlo",
+          p1: "Der MDR hat uns für den Sachsenspiegel am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg besucht. Der Beitrag zeigt, wie wir aus dünnwandigen Kupferreststoffen der Batteriezellfertigung hochwertiges Kupferpulver für die additive Fertigung und das Sintern herstellen — rein mechanisch, ohne Schmelzen und ohne Inertgas.",
+          p2: "Neben Eric Trebeck und Julius Eik Grimmenstein aus unserem Gründungsteam kommt auch Karina Sopp zu Wort, Prorektorin für Nachhaltigkeit und Entrepreneurship der TU Bergakademie Freiberg. Für uns ist der Beitrag ein Meilenstein auf dem Weg von der Forschung zum eigenen Unternehmen: Ab Dezember 2026 bauen wir im Rahmen des EXIST-Forschungstransfers unsere Pilotlinie auf, die Gründung der GmbH ist für 2028 geplant.",
+          p3: "Vielen Dank an das Team des MDR und an alle an der TU Bergakademie Freiberg, die uns auf diesem Weg unterstützen."
+        }
+      }
+    },
     career: {
       eyebrow: "Karriere",
       title: "Bauen Sie die mechanische Alternative mit uns.",
@@ -705,7 +743,7 @@ window.FLX_I18N = {
         registerTitle: "Handelsregister und Umsatzsteuer",
         register: "Ein Eintrag im Handelsregister und eine Umsatzsteuer-Identifikationsnummer bestehen noch nicht, da bisher keine Gesellschaft gegründet ist.",
         creditsTitle: "Bildnachweise",
-        credits: "Blick über Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Laborfoto: IART. Sofern nicht anders angegeben, stammen alle weiteren Fotos, Mikroskopaufnahmen und der Imagefilm vom Team von FlexCycle Solutions und vom IART. Die Logos unserer Unterstützer sind Eigentum der jeweiligen Inhaber."
+        credits: "Blick über Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Laborfoto: IART. Sofern nicht anders angegeben, stammen alle weiteren Fotos, Mikroskopaufnahmen und der Imagefilm vom Team von FlexCycle Solutions und vom IART. Video im Beitrag vom 10. November 2026: MDR Sachsenspiegel. Die Logos unserer Unterstützer sind Eigentum der jeweiligen Inhaber."
       },
       privacy: {
         pageTitle: "FlexCycle Solutions — Datenschutzerklärung",
