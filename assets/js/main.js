@@ -286,6 +286,26 @@
       if (!video || !btn) return;
       video.controls = false;
       btn.hidden = false;
+
+      // Optional per-language sources (data-src-en / data-src-de). When the
+      // language changes mid-playback, continue at the same position.
+      function syncSource() {
+        var want = video.getAttribute('data-src-' + (document.documentElement.lang || 'en'));
+        if (!want || video.getAttribute('src') === want) return;
+        var t = video.currentTime, playing = !video.paused;
+        video.setAttribute('src', want);
+        if (t > 0 || playing) {
+          video.addEventListener('loadedmetadata', function () {
+            video.currentTime = t;
+            if (playing) { var q = video.play(); if (q && q.catch) q.catch(function () {}); }
+          }, { once: true });
+          video.load();
+        }
+      }
+      if (video.hasAttribute('data-src-en') || video.hasAttribute('data-src-de')) {
+        syncSource();
+        document.addEventListener('flx:langchange', syncSource);
+      }
       btn.addEventListener('click', function () {
         video.controls = true;
         var p = video.play();

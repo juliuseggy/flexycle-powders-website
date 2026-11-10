@@ -291,7 +291,7 @@ window.FLX_I18N = {
           play: "Watch the report",
           videoAria: "MDR Sachsenspiegel report on FlexCycle Solutions",
           credit: "Video: MDR Sachsenspiegel · Report: Monika Di Carlo",
-          p1: "MDR visited us for its regional news programme Sachsenspiegel at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) of TU Bergakademie Freiberg. The report shows how we turn thin-walled copper residues from battery cell production into high-quality copper powder for additive manufacturing and sintering — purely mechanically, without melting and without inert gas.",
+          p1: "MDR visited us for its regional news programme Sachsenspiegel at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) of TU Bergakademie Freiberg. The report shows how we turn copper scrap into high-quality copper powder for additive manufacturing and sintering — purely mechanically, without melting and without inert gas.",
           p2: "Alongside Eric Trebeck and Julius Eik Grimmenstein from our founding team, Karina Sopp, Vice-Rector for Sustainability and Entrepreneurship at TU Bergakademie Freiberg, also speaks in the report. For us it marks a milestone on the way from research to our own company: from December 2026 we are building our pilot line within the EXIST research transfer programme, and the company is set to be founded in 2028.",
           p3: "Many thanks to the MDR team and to everyone at TU Bergakademie Freiberg who supports us along the way."
         }
@@ -672,7 +672,7 @@ window.FLX_I18N = {
           play: "Beitrag ansehen",
           videoAria: "Beitrag des MDR Sachsenspiegel über FlexCycle Solutions",
           credit: "Video: MDR Sachsenspiegel · Bericht: Monika Di Carlo",
-          p1: "Der MDR hat uns für den Sachsenspiegel am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg besucht. Der Beitrag zeigt, wie wir aus dünnwandigen Kupferreststoffen der Batteriezellfertigung hochwertiges Kupferpulver für die additive Fertigung und das Sintern herstellen — rein mechanisch, ohne Schmelzen und ohne Inertgas.",
+          p1: "Der MDR hat uns für den Sachsenspiegel am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg besucht. Der Beitrag zeigt, wie wir aus Kupferschrott hochwertiges Kupferpulver für die additive Fertigung und das Sintern herstellen — rein mechanisch, ohne Schmelzen und ohne Inertgas.",
           p2: "Neben Eric Trebeck und Julius Eik Grimmenstein aus unserem Gründungsteam kommt auch Karina Sopp zu Wort, Prorektorin für Nachhaltigkeit und Entrepreneurship der TU Bergakademie Freiberg. Für uns ist der Beitrag ein Meilenstein auf dem Weg von der Forschung zum eigenen Unternehmen: Ab Dezember 2026 bauen wir im Rahmen des EXIST-Forschungstransfers unsere Pilotlinie auf, die Gründung der GmbH ist für 2028 geplant.",
           p3: "Vielen Dank an das Team des MDR und an alle an der TU Bergakademie Freiberg, die uns auf diesem Weg unterstützen."
         }

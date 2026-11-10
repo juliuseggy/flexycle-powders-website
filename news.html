@@ -7,11 +7,11 @@
 <meta name="description" content="News from FlexCycle Solutions: press coverage, milestones and updates on our spin-off from TU Bergakademie Freiberg.">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/fonts.css?v=2026111001">
-<link rel="stylesheet" href="assets/css/tokens.css?v=2026111001">
-<link rel="stylesheet" href="assets/css/base.css?v=2026111001">
-<link rel="stylesheet" href="assets/css/components.css?v=2026111001">
-<link rel="stylesheet" href="assets/css/print.css?v=2026111001">
+<link rel="stylesheet" href="assets/css/fonts.css?v=2026111002">
+<link rel="stylesheet" href="assets/css/tokens.css?v=2026111002">
+<link rel="stylesheet" href="assets/css/base.css?v=2026111002">
+<link rel="stylesheet" href="assets/css/components.css?v=2026111002">
+<link rel="stylesheet" href="assets/css/print.css?v=2026111002">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
@@ -79,7 +79,9 @@
              (git-ignored original): 1280x720, H.264/AAC, faststart. -->
         <figure class="post__media">
           <div class="film film--16x9" data-film>
-            <video class="film__video" src="assets/video/news-mdr-sachsenspiegel.mp4" poster="assets/video/news-mdr-sachsenspiegel-poster.jpg"
+            <!-- English page plays the version with burned-in English subtitles, German page the original (see initFilm in main.js). -->
+            <video class="film__video" src="assets/video/news-mdr-sachsenspiegel-en.mp4" poster="assets/video/news-mdr-sachsenspiegel-poster.jpg"
+                   data-src-en="assets/video/news-mdr-sachsenspiegel-en.mp4" data-src-de="assets/video/news-mdr-sachsenspiegel.mp4"
                    width="1280" height="720" preload="none" playsinline controls
                    aria-label="MDR Sachsenspiegel report on FlexCycle Solutions" data-i18n-aria-label="news.posts.mdr.videoAria"></video>
             <button type="button" class="film__play" data-film-play hidden>
@@ -92,7 +94,7 @@
         </figure>
 
         <div class="post__body">
-          <p data-i18n="news.posts.mdr.p1">MDR visited us for its regional news programme Sachsenspiegel at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) of TU Bergakademie Freiberg. The report shows how we turn thin-walled copper residues from battery cell production into high-quality copper powder for additive manufacturing and sintering — purely mechanically, without melting and without inert gas.</p>
+          <p data-i18n="news.posts.mdr.p1">MDR visited us for its regional news programme Sachsenspiegel at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) of TU Bergakademie Freiberg. The report shows how we turn copper scrap into high-quality copper powder for additive manufacturing and sintering — purely mechanically, without melting and without inert gas.</p>
           <p data-i18n="news.posts.mdr.p2">Alongside Eric Trebeck and Julius Eik Grimmenstein from our founding team, Karina Sopp, Vice-Rector for Sustainability and Entrepreneurship at TU Bergakademie Freiberg, also speaks in the report. For us it marks a milestone on the way from research to our own company: from December 2026 we are building our pilot line within the EXIST research transfer programme, and the company is set to be founded in 2028.</p>
           <p data-i18n="news.posts.mdr.p3">Many thanks to the MDR team and to everyone at TU Bergakademie Freiberg who supports us along the way.</p>
         </div>
@@ -162,11 +164,11 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=2026111001"></script>
-<script src="assets/js/main.js?v=2026111001"></script>
-<script src="assets/js/spectrum.js?v=2026111001"></script>
-<script src="assets/js/forms.js?v=2026111001"></script>
-<script src="assets/js/hero-grain.js?v=2026111001"></script>
+<script src="assets/js/i18n.js?v=2026111002"></script>
+<script src="assets/js/main.js?v=2026111002"></script>
+<script src="assets/js/spectrum.js?v=2026111002"></script>
+<script src="assets/js/forms.js?v=2026111002"></script>
+<script src="assets/js/hero-grain.js?v=2026111002"></script>
 <script type="module">
 /* FlexCycle Solutions — Hero nebula
    A lightweight WebGL particle field for the landing-page hero: GPU-driven
