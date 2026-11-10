@@ -37,7 +37,7 @@ window.FLX_I18N = {
       eyebrow: "Deep tech · recycled copper powder",
       title: "From Scrap to Powder. From Waste to Value.",
       titleHtml: "From Scrap to Powder.<br>From Waste to Value.",
-      lede: "FlexCycle Solutions turns thin-walled copper residues from battery cell production into high-performance powder. Our patented process is purely mechanical — no melting, no inert gas — and sorts the powder into six grades by particle size.",
+      lede: "FlexCycle Solutions turns thin-walled copper residues into high-performance powder. Our patented process is purely mechanical — no melting, no inert gas — and sorts the powder into six grades by particle size.",
       spectrumLabel: "Particle-size spectrum",
       spectrumCta: "See all six grades →",
       stats: [
@@ -64,7 +64,7 @@ window.FLX_I18N = {
         flexycle: {
           title: "FlexCycle Process",
           items: [
-            "Starts from thin-walled copper residues from battery cell production",
+            "Starts from thin-walled copper residues",
             "No melting — mechanical comminution and classification below 100 °C",
             "Around 650 kWh per tonne, no inert gas",
             "Rough, spheroidal particles absorb laser light and interlock under pressure"
@@ -234,7 +234,7 @@ window.FLX_I18N = {
       eyebrow: "Company",
       title: "Eight hundred and fifty years of mining, one new material loop.",
       lede: "FlexCycle Solutions was spun out of TU Bergakademie Freiberg — the world's oldest mining academy — in the town that has defined European metallurgy for over eight centuries.",
-      story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues that battery cell production leaves behind in growing volumes. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg. This mechanical route turns that residue directly into powder, skipping the melt step that conventional powder production depends on.",
+      story: "Freiberg has mined and processed metal since the 12th century. FlexCycle continues that lineage with a different resource: not ore from the ground, but thin-walled copper residues from industrial production. Our team developed the process at the Institute of Mineral Processing Machines and Recycling Systems Technology (IART) at TU Bergakademie Freiberg. This mechanical route turns that residue directly into powder, skipping the melt step that conventional powder production depends on.",
       valuesTitle: "What we hold to",
       values: [
         { title: "Mechanical, not melted", desc: "Every process step avoids re-melting the metal, cutting energy demand at the source." },
@@ -258,7 +258,7 @@ window.FLX_I18N = {
         eyebrow: "Milestones",
         title: "From research project to company",
         items: [
-          { title: "CuprAlUp", desc: "A research project funded through the German Federal Ministry for Economic Affairs (ZIM). It looked at fine copper fractions from battery production for the first time and ran the first laser cladding tests with mechanically made powder." },
+          { title: "CuprAlUp", desc: "A research project funded through the German Federal Ministry for Economic Affairs (ZIM). It examined fine copper fractions and ran the first laser cladding tests with mechanically made powder." },
           { title: "Patent applications", desc: "German application DE 10 2023 115 631 filed in June 2023, followed by the European application EP 4 480 604 in June 2024." },
           { title: "LiCARE", desc: "A project funded by the German Federal Environmental Foundation (DBU), extending the work to coating applications and further material streams." },
           { title: "Validation funding &amp; pilot plant", desc: "Funded by the Sächsische Aufbaubank and the EU, we are assessing the technical and economic case for a spin-off. In parallel, a semi-industrial pilot plant is being set up on the CircEcon circular-economy campus in Lusatia." },
@@ -418,7 +418,7 @@ window.FLX_I18N = {
       eyebrow: "Deep-Tech · recyceltes Kupferpulver",
       title: "Von Schrott zu Pulver. Von Abfall zu Wert.",
       titleHtml: "Von Schrott zu Pulver.<br>Von Abfall zu Wert.",
-      lede: "FlexCycle Solutions macht aus dünnwandigen Kupferreststoffen der Batteriezellfertigung Hochleistungspulver. Unser patentiertes Verfahren ist rein mechanisch — ohne Schmelzen, ohne Inertgas — und sortiert das Pulver in sechs Korngrößen-Klassen.",
+      lede: "FlexCycle Solutions macht aus dünnwandigen Kupferreststoffen Hochleistungspulver. Unser patentiertes Verfahren ist rein mechanisch — ohne Schmelzen, ohne Inertgas — und sortiert das Pulver in sechs Korngrößen-Klassen.",
       spectrumLabel: "Korngrößen-Spektrum",
       spectrumCta: "Alle sechs Klassen ansehen →",
       stats: [
@@ -445,7 +445,7 @@ window.FLX_I18N = {
         flexycle: {
           title: "FlexCycle Process",
           items: [
-            "Beginnt bei dünnwandigen Kupferreststoffen aus der Batteriezellfertigung",
+            "Beginnt bei dünnwandigen Kupferreststoffen",
             "Kein Schmelzen — mechanische Zerkleinerung und Klassierung unter 100 °C",
             "Rund 650 kWh pro Tonne, ohne Inertgas",
             "Raue, verkugelte Partikel absorbieren Laserlicht und verklammern sich beim Pressen"
@@ -615,7 +615,7 @@ window.FLX_I18N = {
       eyebrow: "Unternehmen",
       title: "Achthundertfünfzig Jahre Bergbau, ein neuer Materialkreislauf.",
       lede: "FlexCycle Solutions wurde aus der TU Bergakademie Freiberg ausgegründet — der ältesten Bergakademie der Welt — in der Stadt, die die europäische Metallurgie seit über acht Jahrhunderten prägt.",
-      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünnwandige Kupferreststoffe, die in der Batteriezellfertigung in wachsenden Mengen übrig bleiben. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt. Dieser mechanische Weg überführt die Reststoffe direkt in Pulver und überspringt den Schmelzschritt, auf den die konventionelle Pulverherstellung angewiesen ist.",
+      story: "In Freiberg wird seit dem 12. Jahrhundert Metall gewonnen und verarbeitet. FlexCycle setzt diese Tradition mit einer anderen Ressource fort: nicht Erz aus dem Boden, sondern dünnwandige Kupferreststoffe aus der industriellen Fertigung. Unser Team hat das Verfahren am Institut für Aufbereitungsmaschinen und Recyclingsystemtechnik (IART) der TU Bergakademie Freiberg entwickelt. Dieser mechanische Weg überführt die Reststoffe direkt in Pulver und überspringt den Schmelzschritt, auf den die konventionelle Pulverherstellung angewiesen ist.",
       valuesTitle: "Woran wir uns halten",
       values: [
         { title: "Mechanisch, nicht geschmolzen", desc: "Jeder Prozessschritt vermeidet das erneute Schmelzen des Metalls und senkt den Energiebedarf an der Quelle." },
@@ -639,7 +639,7 @@ window.FLX_I18N = {
         eyebrow: "Meilensteine",
         title: "Vom Forschungsprojekt zum Unternehmen",
         items: [
-          { title: "CuprAlUp", desc: "Ein über das ZIM-Programm des Bundeswirtschaftsministeriums gefördertes Forschungsprojekt. Erstmals standen feine Kupferfraktionen aus der Batteriefertigung im Fokus — mit ersten Tests im Laserauftragsschweißen mit mechanisch erzeugtem Pulver." },
+          { title: "CuprAlUp", desc: "Ein über das ZIM-Programm des Bundeswirtschaftsministeriums gefördertes Forschungsprojekt. Im Fokus standen feine Kupferfraktionen — mit ersten Tests im Laserauftragsschweißen mit mechanisch erzeugtem Pulver." },
           { title: "Patentanmeldungen", desc: "Deutsche Anmeldung DE 10 2023 115 631 im Juni 2023, gefolgt von der europäischen Anmeldung EP 4 480 604 im Juni 2024." },
           { title: "LiCARE", desc: "Ein von der Deutschen Bundesstiftung Umwelt (DBU) gefördertes Projekt, das die Arbeiten auf Beschichtungsanwendungen und weitere Stoffströme ausweitet." },
           { title: "Validierungsförderung &amp; Pilotanlage", desc: "Gefördert von der Sächsischen Aufbaubank und der EU prüfen wir die technische und wirtschaftliche Tragfähigkeit einer Ausgründung. Parallel entsteht auf dem Kreislaufwirtschafts-Campus CircEcon in der Lausitz eine Pilotanlage im semiindustriellen Maßstab." },
