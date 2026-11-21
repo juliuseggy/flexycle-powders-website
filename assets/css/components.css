@@ -1508,4 +1508,5 @@ h2 + .img-ph { margin-top: var(--space-6); }
 .post__title { font-size: var(--fs-600); margin-bottom: var(--space-6); }
 .post__media { margin: 0 0 var(--space-6); }
 .post__body p { color: var(--text-soft); }
+.post__body + .post__media { margin-top: var(--space-6); }
 .film--16x9 { aspect-ratio: 16 / 9; }
