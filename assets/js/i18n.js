@@ -292,7 +292,7 @@ window.FLX_I18N = {
           awardCaption: "Award ceremony at Formnext 2026, Frankfurt am Main",
           trophiesAlt: "The six formnext Awards 2026 trophies: Design, Sustainability, Rookie, Ambassador, Revolution and Start-up",
           trophiesCaption: "The formnext Awards 2026 — we were nominated for Rookie and Sustainability",
-          trophiesCredit: "Photo: Formnext – Mesago Messe Frankfurt GmbH / Marc Jacquemin",
+          trophiesCredit: "Photo: Formnext – Mesago Messe Frankfurt GmbH / Mathias Kutt",
           p1: "From 17 to 20 November 2026 our team spent the whole week at Formnext in Frankfurt am Main, the world's leading trade fair for additive manufacturing. We were nominated for two of the formnext Awards, the Rookie Award and the Sustainability Award, and won the Sustainability Award, which comes with prize money of €4,000.",
           p2: "We see the award as recognition of our approach: we make copper powder for additive manufacturing and sintering from thin-walled copper residues — purely mechanically, without melting and without inert gas. Having that recognised on the industry's most important stage means a great deal to us and gives us momentum for the next steps.",
           p3: "Formnext is one of the most important trade fairs for us and for our future start-up. Over four days we had a great many good conversations and gathered important information. We made valuable contacts with equipment manufacturers and potential customers, explored new trends in additive manufacturing and took several ideas straight back into our business development.",
@@ -377,7 +377,7 @@ window.FLX_I18N = {
         registerTitle: "Commercial register and VAT",
         register: "There is no commercial register entry and no VAT identification number yet, as no company has been founded so far.",
         creditsTitle: "Image credits",
-        credits: "View over Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Lab photo: IART. Unless stated otherwise, all other photos, micrographs and the image film are by the FlexCycle Solutions team and IART. Video in the news post of 10 November 2026: MDR Sachsenspiegel. Trophy photo in the news post of 21 November 2026: Formnext – Mesago Messe Frankfurt GmbH / Marc Jacquemin. The logos of our supporters belong to their respective owners."
+        credits: "View over Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Lab photo: IART. Unless stated otherwise, all other photos, micrographs and the image film are by the FlexCycle Solutions team and IART. Video in the news post of 10 November 2026: MDR Sachsenspiegel. Trophy photo in the news post of 21 November 2026: Formnext – Mesago Messe Frankfurt GmbH / Mathias Kutt. The logos of our supporters belong to their respective owners."
       },
       privacy: {
         pageTitle: "FlexCycle Solutions — Privacy policy",
@@ -688,7 +688,7 @@ window.FLX_I18N = {
           awardCaption: "Preisverleihung auf der Formnext 2026, Frankfurt am Main",
           trophiesAlt: "Die sechs Trophäen der formnext Awards 2026: Design, Sustainability, Rookie, Ambassador, Revolution und Start-up",
           trophiesCaption: "Die formnext Awards 2026 — nominiert waren wir für Rookie und Sustainability",
-          trophiesCredit: "Foto: Formnext – Mesago Messe Frankfurt GmbH / Marc Jacquemin",
+          trophiesCredit: "Foto: Formnext – Mesago Messe Frankfurt GmbH / Mathias Kutt",
           p1: "Vom 17. bis 20. November 2026 war unser Team die gesamte Woche auf der Formnext in Frankfurt am Main, der Weltleitmesse für die additive Fertigung. Dort waren wir für zwei der formnext Awards nominiert, den Rookie Award und den Sustainability Award. Den Sustainability Award konnten wir gewinnen, verbunden mit einem Preisgeld von 4.000 €.",
           p2: "Die Auszeichnung bestätigt unseren Ansatz: Wir stellen Kupferpulver für die additive Fertigung und das Sintern aus dünnwandigen Kupferreststoffen her — rein mechanisch, ohne Schmelzen und ohne Inertgas. Dass dieser Weg auf der wichtigsten Bühne der Branche gewürdigt wird, freut uns sehr und gibt uns Rückenwind für die nächsten Schritte.",
           p3: "Für uns und das zukünftige Start-up ist die Formnext eine der wichtigsten Messen überhaupt. In vier Tagen konnten wir extrem viele gute Gespräche führen und wichtige Informationen sammeln. Wir haben wertvolle Kontakte zu Anlagenherstellern und potenziellen Kunden geknüpft, neue Trends in der additiven Fertigung ergründet und die eine oder andere Idee direkt für unsere Geschäftsentwicklung mitgenommen.",
@@ -773,7 +773,7 @@ window.FLX_I18N = {
         registerTitle: "Handelsregister und Umsatzsteuer",
         register: "Ein Eintrag im Handelsregister und eine Umsatzsteuer-Identifikationsnummer bestehen noch nicht, da bisher keine Gesellschaft gegründet ist.",
         creditsTitle: "Bildnachweise",
-        credits: "Blick über Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Laborfoto: IART. Sofern nicht anders angegeben, stammen alle weiteren Fotos, Mikroskopaufnahmen und der Imagefilm vom Team von FlexCycle Solutions und vom IART. Video im Beitrag vom 10. November 2026: MDR Sachsenspiegel. Trophäenfoto im Beitrag vom 21. November 2026: Formnext – Mesago Messe Frankfurt GmbH / Marc Jacquemin. Die Logos unserer Unterstützer sind Eigentum der jeweiligen Inhaber."
+        credits: "Blick über Freiberg: TU Bergakademie Freiberg / Universitätsbibliothek. Laborfoto: IART. Sofern nicht anders angegeben, stammen alle weiteren Fotos, Mikroskopaufnahmen und der Imagefilm vom Team von FlexCycle Solutions und vom IART. Video im Beitrag vom 10. November 2026: MDR Sachsenspiegel. Trophäenfoto im Beitrag vom 21. November 2026: Formnext – Mesago Messe Frankfurt GmbH / Mathias Kutt. Die Logos unserer Unterstützer sind Eigentum der jeweiligen Inhaber."
       },
       privacy: {
         pageTitle: "FlexCycle Solutions — Datenschutzerklärung",
